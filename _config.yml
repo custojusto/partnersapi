@@ -1,6 +1,6 @@
 theme: jekyll-theme-slate
 title: "CustoJusto Partners API v2.0"
-description: [This is an alternative API, with improved features]
+description: [This is an alternative API with improved features]
 show_downloads: false
 github:
   is_project_page: false
