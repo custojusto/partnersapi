@@ -1,5 +1,5 @@
 <A HREF="https://custojusto.pt"><IMG SRC="https://www.custojusto.pt/img/email/logo.png" alt="CustoJusto"></a>
-<p>This is an alternative API, with improved features<br/>New features will be added just to this API</p>
+<p>New features will be added just to this API</p>
 <ul>
   <li>Get valid districts <b>/locations</b></li>
   <p>This endpoint will return all valid regions<br>
