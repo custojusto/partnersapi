@@ -4,9 +4,8 @@ New features will be added just to this API
 ### Get valid districts /locations
 * * *
 
-This endpoint will return all valid regions
-
-Requires valid token for authentication
+> This endpoint will return all valid regions
+> Requires valid token for authentication
 
   <pre>
   Method 
