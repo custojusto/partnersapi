@@ -6,12 +6,15 @@ New features will be added just to this API
 This endpoint will return all valid regions
 Requires valid token for authentication
 
->  Method 
->    GET
->  Headers
->    Content-Type: application/json
->    Authorization: kiYiuYTiuTiUTYiytIut
->  Response signature for /locations
+  <pre>
+  Method 
+    GET
+  Headers
+    Content-Type: application/json
+    Authorization: kiYiuYTiuTiUTYiytIut
+  Response signature for /locations
+  </pre>
+  
   ```json
     {
     "locations":[
