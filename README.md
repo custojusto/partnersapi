@@ -1,12 +1,12 @@
-<A HREF="https://custojusto.pt"><IMG SRC="https://www.custojusto.pt/img/email/logo.png" alt="CustoJusto"></a>
-<p>New features will be added just to this API</p>
-<ul>
-  <li>Get valid districts <b>/locations</b></li>
-  <p>This endpoint will return all valid regions<br>
-    Requires valid token for authentication
-  </p>
+New features will be added just to this API
+
+
+### Header 3
+Get valid districts **/locations**
+> This endpoint will return all valid regions
+> Requires valid token for authentication
   
-  <pre>
+  ```json
   Method 
     GET
   Headers
@@ -26,7 +26,10 @@
     ],
     "type":"regions"
     }
-  </pre>
+```
+
+
+
 
   <li>Get valid areas <b>/locations/{locationId}</b></li>
   <p>This endpoint will return all valid counties by area<br>
