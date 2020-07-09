@@ -6,34 +6,30 @@ New features will be added just to this API
 > This endpoint will return all valid regions  
 > Requires valid token for authentication
 
-  <pre>
-  Method 
-    GET
-  Headers
-    Content-Type: application/json
-    Authorization: kiYiuYTiuTiUTYiytIut
+<pre>
+Method 
+  GET
+Headers
+  Content-Type: application/json
+  Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /locations
-  </pre>
+</pre>
   
-  ```json
-    {
-    "locations":[
-        {
-            "locationName":"Aveiro",
-            "locationId":6
-        },
-        {
-            "locationName":"Açores",
-            "locationId":19
-        }
-    ],
-    "type":"regions"
-    }
+```json
+{
+"locations":[
+{
+    "locationName":"Aveiro",
+    "locationId":6
+},
+{
+    "locationName":"Açores",
+    "locationId":19
+}
+],
+"type":"regions"
+}
 ```
-
-
-
-
 
 ### Get valid areas /locations/{locationId}
 ***
