@@ -31,6 +31,7 @@ Headers
 }
 ```
 
+
 ### Get valid areas /locations/{locationId}
 * * *
 > This endpoint will return all valid counties by area  
