@@ -96,8 +96,8 @@ Headers
 * * *
 > This endpoint will return the needed IDs for region (district), county (area) and parish (sub area)  
 > Requires valid token for authentication  
-    <small>In some cases, when CP6 was not found, IDs might return 0, which means that they should be lookup on /locations endpoint. Let us know about these cases so we can improve our database</small>
-  </p>
+> In some cases, when CP6 was not found, IDs might return 0, which means that they should be lookup on /locations endpoint.  
+> Let us know about these cases so we can improve our database</small>
   
   <pre>
   Method 
@@ -106,26 +106,31 @@ Headers
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /cp6/4300-200
+  </pre>
+  
+  ```json  
     {
         "districtID": 5,
         "areaID": 62,
         "subAreaID": 3
     }
-  </pre>
+  ```
 
+### Get possible adtypes /adtypes
+* * *
+> This endpoint will return the all types of ads available on our platform  
+> Requires valid token for authentication
 
-  <li>Get possible adtypes <b>/adtypes</b></li>
-  <p>This endpoint will return the all types of ads available on our platform<br>
-    Requires valid token for authentication<br>
-  </p>
-  
-  <pre>
+<pre>
   Method 
     GET
   Headers
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /adtypes
+</pre>
+
+```json  
     [
         {
             "typeID": "t",
@@ -148,8 +153,7 @@ Headers
             "description": "Compra"
         }
     ]
-  </pre>
-
+```
 
   <li>Get possible adtypes <b>/adtypes/bycategory/{categoryID}</b></li>
   <p>This endpoint will return the all ad types allowed for this token and for the specified category<br>
