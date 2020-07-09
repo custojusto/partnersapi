@@ -155,10 +155,11 @@ Headers
     ]
 ```
 
-  <li>Get possible adtypes <b>/adtypes/bycategory/{categoryID}</b></li>
-  <p>This endpoint will return the all ad types allowed for this token and for the specified category<br>
-    Requires valid token for authentication<br>
-  </p>
+
+### Get possible adtypes /adtypes/bycategory/{categoryID}
+* * *
+> This endpoint will return the all ad types allowed for this token and for the specified category  
+> Requires valid token for authentication<br>
   
   <pre>
   Method 
@@ -188,6 +189,9 @@ Headers
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /categories
+  </pre>
+
+```json  
     [
         {
             "categoryID": "7000",
@@ -208,9 +212,7 @@ Headers
             "hasChildren": true
         }
     ]
-  </pre>
-
-
+```
 
   <li>Get categories tree <b>/categories/tree</b></li>
   <p>This endpoint will return the all full category tree for our platform<br>Deepest level is 3<br>
@@ -224,6 +226,7 @@ Headers
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /categories/tree
+```json  
     [
         {
             "categoryID": "6000",
@@ -295,6 +298,7 @@ Headers
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /categories/2000
+```json  
     [
         {
             "subCategoryID": "2020",
@@ -336,6 +340,7 @@ Headers
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /categories/2000/2020
+```json  
     [
         {
             "subSubCategoryID": "2021",
@@ -370,6 +375,7 @@ Headers
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /tags/1100
+```json  
     [
         {
             "id": "piscina",
