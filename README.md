@@ -16,25 +16,24 @@ Headers
 </pre>
   
 ```json
-{
-"locations":[
-{
-    "locationName":"Aveiro",
-    "locationId":6
-},
-{
-    "locationName":"Açores",
-    "locationId":19
-}
-],
-"type":"regions"
-}
+    {
+    "locations":[
+        {
+            "locationName":"Aveiro",
+            "locationId":6
+        },
+        {
+            "locationName":"Açores",
+            "locationId":19
+        }
+    ],
+    "type":"regions"
+    }
 ```
 
 ### Get valid areas /locations/{locationId}
-***
-> This endpoint will return all valid counties by area<br>
-
+* * *
+> This endpoint will return all valid counties by area  
 > Requires valid token for authentication
   
   <pre>
@@ -63,9 +62,8 @@ Headers
   ```
 
 ### Get valid sub areas /locations/{locationId}/{county_locationId}
-***
-> This endpoint will return all valid parishes by area
-
+* * *
+> This endpoint will return all valid parishes by area  
 > Requires valid token for authentication
 
   <pre>
@@ -94,9 +92,10 @@ Headers
    ```
 
 
-  <li>Get location IDs tree based on CP6 <b>/cp6/{cp6}</b></li>
-  <p>This endpoint will return the needed IDs for region (district), county (area) and parish (sub area)<br>
-    Requires valid token for authentication<br>
+### Get location IDs tree based on CP6 /cp6/{cp6}
+* * *
+> This endpoint will return the needed IDs for region (district), county (area) and parish (sub area)  
+> Requires valid token for authentication  
     <small>In some cases, when CP6 was not found, IDs might return 0, which means that they should be lookup on /locations endpoint. Let us know about these cases so we can improve our database</small>
   </p>
   
