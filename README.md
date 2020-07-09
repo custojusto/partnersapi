@@ -16,19 +16,19 @@ Headers
 </pre>
   
 ```json
+{
+"locations":[
     {
-    "locations":[
-        {
-            "locationName":"Aveiro",
-            "locationId":6
-        },
-        {
-            "locationName":"Açores",
-            "locationId":19
-        }
-    ],
-    "type":"regions"
+        "locationName":"Aveiro",
+        "locationId":6
+    },
+    {
+        "locationName":"Açores",
+        "locationId":19
     }
+],
+"type":"regions"
+}
 ```
 
 ### Get valid areas /locations/{locationId}
@@ -46,19 +46,19 @@ Headers
  </pre>
  
   ```json  
+{
+"locations":[
     {
-    "locations":[
-        {
-            "locationName": "Albergaria-a-Velha",
-            "locationId": 70
-        },
-        {
-            "locationName": "Anadia",
-            "locationId": 71
-        }
-    ],
-    "type":"counties"
+        "locationName": "Albergaria-a-Velha",
+        "locationId": 70
+    },
+    {
+        "locationName": "Anadia",
+        "locationId": 71
     }
+],
+"type":"counties"
+}
   ```
 
 ### Get valid sub areas /locations/{locationId}/{county_locationId}
@@ -75,21 +75,21 @@ Headers
   Response signature for /locations/6/70
   </pre>
   
-  ```json  
+```json  
+{
+"locations":[
     {
-    "locations":[
-        {
-            "locationName": "Albergaria-a-Velha e Valmaior",
-            "locationId": 1
-        },
-        {
-            "locationName": "Alquerubim",
-            "locationId": 6
-        }
-    ],
-    "type":"parishes"
+        "locationName": "Albergaria-a-Velha e Valmaior",
+        "locationId": 1
+    },
+    {
+        "locationName": "Alquerubim",
+        "locationId": 6
     }
-   ```
+],
+"type":"parishes"
+}
+```
 
 
 ### Get location IDs tree based on CP6 /cp6/{cp6}
@@ -97,24 +97,24 @@ Headers
 > This endpoint will return the needed IDs for region (district), county (area) and parish (sub area)  
 > Requires valid token for authentication  
 > In some cases, when CP6 was not found, IDs might return 0, which means that they should be lookup on /locations endpoint.  
-> Let us know about these cases so we can improve our database</small>
+> Let us know about these cases so we can improve our database
   
-  <pre>
-  Method 
-    GET
-  Headers
-    Content-Type: application/json
-    Authorization: kiYiuYTiuTiUTYiytIut
-  Response signature for /cp6/4300-200
-  </pre>
+<pre>
+Method 
+  GET
+Headers
+  Content-Type: application/json
+  Authorization: kiYiuYTiuTiUTYiytIut
+Response signature for /cp6/4300-200
+</pre>
   
-  ```json  
-    {
-        "districtID": 5,
-        "areaID": 62,
-        "subAreaID": 3
-    }
-  ```
+```json  
+{
+    "districtID": 5,
+    "areaID": 62,
+    "subAreaID": 3
+}
+```
 
 ### Get possible adtypes /adtypes
 * * *
@@ -122,37 +122,37 @@ Headers
 > Requires valid token for authentication
 
 <pre>
-  Method 
-    GET
-  Headers
-    Content-Type: application/json
-    Authorization: kiYiuYTiuTiUTYiytIut
-  Response signature for /adtypes
+Method 
+  GET
+Headers
+  Content-Type: application/json
+  Authorization: kiYiuYTiuTiUTYiytIut
+Response signature for /adtypes
 </pre>
 
 ```json  
-    [
-        {
-            "typeID": "t",
-            "description": "Trespasse"
-        },
-        {
-            "typeID": "s",
-            "description": "Venda"
-        },
-        {
-            "typeID": "u",
-            "description": "Aluguer/Arrendamento"
-        },
-        {
-            "typeID": "d",
-            "description": "Doação"
-        },
-        {
-            "typeID": "k",
-            "description": "Compra"
-        }
-    ]
+[
+    {
+        "typeID": "t",
+        "description": "Trespasse"
+    },
+    {
+        "typeID": "s",
+        "description": "Venda"
+    },
+    {
+        "typeID": "u",
+        "description": "Aluguer/Arrendamento"
+    },
+    {
+        "typeID": "d",
+        "description": "Doação"
+    },
+    {
+        "typeID": "k",
+        "description": "Compra"
+    }
+]
 ```
 
 
@@ -161,130 +161,132 @@ Headers
 > This endpoint will return the all ad types allowed for this token and for the specified category  
 > Requires valid token for authentication<br>
   
-  <pre>
-  Method 
-    GET
-  Headers
-    Content-Type: application/json
-    Authorization: kiYiuYTiuTiUTYiytIut
-  Response signature for /adtypes/bycategory/2021
-    [
-        {
-            "typeID": "s",
-            "description": "Venda"
-        }
-    ]
-  </pre>
-
-
-  <li>Get possible categories <b>/categories</b></li>
-  <p>This endpoint will return the all the existing categories on our platform<br>Only categories that contain <b>hasChildren: False</b> are allowed to be used when creating an ad<br>
-    Requires valid token for authentication<br>
-  </p>
-  
-  <pre>
-  Method 
-    GET
-  Headers
-    Content-Type: application/json
-    Authorization: kiYiuYTiuTiUTYiytIut
-  Response signature for /categories
-  </pre>
-
-```json  
-    [
-        {
-            "categoryID": "7000",
-            "name": "Emprego & Serviços",
-            "keywords": "ofertas de emprego, procura de emprego, serviços",
-            "hasChildren": true
-        },
-        {
-            "categoryID": "1000",
-            "name": "Imobiliário",
-            "keywords": "apartamentos,quartos,moradias,prédios,lojas,escritórios,imobiliário,imóveis,vivendas,empreendimentos,",
-            "hasChildren": true
-        },
-        {
-            "categoryID": "2000",
-            "name": "Veículos",
-            "keywords": "carros usados,automóveis,motos,caravanas,comerciais,peugeot,vw,volkswagen,mercedes,renault,bmw,opel,audi,seat,citroen,toyota,nissan",
-            "hasChildren": true
-        }
-    ]
+<pre>
+Method 
+  GET
+Headers
+  Content-Type: application/json
+  Authorization: kiYiuYTiuTiUTYiytIut
+Response signature for /adtypes/bycategory/2021
+</pre>
+```json
+[
+  {
+      "typeID": "s",
+      "description": "Venda"
+  }
+]
 ```
 
-  <li>Get categories tree <b>/categories/tree</b></li>
-  <p>This endpoint will return the all full category tree for our platform<br>Deepest level is 3<br>
-    Requires valid token for authentication<br>
-  </p>
-  
-  <pre>
-  Method 
-    GET
-  Headers
-    Content-Type: application/json
-    Authorization: kiYiuYTiuTiUTYiytIut
-  Response signature for /categories/tree
+### Get possible categories /categories
+> This endpoint will return the all the existing categories on our platform  
+> Only categories that contain hasChildren: False are allowed to be used when creating an ad  
+> Requires valid token for authentication
+
+<pre>
+Method 
+  GET
+Headers
+  Content-Type: application/json
+  Authorization: kiYiuYTiuTiUTYiytIut
+Response signature for /categories
+</pre>
+
 ```json  
-    [
-        {
-            "categoryID": "6000",
-            "name": "Desporto & Lazer",
-            "keywords": "arte, coleccões, desporto, bicicleta, música, filmes, livros, animais domésticos",
-            "hasChildren": true,
-            "subCategory": [
-                {
-                    "subCategoryID": "6080",
-                    "name": "Música & Filmes",
-                    "keywords": "livros,filmes,dvd,cd,música",
-                    "hasChildren": false
-                },
-                {
-                    "subCategoryID": "6040",
-                    "name": "Artigos desporto",
-                    "keywords": "bicicleta,ski,snooker,surf,futebol,equipamento",
-                    "hasChildren": false
-                }
-            ]
-        },
-        {
-            "categoryID": "7000",
-            "name": "Emprego & Serviços",
-            "keywords": "ofertas de emprego, procura de emprego, serviços",
-            "hasChildren": true,
-            "subCategory": [
-                {
-                    "subCategoryID": "7020",
-                    "name": "Ofertas de Emprego",
-                    "keywords": "emprego,oferta emprego,estágio profissional,comissionista",
-                    "hasChildren": false
-                },
-                {
-                    "subCategoryID": "7060",
-                    "name": "Serviços",
-                    "keywords": "serviços,carpintaria,babysitter,canalizador,pintura,geriatria,carpintaria,mudanças,contabilidade,design,fotografiamotorista,explicações",
-                    "hasChildren": true,
-                    "subSubCategory": [
-                        {
-                            "subSubCategoryID": "7062",
-                            "name": "Serviço Doméstico",
-                            "keywords": "",
-                            "hasChildren": false
-                        },
-                        {
-                            "subSubCategoryID": "7063",
-                            "name": "Formação",
-                            "keywords": "",
-                            "hasChildren": false
-                        },
-                    ]
-                }
-            ]
-        }
-    ]
-  </pre>
-  
+[
+    {
+        "categoryID": "7000",
+        "name": "Emprego & Serviços",
+        "keywords": "ofertas de emprego, procura de emprego, serviços",
+        "hasChildren": true
+    },
+    {
+        "categoryID": "1000",
+        "name": "Imobiliário",
+        "keywords": "apartamentos,quartos,moradias,prédios,lojas,escritórios,imobiliário,imóveis,vivendas,empreendimentos,",
+        "hasChildren": true
+    },
+    {
+        "categoryID": "2000",
+        "name": "Veículos",
+        "keywords": "carros usados,automóveis,motos,caravanas,comerciais,peugeot,vw,volkswagen,mercedes,renault,bmw,opel,audi,seat,citroen,toyota,nissan",
+        "hasChildren": true
+    }
+]
+```
+
+### Get categories tree /categories/tree
+> This endpoint will return the all full category tree for our platform  
+> Deepest level is 3  
+> Requires valid token for authentication  
+
+<pre>
+Method 
+  GET
+Headers
+  Content-Type: application/json
+  Authorization: kiYiuYTiuTiUTYiytIut
+Response signature for /categories/tree
+</pre>
+
+```json  
+[
+  {
+      "categoryID": "6000",
+      "name": "Desporto & Lazer",
+      "keywords": "arte, coleccões, desporto, bicicleta, música, filmes, livros, animais domésticos",
+      "hasChildren": true,
+      "subCategory": [
+          {
+              "subCategoryID": "6080",
+              "name": "Música & Filmes",
+              "keywords": "livros,filmes,dvd,cd,música",
+              "hasChildren": false
+          },
+          {
+              "subCategoryID": "6040",
+              "name": "Artigos desporto",
+              "keywords": "bicicleta,ski,snooker,surf,futebol,equipamento",
+              "hasChildren": false
+          }
+      ]
+  },
+  {
+      "categoryID": "7000",
+      "name": "Emprego & Serviços",
+      "keywords": "ofertas de emprego, procura de emprego, serviços",
+      "hasChildren": true,
+      "subCategory": [
+          {
+              "subCategoryID": "7020",
+              "name": "Ofertas de Emprego",
+              "keywords": "emprego,oferta emprego,estágio profissional,comissionista",
+              "hasChildren": false
+          },
+          {
+              "subCategoryID": "7060",
+              "name": "Serviços",
+              "keywords": "serviços,carpintaria,babysitter,canalizador,pintura,geriatria,carpintaria,mudanças,contabilidade,design,fotografiamotorista,explicações",
+              "hasChildren": true,
+              "subSubCategory": [
+                  {
+                      "subSubCategoryID": "7062",
+                      "name": "Serviço Doméstico",
+                      "keywords": "",
+                      "hasChildren": false
+                  },
+                  {
+                      "subSubCategoryID": "7063",
+                      "name": "Formação",
+                      "keywords": "",
+                      "hasChildren": false
+                  },
+              ]
+          }
+      ]
+  }
+]
+```
 
   <li>Get categories by level 1 <b>/categories/{categoryID}</b></li>
   <p>This endpoint will return the all categories by level 1<br>
