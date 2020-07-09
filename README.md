@@ -3,7 +3,6 @@ New features will be added just to this API
 
 ### Get valid districts /locations
 * * *
-
 > This endpoint will return all valid regions 
 
 > Requires valid token for authentication
@@ -37,10 +36,11 @@ New features will be added just to this API
 
 
 
-  <li>Get valid areas <b>/locations/{locationId}</b></li>
-  <p>This endpoint will return all valid counties by area<br>
-    Requires valid token for authentication
-  </p>
+### Get valid areas /locations/{locationId}
+***
+> This endpoint will return all valid counties by area<br>
+
+> Requires valid token for authentication
   
   <pre>
   Method 
@@ -49,6 +49,9 @@ New features will be added just to this API
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /locations/6
+ </pre>
+ 
+  ```json  
     {
     "locations":[
         {
@@ -62,14 +65,14 @@ New features will be added just to this API
     ],
     "type":"counties"
     }
-  </pre>
+  ```
 
+### Get valid sub areas /locations/{locationId}/{county_locationId}
+***
+> This endpoint will return all valid parishes by area
 
-  <li>Get valid sub areas <b>/locations/{locationId}/{county_locationId}</b></li>
-  <p>This endpoint will return all valid parishes by area<br>
-    Requires valid token for authentication
-  </p>
-  
+> Requires valid token for authentication
+
   <pre>
   Method 
     GET
@@ -77,6 +80,9 @@ New features will be added just to this API
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /locations/6/70
+  </pre>
+  
+  ```json  
     {
     "locations":[
         {
@@ -90,7 +96,7 @@ New features will be added just to this API
     ],
     "type":"parishes"
     }
-  </pre>
+   ```
 
 
   <li>Get location IDs tree based on CP6 <b>/cp6/{cp6}</b></li>
