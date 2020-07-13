@@ -1699,18 +1699,18 @@ Response signature for /tags/1100
 ```
     
 **Custom Params for Vehicles category**
-   brand - BrandID
-   capacity - Cubic Centimeters (CC)
-   color - ColorID
-   fuel - Fuel TypeID
-   gearbox - Gearbox TypeID
-   licensePlate - Valid, uppercased, Portuguese format, licenseplate
-   mileage - MileageID
-   model - ModelID
-   power - BHP (CV)
-   regMonth - First registration - Month
-   regYear - First registration - Year
-   variant - Variant/Version (SW, S-Line, etc)
+   > brand - BrandID
+   > capacity - Cubic Centimeters (CC)
+   > color - ColorID
+   > fuel - Fuel TypeID
+   > gearbox - Gearbox TypeID
+   > licensePlate - Valid, uppercased, Portuguese format, licenseplate
+   > mileage - MileageID
+   > model - ModelID
+   > power - BHP (CV)
+   > regMonth - First registration - Month
+   > regYear - First registration - Year
+   > variant - Variant/Version (SW, S-Line, etc)
 
 
 
