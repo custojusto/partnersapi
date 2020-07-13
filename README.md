@@ -160,7 +160,7 @@ Response signature for /adtypes
 ### Get possible adtypes /adtypes/bycategory/{categoryID}
 * * *
 > This endpoint will return the all ad types allowed for this token and for the specified category  
-> Requires valid token for authentication<br>
+> Requires valid token for authentication  
   
 <pre>
 Method 
@@ -289,125 +289,129 @@ Response signature for /categories/tree
 ]
 ```
 
-  <li>Get categories by level 1 <b>/categories/{categoryID}</b></li>
-  <p>This endpoint will return the all categories by level 1<br>
-    Requires valid token for authentication<br>
-  </p>
+### Get categories by level 1 /categories/{categoryID}
+* * *
+> This endpoint will return the all categories by level 1  
+> Requires valid token for authentication
   
-  <pre>
-  Method 
-    GET
-  Headers
-    Content-Type: application/json
-    Authorization: kiYiuYTiuTiUTYiytIut
-  Response signature for /categories/2000
+<pre>
+Method 
+  GET
+Headers
+  Content-Type: application/json
+  Authorization: kiYiuYTiuTiUTYiytIut
+Response signature for /categories/2000
+</pre>
+
 ```json  
-    [
-        {
-            "subCategoryID": "2020",
-            "name": "Carros & Autocaravanas",
-            "keywords": "carros usados,automóveis",
-            "hasChildren": true
-        },
-        {
-            "subCategoryID": "2060",
-            "name": "Motos & Scooters",
-            "keywords": "vender,comprar,pesquisar,usados,motas",
-            "hasChildren": false
-        },
-        {
-            "subCategoryID": "2120",
-            "name": "Peças e acessórios de carros",
-            "keywords": "capacete,jante,pneu,gps,motor,peças",
-            "hasChildren": false
-        },
-        {
-            "subCategoryID": "2140",
-            "name": "Peças e acessórios de motas",
-            "keywords": "capacete, pneu, blusões, escapes, faróis, paralamas, carenagem, luvas, botas,",
-            "hasChildren": false
-        }
-    ]
-  </pre>
+[
+    {
+        "subCategoryID": "2020",
+        "name": "Carros & Autocaravanas",
+        "keywords": "carros usados,automóveis",
+        "hasChildren": true
+    },
+    {
+        "subCategoryID": "2060",
+        "name": "Motos & Scooters",
+        "keywords": "vender,comprar,pesquisar,usados,motas",
+        "hasChildren": false
+    },
+    {
+        "subCategoryID": "2120",
+        "name": "Peças e acessórios de carros",
+        "keywords": "capacete,jante,pneu,gps,motor,peças",
+        "hasChildren": false
+    },
+    {
+        "subCategoryID": "2140",
+        "name": "Peças e acessórios de motas",
+        "keywords": "capacete, pneu, blusões, escapes, faróis, paralamas, carenagem, luvas, botas,",
+        "hasChildren": false
+    }
+]
+```
 
+### Get categories by level 2 /categories/{categoryID}/{subCategoryID}
+* * *
+> This endpoint will return the all categories by level 2  
+> Requires valid token for authentication
 
-  <li>Get categories by level 2 <b>/categories/{categoryID}/{subCategoryID}</b></li>
-  <p>This endpoint will return the all categories by level 2<br>
-    Requires valid token for authentication<br>
-  </p>
-  
-  <pre>
-  Method 
-    GET
-  Headers
-    Content-Type: application/json
-    Authorization: kiYiuYTiuTiUTYiytIut
-  Response signature for /categories/2000/2020
+<pre>
+Method 
+  GET
+Headers
+  Content-Type: application/json
+  Authorization: kiYiuYTiuTiUTYiytIut
+Response signature for /categories/2000/2020
+</pre>
+
 ```json  
-    [
-        {
-            "subSubCategoryID": "2021",
-            "name": "Ligeiros Passageiros",
-            "keywords": "ligeiros passageiros, carros usados, automóveis usados, motas, renault, mercedes, bmw, fiat",
-            "hasChildren": false
-        },
-        {
-            "subSubCategoryID": "2023",
-            "name": "Monovolume / SUV",
-            "keywords": "monovolumes, suvs, carros usados, automóveis usados, coupé, descapotável, cabriolé, motas, renault, mercedes, bmw, fiat",
-            "hasChildren": false
-        },
-        {
-            "subSubCategoryID": "2024",
-            "name": "Pick-up/ Todo-o-Terreno",
-            "keywords": "pick-up, todo-o-terreno, jipe, jeeps, carros usados, automóveis usados, cherokee, land rover, renault, mercedes, bmw, fiat,",
-            "hasChildren": false
-        }
-    ]
-  </pre>
+[
+    {
+        "subSubCategoryID": "2021",
+        "name": "Ligeiros Passageiros",
+        "keywords": "ligeiros passageiros, carros usados, automóveis usados, motas, renault, mercedes, bmw, fiat",
+        "hasChildren": false
+    },
+    {
+        "subSubCategoryID": "2023",
+        "name": "Monovolume / SUV",
+        "keywords": "monovolumes, suvs, carros usados, automóveis usados, coupé, descapotável, cabriolé, motas, renault, mercedes, bmw, fiat",
+        "hasChildren": false
+    },
+    {
+        "subSubCategoryID": "2024",
+        "name": "Pick-up/ Todo-o-Terreno",
+        "keywords": "pick-up, todo-o-terreno, jipe, jeeps, carros usados, automóveis usados, cherokee, land rover, renault, mercedes, bmw, fiat,",
+        "hasChildren": false
+    }
+]
+```
 
-  <li>Get allowed tags by category <b>/tags/{categoryID}</b></li>
-  <p>This endpoint will return the allowed tags by category<br>
-    Requires valid token for authentication<br>
-  </p>
-  
-  <pre>
-  Method 
-    GET
-  Headers
-    Content-Type: application/json
-    Authorization: kiYiuYTiuTiUTYiytIut
-  Response signature for /tags/1100
+### Get allowed tags by category /tags/{categoryID}
+* * * 
+> This endpoint will return the allowed tags by category  
+> Requires valid token for authentication
+
+<pre>
+Method 
+  GET
+Headers
+  Content-Type: application/json
+  Authorization: kiYiuYTiuTiUTYiytIut
+Response signature for /tags/1100
+</pre>
+
 ```json  
-    [
-        {
-            "id": "piscina",
-            "name": "Piscina"
-        },
-        {
-            "id": "cozinha",
-            "name": "Cozinha"
-        },
-        {
-            "id": "animais",
-            "name": "Permitido animais"
-        },
-        {
-            "id": "wifi",
-            "name": "Wifi"
-        },
-        {
-            "id": "ac",
-            "name": "Ar condicionado"
-        }
-    ]
-  </pre>
-  
+[
+    {
+        "id": "piscina",
+        "name": "Piscina"
+    },
+    {
+        "id": "cozinha",
+        "name": "Cozinha"
+    },
+    {
+        "id": "animais",
+        "name": "Permitido animais"
+    },
+    {
+        "id": "wifi",
+        "name": "Wifi"
+    },
+    {
+        "id": "ac",
+        "name": "Ar condicionado"
+    }
+]
+```
 
-  <li>Get the existing car brands <b>/carbrands</b></li>
-  <p>This endpoint will return the existing car brands on our platform<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Get the existing car brands /carbrands
+  > This endpoint will return the existing car brands on our platform  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -437,10 +441,10 @@ Response signature for /categories/tree
   </pre>
 
 
-  <li>Get the existing car models per brand <b>/carbrands/{brandID}</b></li>
-  <p>This endpoint will return the existing car models on our platform, per brand<br>
-    Requires valid token for authentication<br>
-  </p>
+### Get the existing car models per brand /carbrands/{brandID}
+  > This endpoint will return the existing car models on our platform, per brand  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -469,10 +473,10 @@ Response signature for /categories/tree
   </pre>
 
 
-  <li>Get the existing car models per brand <b>/carbrands/{brandID}/series</b></li>
-  <p>This endpoint will return the existing car models on our platform, per brand, grouped by serie. Usefull for BMW and Mercedes<br>
-    Requires valid token for authentication<br>
-  </p>
+### Get the existing car models per brand /carbrands/{brandID}/series
+> This endpoint will return the existing car models on our platform, per brand, grouped by serie. Usefull for BMW and Mercedes  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -510,10 +514,10 @@ Response signature for /categories/tree
   </pre>
 
 
-  <li>Find car brand by similar name <b>/carbrands/byname/{lowercaseName}</b></li>
-  <p>This endpoint searches for car brand by name, such as toyota.<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Find car brand by similar name /carbrands/byname/{lowercaseName}
+  > This endpoint searches for car brand by name, such as toyota.  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -529,10 +533,10 @@ Response signature for /categories/tree
   </pre>
 
 
-  <li>Find car model by similar name <b>/carbrands/{brandID}/byname/{lowercaseName}</b></li>
-  <p>This endpoint searches for car model by name, such as corola<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Find car model by similar name /carbrands/{brandID}/byname/{lowercaseName}
+  > This endpoint searches for car model by name, such as corola  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -548,10 +552,10 @@ Response signature for /categories/tree
   </pre>
 
 
-  <li>Get the existing moto brands <b>/motobrands</b></li>
-  <p>This endpoint will return the existing moto brands on our platform<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Get the existing moto brands /motobrands
+  > This endpoint will return the existing moto brands on our platform  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -589,10 +593,10 @@ Response signature for /categories/tree
   </pre>
 
 
-  <li>Get the existing moto models per brand <b>/motobrands/{brandID}</b></li>
-  <p>This endpoint will return the existing moto models on our platform, per brand<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Get the existing moto models per brand /motobrands/{brandID}
+  > This endpoint will return the existing moto models on our platform, per brand  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -627,10 +631,10 @@ Response signature for /categories/tree
 
 
 
-  <li>Find moto brand by similar name <b>/motobrands/byname/{lowercaseName}</b></li>
-  <p>This endpoint searches for moto brand by name, such as cavasaqui.<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Find moto brand by similar name /motobrands/byname/{lowercaseName}
+  > This endpoint searches for moto brand by name, such as cavasaqui.  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -646,10 +650,10 @@ Response signature for /categories/tree
   </pre>
 
 
-  <li>Find car model by similar name <b>/motobrands/{brandID}/byname/{lowercaseName}</b></li>
-  <p>This endpoint searches for moto model by name, such as eliminador<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Find car model by similar name /motobrands/{brandID}/byname/{lowercaseName}
+  > This endpoint searches for moto model by name, such as eliminador  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -665,10 +669,10 @@ Response signature for /categories/tree
   </pre>
 
 
-  <li>Get Cubic Centemeters configurations <b>/cc</b></li>
-  <p>This endpoint returns the CC intervals used on our platform<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Get Cubic Centemeters configurations /cc
+  > This endpoint returns the CC intervals used on our platform  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -712,10 +716,10 @@ Response signature for /categories/tree
   </pre>
 
 
-  <li>Get Cubic Centimeters configuration based on CC value <b>/cc/{CubicCentimetersValue}</b></li>
-  <p>This endpoint returns the CC data used on our platform<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Get Cubic Centimeters configuration based on CC value /cc/{CubicCentimetersValue}
+  > This endpoint returns the CC data used on our platform  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -733,10 +737,10 @@ Response signature for /categories/tree
   </pre>
 
 
-  <li>Get our color list <b>/color</b></li>
-  <p>This endpoint returns the available colors on our platform<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Get our color list /color
+  > This endpoint returns the available colors on our platform  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -765,10 +769,10 @@ Response signature for /categories/tree
   </pre>
 
 
-  <li>Get our fuel type list <b>/fuels</b></li>
-  <p>This endpoint returns the available fuel types on our platform<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Get our fuel type list /fuels
+  > This endpoint returns the available fuel types on our platform  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -803,10 +807,10 @@ Response signature for /categories/tree
 
 
 
-  <li>Get our gear boxes list <b>/gearboxes</b></li>
-  <p>This endpoint returns the available gearboxes types on our platform<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Get our gear boxes list /gearboxes
+  > This endpoint returns the available gearboxes types on our platform  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -835,10 +839,10 @@ Response signature for /categories/tree
     ]
   </pre>
 
-  <li>Get our mileage intervals <b>/mileages</b></li>
-  <p>This endpoint returns the available mileage intervals on our platform<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Get our mileage intervals /mileages
+  > This endpoint returns the available mileage intervals on our platform  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -869,10 +873,10 @@ Response signature for /categories/tree
     ]
   </pre>
 
-  <li>Get mileage id by mileage value <b>/mileages/{mileageValue}</b></li>
-  <p>This endpoint returns the mileage id based on actual mileages (km)<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Get mileage id by mileage value /mileages/{mileageValue}
+  > This endpoint returns the mileage id based on actual mileages (km)  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -890,10 +894,10 @@ Response signature for /categories/tree
   </pre>
 
 
-  <li>Get energy rating list <b>/energyratings</b></li>
-  <p>This endpoint returns our energy rating list<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Get energy rating list /energyratings
+  > This endpoint returns our energy rating list  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -932,10 +936,10 @@ Response signature for /categories/tree
 
 
 
-  <li>Get room typologies list <b>/roomtypologies</b></li>
-  <p>This endpoint returns our room typologies list<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Get room typologies list /roomtypologies
+  > This endpoint returns our room typologies list  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -965,10 +969,10 @@ Response signature for /categories/tree
   </pre>
 
 
-  <li>Get room typology <b>/roomtypologies/{typologyName}</b></li>
-  <p>This endpoint returns our room typology based on keyword, uppercase<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Get room typology /roomtypologies/{typologyName}
+  > This endpoint returns our room typology based on keyword, uppercase  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -984,10 +988,10 @@ Response signature for /categories/tree
   </pre>
 
 
-  <li>Get room typology <b>/partner/categories</b></li>
-  <p>This endpoint returns the category tree allowed for the privided partner token<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Get room typology /partner/categories
+  > This endpoint returns the category tree allowed for the privided partner token  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -1041,10 +1045,10 @@ Response signature for /categories/tree
   </pre>
 
 
-  <li>Get partner data <b>/partner</b></li>
-  <p>This endpoint returns partner data<br>Partners who have shops, will get extra object, "shop"<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Get partner data /partner
+  > This endpoint returns partner data  Partners who have shops, will get extra object, "shop"  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -1171,10 +1175,10 @@ Response signature for /categories/tree
   </pre>
 
 
-  <li>Update partner profile <b>/partner/profile</b></li>
-  <p>This endpoint update profile details, such as location, main phone and address<br>Editing the phone number won't update ads<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Update partner profile /partner/profile
+  > This endpoint update profile details, such as location, main phone and address  Editing the phone number won't update ads  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -1194,7 +1198,7 @@ Response signature for /categories/tree
       }
     }
   </pre>
-  <p>Fail errors will return the field and error description</p>
+  <p>Fail errors will return the field and error description
   <pre>
   StatusCode 
     400 - Bad Request
@@ -1225,10 +1229,10 @@ Response signature for /categories/tree
     }
   </pre>
 
-  <li>Update partner shop details <b>/partner/shop</b></li>
-  <p>This endpoint update shop details for parthers with enabled shop<br>Limit for phone numbers is 5<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Update partner shop details /partner/shop
+  > This endpoint update shop details for parthers with enabled shop  Limit for phone numbers is 5  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -1288,7 +1292,7 @@ Response signature for /categories/tree
       ]
     }
   </pre>
-  <p>Fail errors will return the field and error description</p>
+  <p>Fail errors will return the field and error description
   <pre>
   StatusCode
     417 - Expectation Failed
@@ -1323,16 +1327,16 @@ Response signature for /categories/tree
   </pre>
 
 
-  <li>Update shop banner <b>/images/users/shop</b></li>
-  <p>This endpoint allows a banner update. Will remove the existing image.<br><b>Only jpg files are allowed</b><br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Update shop banner /images/users/shop
+  > This endpoint allows a banner update. Will remove the existing image.  Only jpg files are allowed  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
     POST
   Headers
-    Authorization: <b>Token</b> kiYiuYTiuTiUTYiytIut
+    Authorization: Token kiYiuYTiuTiUTYiytIut
     Content-Type: multipart/form-data
     Form field: file
     <small>curl --location --request POST '{API_URL}/images/users/shop' --header 'Authorization: Token kiYiuYTiuTiUTYiytIut' --header 'Content-Type: multipart/form-data' --form 'file=@/image_location/filename.jpg'</small>
@@ -1345,30 +1349,30 @@ Response signature for /categories/tree
     }
   </pre>
 
-  <li>Delete shop banner <b>/images/users/shop</b></li>
-  <p>This endpoint allows removal of the banner image completely<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Delete shop banner /images/users/shop
+  > This endpoint allows removal of the banner image completely  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
     DELETE
   Headers
     Content-Type: application/json
-    Authorization: <b>Token</b> kiYiuYTiuTiUTYiytIut
+    Authorization: Token kiYiuYTiuTiUTYiytIut
   </pre>
 
 
-  <li>Update user profile image <b>/images/users/profile</b></li>
-  <p>This endpoint allows profile logo update. Will remove the existing image.<br><b>Only jpg files are allowed</b><br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Update user profile image /images/users/profile
+  > This endpoint allows profile logo update. Will remove the existing image.  Only jpg files are allowed  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
     POST
   Headers
-    Authorization: <b>Token</b> kiYiuYTiuTiUTYiytIut
+    Authorization: Token kiYiuYTiuTiUTYiytIut
     Content-Type: multipart/form-data
     Form field: file
     <small>curl --location --request POST '{API_URL}/images/users/profile' --header 'Authorization: Token kiYiuYTiuTiUTYiytIut' --header 'Content-Type: multipart/form-data' --form 'file=@/image_location/filename.jpg'</small>
@@ -1381,32 +1385,32 @@ Response signature for /categories/tree
     }
   </pre>
 
-  <li>Delete profile image <b>/images/users/profile</b></li>
-  <p>This endpoint allows removal of the profile image completely<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Delete profile image /images/users/profile
+  > This endpoint allows removal of the profile image completely  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
     DELETE
   Headers
     Content-Type: application/json
-    Authorization: <b>Token</b> kiYiuYTiuTiUTYiytIut
+    Authorization: Token kiYiuYTiuTiUTYiytIut
   </pre>
 
 
-  <li>Get partner ads <b>/partner/entries</b></li>
-  <p>This endpoint returns all partner ads, with a few information<br>All 4 Status apply: active (published), inactive (under approval), disabled (marked as deleted for less than 60 days), refused (when ad has been refused, refusalReason field will contain more details)<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Get partner ads /partner/entries
+  > This endpoint returns all partner ads, with a few information  All 4 Status apply: active (published), inactive (under approval), disabled (marked as deleted for less than 60 days), refused (when ad has been refused, refusalReason field will contain more details)  
+> Requires valid token for authentication  
+  
   <p>
-  <b>* it's possible to filter data based on url route *</b><br>
-  <b>/partner/entries/active</b> will return just active ads<br>
-  <b>/partner/entries/refused</b> will return just refused ads<br>
-  <b>/partner/entries/disabled</b> will return just ads marked as disabled. Auto removal after 60 days of the deactivation<br>
-  <b>/partner/entries/inactive</b> will return just inactive ads<br>
-  <br><b>* pagination also possible * </b><br>Params: <b>p=0</b> (page number, index 0 based) <b>c=40</b> (count per page)<br><br>
-  <b>* stats per ad also possible *</b><br>Param: <b>stats=enabled</b> adds a new object to each ad<br><pre>
+  * it's possible to filter data based on url route *  
+  /partner/entries/active will return just active ads  
+  /partner/entries/refused will return just refused ads  
+  /partner/entries/disabled will return just ads marked as disabled. Auto removal after 60 days of the deactivation  
+  /partner/entries/inactive will return just inactive ads  
+    * pagination also possible *   Params: p=0 (page number, index 0 based) c=40 (count per page)    
+  * stats per ad also possible *  Param: stats=enabled adds a new object to each ad  <pre>
             "adStats": {
                 "month": {
                     "pageViews": 16,
@@ -1426,8 +1430,8 @@ Response signature for /categories/tree
             }
             </pre>
 
-  </p>
-  <br>
+  
+    
   <pre>
   Method 
     GET
@@ -1496,11 +1500,11 @@ Response signature for /categories/tree
   </pre>
 
 
-  <li>Read ad complete details <b>/partner/entries/{adID}</b></li>
-  <p>This endpoint will return the ad details, regardless the ad state<br>
-  <b>General ad type, without special parameters</b><br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Read ad complete details /partner/entries/{adID}
+  > This endpoint will return the ad details, regardless the ad state  
+  General ad type, without special parameters  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -1557,11 +1561,11 @@ Response signature for /categories/tree
 
 
 
-  <li>Read ad complete details - Vehicles <b>/partner/entries/{adID}</b></li>
-  <p>This endpoint will return the ad details, regardless the ad state<br>
-  <b>Car type ad, with custom parameters</b><br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Read ad complete details - Vehicles /partner/entries/{adID}
+  > This endpoint will return the ad details, regardless the ad state  
+  Car type ad, with custom parameters  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -1629,9 +1633,9 @@ Response signature for /categories/tree
         "url": "https://www.custojusto.pt/11812765"
     }
   </pre>
-  <br>
+    
   <pre>
-    <b>* Custom Params for Vehicles category *</b>
+    * Custom Params for Vehicles category *
     brand - BrandID
     capacity - Cubic Centimeters (CC)
     color - ColorID
@@ -1648,11 +1652,11 @@ Response signature for /categories/tree
 
 
 
-  <li>Read ad complete details - Real Estate <b>/partner/entries/{adID}</b></li>
-  <p>This endpoint will return the ad details, regardless the ad state<br>
-  <b>Real Estate type ad, with custom parameters</b><br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Read ad complete details - Real Estate /partner/entries/{adID}
+  > This endpoint will return the ad details, regardless the ad state  
+  Real Estate type ad, with custom parameters  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -1734,9 +1738,9 @@ Response signature for /categories/tree
       "url":"https://www.custojusto.pt/11804904"
     }
   </pre>
-  <br>
+    
   <pre>
-    <b>* Custom Params for Real Estate *</b>
+    * Custom Params for Real Estate *
         availability - To be defined a custom layout
         beds - Capacity, number of beds or rooms. Is this case, the website will show 4 as capacity
         energyRating - Not used for Vacation rental
@@ -1748,10 +1752,10 @@ Response signature for /categories/tree
   </pre>
 
 
-  <li>Update shop banner <b>/images/ads</b></li>
-  <p>When creating ads, image ids are needed. Use this endpoint to upload those images, image id will be returned</b><br>This endpoint will return a valid and temporary image url (valid for 24h).<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Update shop banner /images/ads
+  <p>When creating ads, image ids are needed. Use this endpoint to upload those images, image id will be returned  This endpoint will return a valid and temporary image url (valid for 24h).  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -1776,10 +1780,10 @@ Response signature for /categories/tree
   </pre>
 
 
-  <li>Create general ad <b>/partner/entries</b></li>
-  <p>Create new general ad<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Create general ad /partner/entries
+  <p>Create new general ad  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -1843,7 +1847,7 @@ Response signature for /categories/tree
       ]
     }
   </pre>
-  <br>
+    
   <pre>
         adID - ID used to edit or deactivate an exported ad
         remainingCredits - Indicates the number of new ads + number of Edits remaning
@@ -1853,10 +1857,10 @@ Response signature for /categories/tree
 
 
 
-  <li>Create vehicle ad <b>/partner/entries</b></li>
-  <p>Create new vehicle ad<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Create vehicle ad /partner/entries
+  <p>Create new vehicle ad  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -1886,7 +1890,7 @@ Response signature for /categories/tree
           "district":5,
           "subArea":4
       },
-      <b>"params":{
+      "params":{
           "brand":6,
           "capacity":200,
           "color":8,
@@ -1899,7 +1903,7 @@ Response signature for /categories/tree
           "regMonth":3,
           "regYear":2017,
           "variant":"XPTO"
-      }</b>,
+      },
       "partner":{
           "externalAdID":"BMW-112233",
           "externalGroupID":"partner-group-name",
@@ -1934,17 +1938,17 @@ Response signature for /categories/tree
       ]
     }
   </pre>
-  <br>
+    
   <pre>
         adID - ID used to edit or deactivate an exported ad
         remainingCredits - Indicates the number of new ads + number of Edits remaning
   </pre>
 
 
-  <li>Create real estate ad <b>/partner/entries</b></li>
-  <p>Create new real estate ad<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Create real estate ad /partner/entries
+  <p>Create new real estate ad  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -1974,11 +1978,11 @@ Response signature for /categories/tree
           "district":5,
           "subArea":4
       },
-      <b>"params":{
+      "params":{
           "energyRating":3,
           "size":500,
           "typology":7
-      }</b>,
+      },
       "partner":{
           "externalAdID":"Partner-T4-33123",
           "externalGroupID":"partner-group-name",
@@ -2013,17 +2017,17 @@ Response signature for /categories/tree
       ]
     }
   </pre>
-  <br>
+    
   <pre>
         adID - ID used to edit or deactivate an exported ad
         remainingCredits - Indicates the number of new ads + number of Edits remaning
   </pre>
 
 
-  <li>Create real estate - Vacation rental ad <b>/partner/entries</b></li>
-  <p>Create new VR ad<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Create real estate - Vacation rental ad /partner/entries
+  <p>Create new VR ad  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -2053,7 +2057,7 @@ Response signature for /categories/tree
           "district":18,
           "subArea":2
       },
-      <b>"params":{
+      "params":{
           "availability":"custom string, please contact us for more details",
           "beds":4,
           "rntLicence":"12345",
@@ -2065,7 +2069,7 @@ Response signature for /categories/tree
             "ac"
           ],
           "typology":5
-      },</b>
+      },
       "partner":{
           "externalAdID":"Partner-T2-33123",
           "externalGroupID":"partner-group-name",
@@ -2100,7 +2104,7 @@ Response signature for /categories/tree
       ]
     }
   </pre>
-  <br>
+    
   <pre>
         adID - ID used to edit or deactivate an exported ad
         remainingCredits - Indicates the number of new ads + number of Edits remaning
@@ -2108,10 +2112,10 @@ Response signature for /categories/tree
 
 
 
-  <li>Edit ad <b>/partner/entries/{adID}</b></li>
-  <p>Edit an ad<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Edit ad /partner/entries/{adID}
+  <p>Edit an ad  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -2120,7 +2124,7 @@ Response signature for /categories/tree
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Payload signature
-    <b>Same as for creating</b><br><small>It will not bump the ad</small>
+    Same as for creating  <small>It will not bump the ad</small>
   Response signature
   StatusCode
     200 - OK
@@ -2147,13 +2151,13 @@ Response signature for /categories/tree
       ]
     }
   </pre>
-  <br>
+    
 
 
-  <li>Deactivate ad <b>/partner/entries/{deleteID}</b></li>
-  <p>Deactivate an ad<br>deleteID field is preset on /partner/entries and it's the same as the listID found when reading the full ad details.<br>
-    Requires valid token for authentication<br>
-  </p>
+  ### Deactivate ad /partner/entries/{deleteID}
+  <p>Deactivate an ad  deleteID field is preset on /partner/entries and it's the same as the listID found when reading the full ad details.  
+> Requires valid token for authentication  
+  
   
   <pre>
   Method 
@@ -2185,7 +2189,7 @@ Response signature for /categories/tree
       ]
     }
   </pre>
-  <br>
+    
 
 </ul>
 
