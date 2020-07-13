@@ -10,3 +10,11 @@ footer {
 .btn {
   display: none !important;
 }
+
+.wrapper {
+    width: 1280px !important;
+}
+
+section {
+    width: 900px!important;
+}
