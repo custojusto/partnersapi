@@ -2,6 +2,13 @@
 ---
 
 @import "{{ site.theme }}";
+footer {
+  display: none !important;
+}
+
+.btn {
+  display: none !important;
+}
 .wrapper {
     width: 1280px !important;
 }
