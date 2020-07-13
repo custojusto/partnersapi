@@ -917,9 +917,8 @@ Response signature for /tags/1100
     }
 ```
 
-
-  ### Get energy rating list /energyratings
-  > This endpoint returns our energy rating list  
+### Get energy rating list /energyratings
+> This endpoint returns our energy rating list  
 > Requires valid token for authentication  
   
   
@@ -962,8 +961,8 @@ Response signature for /tags/1100
 
 
 
-  ### Get room typologies list /roomtypologies
-  > This endpoint returns our room typologies list  
+### Get room typologies list /roomtypologies
+> This endpoint returns our room typologies list  
 > Requires valid token for authentication  
   
   
