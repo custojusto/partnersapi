@@ -1805,14 +1805,14 @@ Response signature for /tags/1100
 ```
     
 **Custom Params for Real Estate**
-  availability - To be defined a custom layout
-  beds - Capacity, number of beds or rooms. Is this case, the website will show 4 as capacity
-  energyRating - Not used for Vacation rental
-  gotAffordableRental - Not used for Vacation rental. This parameter indicates if the rental allows PAA (arrendamento-acessivel)
-  rntLicence - Rental license
-  size - Mt² available
-  tags - Available amenities. Check /tags/{category} endpoint
-  typology - Check /roomtypologies for correct ID
+  > availability - To be defined a custom layout  
+  > beds - Capacity, number of beds or rooms. Is this case, the website will show 4 as capacity  
+  > energyRating - Not used for Vacation rental  
+  > gotAffordableRental - Not used for Vacation rental. This parameter indicates if the rental allows PAA (arrendamento-acessivel)  
+  > rntLicence - Rental license  
+  > size - Mt² available  
+  > tags - Available amenities. Check /tags/{category} endpoint  
+  > typology - Check /roomtypologies for correct ID  
 
 
 ### Update shop banner /images/ads
