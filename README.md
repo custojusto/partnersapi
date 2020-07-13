@@ -412,8 +412,7 @@ Response signature for /tags/1100
 * * * 
 > This endpoint will return the existing car brands on our platform  
 > Requires valid token for authentication  
-  
-  
+
   <pre>
   Method 
     GET
@@ -443,13 +442,11 @@ Response signature for /tags/1100
     ]
 ```
 
-
 ### Get the existing car models per brand /carbrands/{brandID}
 * * * 
 > This endpoint will return the existing car models on our platform, per brand  
 > Requires valid token for authentication  
-  
-  
+
   <pre>
   Method 
     GET
@@ -458,6 +455,7 @@ Response signature for /tags/1100
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /carbrands/6
   </pre>
+
   ```json
     {
         "id": 6,
@@ -477,11 +475,11 @@ Response signature for /tags/1100
             }
     }
 ```
+
 ### Get the existing car models per brand /carbrands/{brandID}/series
 * * *
 > This endpoint will return the existing car models on our platform, per brand, grouped by serie. Usefull for BMW and Mercedes  
 > Requires valid token for authentication  
-  
   
   <pre>
   Method 
@@ -526,7 +524,6 @@ Response signature for /tags/1100
 > This endpoint searches for car brand by name, such as toyota.  
 > Requires valid token for authentication  
   
-  
   <pre>
   Method 
     GET
@@ -535,7 +532,7 @@ Response signature for /tags/1100
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /carbrands/byname/tayotaa
   </pre>
-  ```json 
+```json 
     {
         "id": 48,
         "name": "Toyota"
@@ -547,8 +544,7 @@ Response signature for /tags/1100
 * * *
 > This endpoint searches for car model by name, such as corola  
 > Requires valid token for authentication  
-  
-  
+
   <pre>
   Method 
     GET
@@ -556,18 +552,19 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /carbrands/48/byname/corola
+  </pre>
+```json
     {
         "id": 10,
         "name": "Corolla"
     }
 ```
 
-
-  ### Get the existing moto brands /motobrands
-  > This endpoint will return the existing moto brands on our platform  
+### Get the existing moto brands /motobrands
+* * *
+> This endpoint will return the existing moto brands on our platform  
 > Requires valid token for authentication  
-  
-  
+
   <pre>
   Method 
     GET
@@ -575,6 +572,8 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /motobrands
+  </pre>
+```json
 	[
 	    {
 		"id": 4,
@@ -601,13 +600,12 @@ Response signature for /tags/1100
 		"name": "BMW"
 	    }
     ]
-  </pre>
+ ```
 
-
-  ### Get the existing moto models per brand /motobrands/{brandID}
-  > This endpoint will return the existing moto models on our platform, per brand  
+### Get the existing moto models per brand /motobrands/{brandID}
+* * *
+> This endpoint will return the existing moto models on our platform, per brand  
 > Requires valid token for authentication  
-  
   
   <pre>
   Method 
@@ -616,6 +614,8 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /motobrands/9
+  </pre>
+```json  
 	{
 	    "id": 9,
 	    "name": "BMW",
@@ -638,15 +638,13 @@ Response signature for /tags/1100
 		}
 	    ]
 	}
-  </pre>
+```
 
-
-
-  ### Find moto brand by similar name /motobrands/byname/{lowercaseName}
-  > This endpoint searches for moto brand by name, such as cavasaqui.  
+### Find moto brand by similar name /motobrands/byname/{lowercaseName}
+* * *
+> This endpoint searches for moto brand by name, such as cavasaqui.  
 > Requires valid token for authentication  
-  
-  
+
   <pre>
   Method 
     GET
@@ -654,18 +652,20 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /motobrands/byname/cavasaqui
+  </pre>
+```json
 	{
 	    "id": 28,
 	    "name": "Kawasaki"
 	}
-  </pre>
+```
 
 
-  ### Find car model by similar name /motobrands/{brandID}/byname/{lowercaseName}
-  > This endpoint searches for moto model by name, such as eliminador  
+### Find car model by similar name /motobrands/{brandID}/byname/{lowercaseName}
+* * *
+> This endpoint searches for moto model by name, such as eliminador  
 > Requires valid token for authentication  
-  
-  
+
   <pre>
   Method 
     GET
@@ -673,18 +673,19 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /motobrands/28/byname/eliminador
+  </pre>
+```json
 	{
 	    "id": 19,
 	    "name": "Eliminator"
 	}
-  </pre>
+```
 
-
-  ### Get Cubic Centemeters configurations /cc
-  > This endpoint returns the CC intervals used on our platform  
+### Get Cubic Centemeters configurations /cc
+* * *
+> This endpoint returns the CC intervals used on our platform  
 > Requires valid token for authentication  
-  
-  
+
   <pre>
   Method 
     GET
@@ -692,6 +693,8 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /cc
+  </pre>
+```json
     [
         {
             "min": 0,
@@ -724,21 +727,22 @@ Response signature for /tags/1100
             "name": "Mais de 1000 cc"
         }
     ]
-  </pre>
+```
 
-
-  ### Get Cubic Centimeters configuration based on CC value /cc/{CubicCentimetersValue}
-  > This endpoint returns the CC data used on our platform  
+### Get Cubic Centimeters configuration based on CC value /cc/{CubicCentimetersValue}
+* * *
+> This endpoint returns the CC data used on our platform  
 > Requires valid token for authentication  
   
-  
-  <pre>
+<pre>
   Method 
     GET
   Headers
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /cc/350
+</pre>
+```json
     {
         "min": 126,
         "max": 500,
@@ -748,8 +752,9 @@ Response signature for /tags/1100
 ```
 
 
-  ### Get our color list /color
-  > This endpoint returns the available colors on our platform  
+### Get our color list /color
+* * *
+> This endpoint returns the available colors on our platform  
 > Requires valid token for authentication  
   
   
@@ -760,6 +765,8 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /color
+  </pre>
+```json  
     [
         {
             "id": 6,
@@ -777,13 +784,11 @@ Response signature for /tags/1100
             "hexColor": "#fff"
         }
     ]
-  </pre>
-
-
-  ### Get our fuel type list /fuels
-  > This endpoint returns the available fuel types on our platform  
+```
+### Get our fuel type list /fuels
+* * *
+> This endpoint returns the available fuel types on our platform  
 > Requires valid token for authentication  
-  
   
   <pre>
   Method 
@@ -792,6 +797,8 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /fuels
+  </pre>
+```json
     [
         {
             "id": 2,
@@ -814,15 +821,13 @@ Response signature for /tags/1100
             "name": "Gasolina"
         }
     ]
-  </pre>
+  ```
 
-
-
-  ### Get our gear boxes list /gearboxes
-  > This endpoint returns the available gearboxes types on our platform  
+### Get our gear boxes list /gearboxes
+* * *
+> This endpoint returns the available gearboxes types on our platform  
 > Requires valid token for authentication  
-  
-  
+
   <pre>
   Method 
     GET
@@ -830,6 +835,8 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /gearboxes
+  </pre>
+```json  
     [
         {
             "id": 2,
@@ -848,10 +855,11 @@ Response signature for /tags/1100
             "name": "Sequencial"
         }
     ]
-  </pre>
+  ```
 
-  ### Get our mileage intervals /mileages
-  > This endpoint returns the available mileage intervals on our platform  
+### Get our mileage intervals /mileages
+* * *
+> This endpoint returns the available mileage intervals on our platform  
 > Requires valid token for authentication  
   
   
@@ -862,6 +870,8 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /mileages
+  </pre>
+```json
     [
         {
             "min": 0,
@@ -882,10 +892,11 @@ Response signature for /tags/1100
             "id": 3
         }
     ]
-  </pre>
+  ```
 
-  ### Get mileage id by mileage value /mileages/{mileageValue}
-  > This endpoint returns the mileage id based on actual mileages (km)  
+### Get mileage id by mileage value /mileages/{mileageValue}
+* * *
+> This endpoint returns the mileage id based on actual mileages (km)  
 > Requires valid token for authentication  
   
   
@@ -896,6 +907,8 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /mileages/14000
+  </pre>
+```json
     {
         "min": 10000,
         "max": 19999,
@@ -917,6 +930,8 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /energyratings
+  </pre>
+```json
     [
         {
             "id": 0,
@@ -943,7 +958,7 @@ Response signature for /tags/1100
             "name": "Isento"
         }
     ]
-  </pre>
+  ```
 
 
 
@@ -959,6 +974,8 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /roomtypologies
+  </pre>
+```json  
     [
         {
             "id": 3,
@@ -977,7 +994,7 @@ Response signature for /tags/1100
             "name": "T6 ou maior"
         }
     ]
-  </pre>
+  ```
 
 
   ### Get room typology /roomtypologies/{typologyName}
@@ -992,6 +1009,8 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /roomtypologies/T4
+  </pre>
+```json  
     {
         "id": 7,
         "name": "T4"
@@ -1011,6 +1030,8 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /partner/categories
+  </pre>
+```json  
     [
         {
             "categoryID": "2000",
@@ -1053,7 +1074,7 @@ Response signature for /tags/1100
             ]
         }
     ]
-  </pre>
+  ```
 
 
   ### Get partner data /partner
@@ -1068,6 +1089,8 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /partner
+  </pre>
+```json  
     {
         "userID": "4234123414",
         "name": "Partner Name",
@@ -1198,6 +1221,8 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /partner/profile
+  </pre>
+```json  
     {
       "address":"Estrada Granja do Marques",
       "phone":"911234567",
@@ -1209,11 +1234,15 @@ Response signature for /tags/1100
       }
     }
 ```
-  <p>Fail errors will return the field and error description
+
+### Fail errors will return the field and error description
+* * *
   <pre>
   StatusCode 
     400 - Bad Request
   Response example when providing an unexisting district (consequently no match for area and subarea), a bad format CP6 and bad format phone number
+  </pre>
+```json
     {
         "results": [
             {
@@ -1240,11 +1269,11 @@ Response signature for /tags/1100
     }
 ```
 
-  ### Update partner shop details /partner/shop
-  > This endpoint update shop details for parthers with enabled shop  Limit for phone numbers is 5  
+### Update partner shop details /partner/shop
+* * *
+> This endpoint update shop details for parthers with enabled shop  Limit for phone numbers is 5  
 > Requires valid token for authentication  
-  
-  
+
   <pre>
   Method 
     PUT
@@ -1252,6 +1281,8 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /partner/shop
+  </pre>
+```json
     {
       "name":"O nome da minha loja",
       "description":"Vendemos todo o tipo de veículos",
@@ -1303,7 +1334,8 @@ Response signature for /tags/1100
       ]
     }
 ```
-  <p>Fail errors will return the field and error description
+###Fail errors will return the field and error description
+* * *
   <pre>
   StatusCode
     417 - Expectation Failed
@@ -1311,6 +1343,8 @@ Response signature for /tags/1100
   StatusCode 
     400 - Bad Request
   Response example when providing wrong phone format and several wrong schedule hours. Having shop_hours_1 meaning, opening/closing time has a wrong time value for Monday.
+  </pre>
+```json
     {
         "results": [
             {
@@ -1338,8 +1372,9 @@ Response signature for /tags/1100
 ```
 
 
-  ### Update shop banner /images/users/shop
-  > This endpoint allows a banner update. Will remove the existing image.  Only jpg files are allowed  
+### Update shop banner /images/users/shop
+* * *
+> This endpoint allows a banner update. Will remove the existing image.  Only jpg files are allowed  
 > Requires valid token for authentication  
   
   
@@ -1352,6 +1387,8 @@ Response signature for /tags/1100
     Form field: file
     <small>curl --location --request POST '{API_URL}/images/users/shop' --header 'Authorization: Token kiYiuYTiuTiUTYiytIut' --header 'Content-Type: multipart/form-data' --form 'file=@/image_location/filename.jpg'</small>
   Response signature for /images/users/shop
+  </pre>
+```json  
     {
         "image": {
             "image_url": "/profiles/32/3280777678.jpg",
@@ -1360,8 +1397,9 @@ Response signature for /tags/1100
     }
 ```
 
-  ### Delete shop banner /images/users/shop
-  > This endpoint allows removal of the banner image completely  
+### Delete shop banner /images/users/shop
+* * *
+> This endpoint allows removal of the banner image completely  
 > Requires valid token for authentication  
   
   
@@ -1374,8 +1412,9 @@ Response signature for /tags/1100
   </pre>
 
 
-  ### Update user profile image /images/users/profile
-  > This endpoint allows profile logo update. Will remove the existing image.  Only jpg files are allowed  
+### Update user profile image /images/users/profile
+* * *
+> This endpoint allows profile logo update. Will remove the existing image.  Only jpg files are allowed  
 > Requires valid token for authentication  
   
   
@@ -1388,6 +1427,8 @@ Response signature for /tags/1100
     Form field: file
     <small>curl --location --request POST '{API_URL}/images/users/profile' --header 'Authorization: Token kiYiuYTiuTiUTYiytIut' --header 'Content-Type: multipart/form-data' --form 'file=@/image_location/filename.jpg'</small>
   Response signature for /images/users/shop
+  </pre>
+```json
     {
         "image": {
             "image_url": "/profiles/31/311123321.jpg",
@@ -1396,10 +1437,10 @@ Response signature for /tags/1100
     }
 ```
 
-  ### Delete profile image /images/users/profile
-  > This endpoint allows removal of the profile image completely  
+### Delete profile image /images/users/profile
+* * *
+> This endpoint allows removal of the profile image completely  
 > Requires valid token for authentication  
-  
   
   <pre>
   Method 
@@ -1410,38 +1451,38 @@ Response signature for /tags/1100
   </pre>
 
 
-  ### Get partner ads /partner/entries
-  > This endpoint returns all partner ads, with a few information  All 4 Status apply: active (published), inactive (under approval), disabled (marked as deleted for less than 60 days), refused (when ad has been refused, refusalReason field will contain more details)  
+### Get partner ads /partner/entries
+* * *
+> This endpoint returns all partner ads, with a few information  All 4 Status apply: active (published), inactive (under approval), disabled (marked as deleted for less than 60 days), refused (when ad has been refused, refusalReason field will contain more details)  
 > Requires valid token for authentication  
   
-  <p>
+ <pre>
   * it's possible to filter data based on url route *  
   /partner/entries/active will return just active ads  
   /partner/entries/refused will return just refused ads  
   /partner/entries/disabled will return just ads marked as disabled. Auto removal after 60 days of the deactivation  
   /partner/entries/inactive will return just inactive ads  
-    * pagination also possible *   Params: p=0 (page number, index 0 based) c=40 (count per page)    
-  * stats per ad also possible *  Param: stats=enabled adds a new object to each ad  <pre>
-            "adStats": {
-                "month": {
-                    "pageViews": 16,
-                    "replies": 5,
-                    "phoneViews": 0
-                },
-                "yesterday": {
-                    "pageViews": 13,
-                    "replies": 5,
-                    "phoneViews": 0
-                },
-                "today": {
-                    "pageViews": 3,
-                    "replies": 0,
-                    "phoneViews": 0
-                }
-            }
-            </pre>
-
-  
+  * pagination also possible *   Params: p=0 (page number, index 0 based) c=40 (count per page)    
+  * stats per ad also possible *  Param: stats=enabled adds a new object to each ad  </pre>
+```json
+  "adStats": {
+      "month": {
+          "pageViews": 16,
+          "replies": 5,
+          "phoneViews": 0
+      },
+      "yesterday": {
+          "pageViews": 13,
+          "replies": 5,
+          "phoneViews": 0
+      },
+      "today": {
+          "pageViews": 3,
+          "replies": 0,
+          "phoneViews": 0
+      }
+  }
+```
     
   <pre>
   Method 
@@ -1450,6 +1491,8 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /partner/entries
+  </pre>
+```json
     {
         "ads": [
             {
@@ -1510,12 +1553,11 @@ Response signature for /tags/1100
     }
 ```
 
-
-  ### Read ad complete details /partner/entries/{adID}
-  > This endpoint will return the ad details, regardless the ad state  
-  General ad type, without special parameters  
+### Read ad complete details /partner/entries/{adID}
+* * *
+> This endpoint will return the ad details, regardless the ad state  
+> General ad type, without special parameters  
 > Requires valid token for authentication  
-  
   
   <pre>
   Method 
@@ -1528,6 +1570,8 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /partner/entries/12505606
+  </pre>
+```json  
     {
         "adID": 12505606,
         "author": {
@@ -1572,9 +1616,10 @@ Response signature for /tags/1100
 
 
 
-  ### Read ad complete details - Vehicles /partner/entries/{adID}
-  > This endpoint will return the ad details, regardless the ad state  
-  Car type ad, with custom parameters  
+### Read ad complete details - Vehicles /partner/entries/{adID}
+* * *
+> This endpoint will return the ad details, regardless the ad state  
+> Car type ad, with custom parameters  
 > Requires valid token for authentication  
   
   
@@ -1589,6 +1634,8 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /partner/entries/12505606
+  </pre>
+```json    
     {
         "adID": 12505606,
         "author": {
@@ -1663,9 +1710,10 @@ Response signature for /tags/1100
 
 
 
-  ### Read ad complete details - Real Estate /partner/entries/{adID}
-  > This endpoint will return the ad details, regardless the ad state  
-  Real Estate type ad, with custom parameters  
+### Read ad complete details - Real Estate /partner/entries/{adID}
+* * *
+> This endpoint will return the ad details, regardless the ad state  
+> Real Estate type ad, with custom parameters  
 > Requires valid token for authentication  
   
   
@@ -1680,6 +1728,8 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /partner/entries/12497547
+  </pre>
+```json  
     {
       "adID":12497547,
       "author":{
@@ -1763,8 +1813,9 @@ Response signature for /tags/1100
   </pre>
 
 
-  ### Update shop banner /images/ads
-  <p>When creating ads, image ids are needed. Use this endpoint to upload those images, image id will be returned  This endpoint will return a valid and temporary image url (valid for 24h).  
+### Update shop banner /images/ads
+* * *
+> When creating ads, image ids are needed. Use this endpoint to upload those images, image id will be returned  This endpoint will return a valid and temporary image url (valid for 24h).  
 > Requires valid token for authentication  
   
   
@@ -1777,6 +1828,8 @@ Response signature for /tags/1100
     Form field: file
     <small>curl --location --request POST '{API_URL}/images/ads' --header 'Authorization: Token kiYiuYTiuTiUTYiytIut' --header 'Content-Type: multipart/form-data' --form 'file=@/image_location/filename.jpg'</small>
   Response signature for /images/ads
+  </pre>
+```json  
     {
       "image":{
           "id":"3568575919",
@@ -1791,10 +1844,9 @@ Response signature for /tags/1100
 ```
 
 
-  ### Create general ad /partner/entries
-  <p>Create new general ad  
-> Requires valid token for authentication  
-  
+### Create general ad /partner/entries
+> Create new general ad  
+> Requires valid token for authentication    
   
   <pre>
   Method 
@@ -1803,6 +1855,8 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Payload signature
+  </pre>
+```json
     {
       "author":{
           "email":"name@partner.pt",
@@ -1832,9 +1886,13 @@ Response signature for /tags/1100
       "subject":"Barco para 6 pessoas, motor 175cv",
       "type":"s",
     }
+```    
+<pre>
   Response signature
   StatusCode
     200 - OK
+</pre>
+```json      
     {
       "results":[
           {
@@ -1847,8 +1905,12 @@ Response signature for /tags/1100
           }
       ]
     }
+```
+<pre>
   StatusCode
     417 - Expectation Failed
+  </pre>
+```json  
     {
       "results":[
           {
@@ -1865,11 +1927,9 @@ Response signature for /tags/1100
   </pre>
 
 
-
-
-
-  ### Create vehicle ad /partner/entries
-  <p>Create new vehicle ad  
+### Create vehicle ad /partner/entries
+* * *
+> Create new vehicle ad  
 > Requires valid token for authentication  
   
   
@@ -1880,6 +1940,8 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Payload signature
+  </pre>
+```json    
     {
       "author":{
           "email":"name@partner.pt",
@@ -1923,9 +1985,13 @@ Response signature for /tags/1100
       "subject":"Auto subject will apply for cars",
       "type":"s",
     }
+```
+<pre>
   Response signature
   StatusCode
     200 - OK
+  </pre>
+```json  
     {
       "results":[
           {
@@ -1938,8 +2004,12 @@ Response signature for /tags/1100
           }
       ]
     }
+```
+<pre>
   StatusCode
     417 - Expectation Failed
+  </pre>
+```json  
     {
       "results":[
           {
@@ -1956,11 +2026,11 @@ Response signature for /tags/1100
   </pre>
 
 
-  ### Create real estate ad /partner/entries
-  <p>Create new real estate ad  
+### Create real estate ad /partner/entries
+* * *
+> Create new real estate ad  
 > Requires valid token for authentication  
-  
-  
+    
   <pre>
   Method 
     POST
@@ -1968,6 +2038,8 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Payload signature
+  </pre>
+```json  
     {
       "author":{
           "email":"name@partner.pt",
@@ -2002,9 +2074,14 @@ Response signature for /tags/1100
       "subject":"Auto subject will apply for cars",
       "type":"s",
     }
+```
+
+<pre>
   Response signature
   StatusCode
     200 - OK
+  </pre>
+```json  
     {
       "results":[
           {
@@ -2017,8 +2094,12 @@ Response signature for /tags/1100
           }
       ]
     }
+```
+<pre>
   StatusCode
     417 - Expectation Failed
+  </pre>
+```json  
     {
       "results":[
           {
@@ -2035,18 +2116,20 @@ Response signature for /tags/1100
   </pre>
 
 
-  ### Create real estate - Vacation rental ad /partner/entries
-  <p>Create new VR ad  
+### Create real estate - Vacation rental ad /partner/entries
+* * *
+> Create new VR ad  
 > Requires valid token for authentication  
   
-  
-  <pre>
+ <pre>
   Method 
     POST
   Headers
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Payload signature
+  </pre>
+```json  
     {
       "author":{
           "email":"name@partner.pt",
@@ -2089,9 +2172,13 @@ Response signature for /tags/1100
       "subject":"Propriedade situada em Vila-do-Bispo-Ref: 4640",
       "type":"u",
     }
+```
+<pre>
   Response signature
   StatusCode
     200 - OK
+  </pre>
+```json  
     {
       "results":[
           {
@@ -2104,8 +2191,12 @@ Response signature for /tags/1100
           }
       ]
     }
+```
+<pre>
   StatusCode
     417 - Expectation Failed
+  </pre>
+```json  
     {
       "results":[
           {
@@ -2122,9 +2213,9 @@ Response signature for /tags/1100
   </pre>
 
 
-
-  ### Edit ad /partner/entries/{adID}
-  <p>Edit an ad  
+### Edit ad /partner/entries/{adID}
+* * *
+> Edit an ad  
 > Requires valid token for authentication  
   
   
@@ -2139,6 +2230,8 @@ Response signature for /tags/1100
   Response signature
   StatusCode
     200 - OK
+  </pre>
+```json  
     {
       "results":[
           {
@@ -2151,8 +2244,12 @@ Response signature for /tags/1100
           }
       ]
     }
+```
+<pre>
   StatusCode
     417 - Expectation Failed
+  </pre>
+```json  
     {
       "results":[
           {
@@ -2163,12 +2260,9 @@ Response signature for /tags/1100
     }
 ```
     
-
-
-  ### Deactivate ad /partner/entries/{deleteID}
-  <p>Deactivate an ad  deleteID field is preset on /partner/entries and it's the same as the listID found when reading the full ad details.  
+### Deactivate ad /partner/entries/{deleteID}
+> Deactivate an ad  deleteID field is preset on /partner/entries and it's the same as the listID found when reading the full ad details.  
 > Requires valid token for authentication  
-  
   
   <pre>
   Method 
@@ -2181,6 +2275,8 @@ Response signature for /tags/1100
   Response signature
   StatusCode
     200 - OK
+  </pre>
+```json  
     {
       "results":[
           {
@@ -2189,8 +2285,12 @@ Response signature for /tags/1100
           }
       ]
     }
+```
+<pre>
   StatusCode
     417 - Expectation Failed
+  </pre>
+```json  
     {
       "results":[
           {
@@ -2200,7 +2300,3 @@ Response signature for /tags/1100
       ]
     }
 ```
-    
-
-</ul>
-
