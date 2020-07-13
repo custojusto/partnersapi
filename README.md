@@ -1698,8 +1698,7 @@ Response signature for /tags/1100
     }
 ```
     
-  <pre>
-    * Custom Params for Vehicles category *
+    ** Custom Params for Vehicles category **
     brand - BrandID
     capacity - Cubic Centimeters (CC)
     color - ColorID
@@ -1712,7 +1711,6 @@ Response signature for /tags/1100
     regMonth - First registration - Month
     regYear - First registration - Year
     variant - Variant/Version (SW, S-Line, etc)
-  </pre>
 
 
 
