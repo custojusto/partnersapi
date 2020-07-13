@@ -408,8 +408,9 @@ Response signature for /tags/1100
 ]
 ```
 
-  ### Get the existing car brands /carbrands
-  > This endpoint will return the existing car brands on our platform  
+### Get the existing car brands /carbrands
+* * * 
+> This endpoint will return the existing car brands on our platform  
 > Requires valid token for authentication  
   
   
@@ -420,6 +421,8 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /carbrands
+  </pre>
+  ```json  
     [
         {
             "id": 1,
@@ -438,11 +441,12 @@ Response signature for /tags/1100
             "name": "BMW"
         }
     ]
-  </pre>
+```
 
 
 ### Get the existing car models per brand /carbrands/{brandID}
-  > This endpoint will return the existing car models on our platform, per brand  
+* * * 
+> This endpoint will return the existing car models on our platform, per brand  
 > Requires valid token for authentication  
   
   
@@ -453,6 +457,8 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /carbrands/6
+  </pre>
+  ```json
     {
         "id": 6,
         "name": "BMW",
@@ -470,10 +476,9 @@ Response signature for /tags/1100
                 "name": "118"
             }
     }
-  </pre>
-
-
+```
 ### Get the existing car models per brand /carbrands/{brandID}/series
+* * *
 > This endpoint will return the existing car models on our platform, per brand, grouped by serie. Usefull for BMW and Mercedes  
 > Requires valid token for authentication  
   
@@ -485,6 +490,8 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /carbrands/6/series
+  </pre>
+  ```json  
     {
         "series": [
             {
@@ -511,11 +518,12 @@ Response signature for /tags/1100
         ],
         "models": null
     }
-  </pre>
+```
 
 
-  ### Find car brand by similar name /carbrands/byname/{lowercaseName}
-  > This endpoint searches for car brand by name, such as toyota.  
+### Find car brand by similar name /carbrands/byname/{lowercaseName}
+* * *
+> This endpoint searches for car brand by name, such as toyota.  
 > Requires valid token for authentication  
   
   
@@ -526,15 +534,18 @@ Response signature for /tags/1100
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /carbrands/byname/tayotaa
+  </pre>
+  ```json 
     {
         "id": 48,
         "name": "Toyota"
     }
-  </pre>
+```
 
 
-  ### Find car model by similar name /carbrands/{brandID}/byname/{lowercaseName}
-  > This endpoint searches for car model by name, such as corola  
+### Find car model by similar name /carbrands/{brandID}/byname/{lowercaseName}
+* * *
+> This endpoint searches for car model by name, such as corola  
 > Requires valid token for authentication  
   
   
@@ -549,7 +560,7 @@ Response signature for /tags/1100
         "id": 10,
         "name": "Corolla"
     }
-  </pre>
+```
 
 
   ### Get the existing moto brands /motobrands
@@ -734,7 +745,7 @@ Response signature for /tags/1100
         "id": "3",
         "name": "126 - 500 cc"
     }
-  </pre>
+```
 
 
   ### Get our color list /color
@@ -891,7 +902,7 @@ Response signature for /tags/1100
         "name": "10000 - 19999",
         "id": 3
     }
-  </pre>
+```
 
 
   ### Get energy rating list /energyratings
@@ -985,7 +996,7 @@ Response signature for /tags/1100
         "id": 7,
         "name": "T4"
     }
-  </pre>
+```
 
 
   ### Get room typology /partner/categories
@@ -1172,7 +1183,7 @@ Response signature for /tags/1100
             "inactive": 0
         }
     }
-  </pre>
+```
 
 
   ### Update partner profile /partner/profile
@@ -1197,7 +1208,7 @@ Response signature for /tags/1100
           "cp6":"4445-371"
       }
     }
-  </pre>
+```
   <p>Fail errors will return the field and error description
   <pre>
   StatusCode 
@@ -1227,7 +1238,7 @@ Response signature for /tags/1100
             }
         ]
     }
-  </pre>
+```
 
   ### Update partner shop details /partner/shop
   > This endpoint update shop details for parthers with enabled shop  Limit for phone numbers is 5  
@@ -1291,7 +1302,7 @@ Response signature for /tags/1100
           }
       ]
     }
-  </pre>
+```
   <p>Fail errors will return the field and error description
   <pre>
   StatusCode
@@ -1324,7 +1335,7 @@ Response signature for /tags/1100
             }
         ]
     }
-  </pre>
+```
 
 
   ### Update shop banner /images/users/shop
@@ -1347,7 +1358,7 @@ Response signature for /tags/1100
             "server_url": "https://www.custojusto.pt"
         }
     }
-  </pre>
+```
 
   ### Delete shop banner /images/users/shop
   > This endpoint allows removal of the banner image completely  
@@ -1383,7 +1394,7 @@ Response signature for /tags/1100
             "server_url": "https://www.custojusto.pt"
         }
     }
-  </pre>
+```
 
   ### Delete profile image /images/users/profile
   > This endpoint allows removal of the profile image completely  
@@ -1497,7 +1508,7 @@ Response signature for /tags/1100
             "currentOffset": 0
         }
     }
-  </pre>
+```
 
 
   ### Read ad complete details /partner/entries/{adID}
@@ -1557,7 +1568,7 @@ Response signature for /tags/1100
         "type": "s",
         "url": "https://www.custojusto.pt/11812765"
     }
-  </pre>
+```
 
 
 
@@ -1632,7 +1643,7 @@ Response signature for /tags/1100
         "type": "s",
         "url": "https://www.custojusto.pt/11812765"
     }
-  </pre>
+```
     
   <pre>
     * Custom Params for Vehicles category *
@@ -1737,7 +1748,7 @@ Response signature for /tags/1100
       "type":"u",
       "url":"https://www.custojusto.pt/11804904"
     }
-  </pre>
+```
     
   <pre>
     * Custom Params for Real Estate *
@@ -1777,7 +1788,7 @@ Response signature for /tags/1100
           "valid_until":"2020-06-23T15:15:48.201486653+01:00"
       }
     }
-  </pre>
+```
 
 
   ### Create general ad /partner/entries
@@ -1846,7 +1857,7 @@ Response signature for /tags/1100
           }
       ]
     }
-  </pre>
+```
     
   <pre>
         adID - ID used to edit or deactivate an exported ad
@@ -1937,7 +1948,7 @@ Response signature for /tags/1100
           }
       ]
     }
-  </pre>
+```
     
   <pre>
         adID - ID used to edit or deactivate an exported ad
@@ -2016,7 +2027,7 @@ Response signature for /tags/1100
           }
       ]
     }
-  </pre>
+```
     
   <pre>
         adID - ID used to edit or deactivate an exported ad
@@ -2103,7 +2114,7 @@ Response signature for /tags/1100
           }
       ]
     }
-  </pre>
+```
     
   <pre>
         adID - ID used to edit or deactivate an exported ad
@@ -2150,7 +2161,7 @@ Response signature for /tags/1100
           }
       ]
     }
-  </pre>
+```
     
 
 
@@ -2188,7 +2199,7 @@ Response signature for /tags/1100
           }
       ]
     }
-  </pre>
+```
     
 
 </ul>
