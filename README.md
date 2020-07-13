@@ -1462,13 +1462,14 @@ Response signature for /tags/1100
 > Requires valid token for authentication  
   
  <pre>
-  * it's possible to filter data based on url route *  
-  /partner/entries/active will return just active ads  
-  /partner/entries/refused will return just refused ads  
-  /partner/entries/disabled will return just ads marked as disabled. Auto removal after 60 days of the deactivation  
-  /partner/entries/inactive will return just inactive ads  
-  * pagination also possible *   Params: p=0 (page number, index 0 based) c=40 (count per page)    
-  * stats per ad also possible *  Param: stats=enabled adds a new object to each ad  </pre>
+  **it's possible to filter data based on url route**
+  * /partner/entries/active will return just active ads  
+  * /partner/entries/refused will return just refused ads  
+  * /partner/entries/disabled will return just ads marked as disabled. Auto removal after 60 days of the deactivation  
+  * /partner/entries/inactive will return just inactive ads  
+  ** pagination also possible **   Params: p=0 (page number, index 0 based) c=40 (count per page)    
+  ** stats per ad also possible **  Param: stats=enabled adds a new object to each ad
+  </pre>
 ```json
   "adStats": {
       "month": {
