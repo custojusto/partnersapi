@@ -1698,19 +1698,19 @@ Response signature for /tags/1100
     }
 ```
     
-    ** Custom Params for Vehicles category **
-    brand - BrandID
-    capacity - Cubic Centimeters (CC)
-    color - ColorID
-    fuel - Fuel TypeID
-    gearbox - Gearbox TypeID
-    licensePlate - Valid, uppercased, Portuguese format, licenseplate
-    mileage - MileageID
-    model - ModelID
-    power - BHP (CV)
-    regMonth - First registration - Month
-    regYear - First registration - Year
-    variant - Variant/Version (SW, S-Line, etc)
+**Custom Params for Vehicles category**
+  brand - BrandID
+  capacity - Cubic Centimeters (CC)
+  color - ColorID
+  fuel - Fuel TypeID
+  gearbox - Gearbox TypeID
+  licensePlate - Valid, uppercased, Portuguese format, licenseplate
+  mileage - MileageID
+  model - ModelID
+  power - BHP (CV)
+  regMonth - First registration - Month
+  regYear - First registration - Year
+  variant - Variant/Version (SW, S-Line, etc)
 
 
 
@@ -1804,17 +1804,15 @@ Response signature for /tags/1100
     }
 ```
     
-  <pre>
-    * Custom Params for Real Estate *
-        availability - To be defined a custom layout
-        beds - Capacity, number of beds or rooms. Is this case, the website will show 4 as capacity
-        energyRating - Not used for Vacation rental
-        gotAffordableRental - Not used for Vacation rental. This parameter indicates if the rental allows PAA (arrendamento-acessivel)
-        rntLicence - Rental license
-        size - Mt² available
-        tags - Available amenities. Check /tags/{category} endpoint
-        typology - Check /roomtypologies for correct ID
-  </pre>
+**Custom Params for Real Estate**
+  availability - To be defined a custom layout
+  beds - Capacity, number of beds or rooms. Is this case, the website will show 4 as capacity
+  energyRating - Not used for Vacation rental
+  gotAffordableRental - Not used for Vacation rental. This parameter indicates if the rental allows PAA (arrendamento-acessivel)
+  rntLicence - Rental license
+  size - Mt² available
+  tags - Available amenities. Check /tags/{category} endpoint
+  typology - Check /roomtypologies for correct ID
 
 
 ### Update shop banner /images/ads
@@ -1925,10 +1923,10 @@ Response signature for /tags/1100
     }
 ```
     
-  <pre>
-        adID - ID used to edit or deactivate an exported ad
-        remainingCredits - Indicates the number of new ads + number of Edits remaning
-  </pre>
+<pre>
+adID - ID used to edit or deactivate an exported ad
+remainingCredits - Indicates the number of new ads + number of Edits remaning
+</pre>
 
 
 ### Create vehicle ad /partner/entries
