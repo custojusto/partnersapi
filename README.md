@@ -2022,10 +2022,10 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
     }
 ```
     
-  <pre>
-        adID - ID used to edit or deactivate an exported ad
-        remainingCredits - Indicates the number of new ads + number of Edits remaning
-  </pre>
+<pre>
+  adID - ID used to edit or deactivate an exported ad
+  remainingCredits - Indicates the number of new ads + number of Edits remaning
+</pre>
 
 
 ### Create real estate ad /partner/entries
@@ -2112,10 +2112,10 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
     }
 ```
     
-  <pre>
-        adID - ID used to edit or deactivate an exported ad
-        remainingCredits - Indicates the number of new ads + number of Edits remaning
-  </pre>
+<pre>
+  adID - ID used to edit or deactivate an exported ad
+  remainingCredits - Indicates the number of new ads + number of Edits remaning
+</pre>
 
 
 ### Create real estate - Vacation rental ad /partner/entries
@@ -2209,10 +2209,10 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
     }
 ```
     
-  <pre>
-        adID - ID used to edit or deactivate an exported ad
-        remainingCredits - Indicates the number of new ads + number of Edits remaning
-  </pre>
+<pre>
+  adID - ID used to edit or deactivate an exported ad
+  remainingCredits - Indicates the number of new ads + number of Edits remaning
+</pre>
 
 
 ### Edit ad /partner/entries/{adID}
