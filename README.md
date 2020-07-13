@@ -918,6 +918,7 @@ Response signature for /tags/1100
 ```
 
 ### Get energy rating list /energyratings
+* * *
 > This endpoint returns our energy rating list  
 > Requires valid token for authentication  
   
@@ -962,18 +963,18 @@ Response signature for /tags/1100
 
 
 ### Get room typologies list /roomtypologies
+* * *
 > This endpoint returns our room typologies list  
 > Requires valid token for authentication  
   
-  
-  <pre>
+<pre>
   Method 
     GET
   Headers
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
   Response signature for /roomtypologies
-  </pre>
+</pre>
 ```json  
     [
         {
@@ -996,8 +997,9 @@ Response signature for /tags/1100
   ```
 
 
-  ### Get room typology /roomtypologies/{typologyName}
-  > This endpoint returns our room typology based on keyword, uppercase  
+### Get room typology /roomtypologies/{typologyName}
+* * *
+> This endpoint returns our room typology based on keyword, uppercase  
 > Requires valid token for authentication  
   
   
@@ -1017,8 +1019,9 @@ Response signature for /tags/1100
 ```
 
 
-  ### Get room typology /partner/categories
-  > This endpoint returns the category tree allowed for the privided partner token  
+### Get room typology /partner/categories
+* * *
+> This endpoint returns the category tree allowed for the privided partner token  
 > Requires valid token for authentication  
   
   
@@ -1076,8 +1079,9 @@ Response signature for /tags/1100
   ```
 
 
-  ### Get partner data /partner
-  > This endpoint returns partner data  Partners who have shops, will get extra object, "shop"  
+### Get partner data /partner
+* * *
+> This endpoint returns partner data  Partners who have shops, will get extra object, "shop"  
 > Requires valid token for authentication  
   
   
@@ -1208,8 +1212,9 @@ Response signature for /tags/1100
 ```
 
 
-  ### Update partner profile /partner/profile
-  > This endpoint update profile details, such as location, main phone and address  Editing the phone number won't update ads  
+### Update partner profile /partner/profile
+* * *
+> This endpoint update profile details, such as location, main phone and address  Editing the phone number won't update ads  
 > Requires valid token for authentication  
   
   
@@ -1333,7 +1338,8 @@ Response signature for /tags/1100
       ]
     }
 ```
-###Fail errors will return the field and error description
+
+### Fail errors will return the field and error description
 * * *
   <pre>
   StatusCode
