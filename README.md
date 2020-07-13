@@ -1461,15 +1461,15 @@ Response signature for /tags/1100
 > This endpoint returns all partner ads, with a few information  All 4 Status apply: active (published), inactive (under approval), disabled (marked as deleted for less than 60 days), refused (when ad has been refused, refusalReason field will contain more details)  
 > Requires valid token for authentication  
   
- <pre>
   **it's possible to filter data based on url route**
   * /partner/entries/active will return just active ads  
   * /partner/entries/refused will return just refused ads  
   * /partner/entries/disabled will return just ads marked as disabled. Auto removal after 60 days of the deactivation  
   * /partner/entries/inactive will return just inactive ads  
-  ** pagination also possible **   Params: p=0 (page number, index 0 based) c=40 (count per page)    
-  ** stats per ad also possible **  Param: stats=enabled adds a new object to each ad
-  </pre>
+  **pagination also possible **   Params: p=0 (page number, index 0 based) c=40 (count per page)    
+  **stats per ad also possible **  Param: stats=enabled adds a new object to each ad
+
+
 ```json
   "adStats": {
       "month": {
