@@ -408,6 +408,68 @@ Response signature for /tags/1100
 ]
 ```
 
+### Get the existing car phone brands /phonebrands
+* * * 
+> This endpoint will return the existing phone brands on our platform  
+> Requires valid token for authentication  
+
+  <pre>
+  Method 
+    GET
+  Headers
+    Content-Type: application/json
+    Authorization: kiYiuYTiuTiUTYiytIut
+  Response signature for /phonebrands
+  </pre>
+  ```json  
+[
+    {
+        "id": 1,
+        "name": "AEG"
+    },
+    {
+        "id": 2,
+        "name": "Alcatel"
+    },
+    {
+        "id": 3,
+        "name": "Apple"
+    },
+    {
+        "id": 4,
+        "name": "HTC"
+    },
+    {
+        "id": 5,
+        "name": "Huawei"
+    },
+    {
+        "id": 6,
+        "name": "LG"
+    }
+]
+```
+
+### Find phone brand by similar name /phonebrands/byname/{lowercaseName}
+* * *
+> This endpoint searches for phone brand by name, such as Apple.  
+> Requires valid token for authentication  
+  
+  <pre>
+  Method 
+    GET
+  Headers
+    Content-Type: application/json
+    Authorization: kiYiuYTiuTiUTYiytIut
+  Response signature for /phonebrand/byname/aple
+  </pre>
+```json 
+    {
+        "id": 3,
+        "name": "Apple"
+    }
+```
+
 ### Get the existing car brands /carbrands
 * * * 
 > This endpoint will return the existing car brands on our platform  
@@ -822,6 +884,73 @@ Response signature for /tags/1100
         }
     ]
   ```
+### Get our animal/dogs breed list /animals/canine-breeds
+* * *
+> This endpoint returns the available dog breeds on our platform  
+> Requires valid token for authentication  
+  
+  <pre>
+  Method 
+    GET
+  Headers
+    Content-Type: application/json
+    Authorization: kiYiuYTiuTiUTYiytIut
+  Response signature for /animals/canine-breeds
+  </pre>
+```json
+  [
+    {
+        "id": 1,
+        "name": "Beagle"
+    },
+    {
+        "id": 2,
+        "name": "Boxer"
+    },
+    {
+        "id": 3,
+        "name": "Braco Alemão"
+    }
+  ]
+  ```
+
+### Get our animal/dogs ageing intervals /animals/ageing
+* * *
+> This endpoint returns the available dog ageing intervals on our platform  
+> Requires valid token for authentication  
+  
+  <pre>
+  Method 
+    GET
+  Headers
+    Content-Type: application/json
+    Authorization: kiYiuYTiuTiUTYiytIut
+  Response signature for /animals/ageing
+  </pre>
+```json
+  [
+      {
+          "id": 1,
+          "name": "0-2 meses"
+      },
+      {
+          "id": 2,
+          "name": "2-12 meses"
+      },
+      {
+          "id": 3,
+          "name": "1-3 anos"
+      },
+      {
+          "id": 4,
+          "name": "3-6 anos"
+      },
+      {
+          "id": 5,
+          "name": "6 anos"
+      }
+  ]
+  ```
 
 ### Get our gear boxes list /gearboxes
 * * *
@@ -1111,7 +1240,9 @@ Response signature for /tags/1100
         "profileImage": "https://www.custojusto.pt/profiles/25/2555207721.jpg",
         "partnerId": "Partner-Name-987456321",
         "firstApprovedAd": "2019-07-11 10:21:55.933294+01",
-        "allowedCategory": "2000",
+        "allowedCategories": [
+          "2000"
+          ],
         "hasShop": true,
         "shop": {
             "name": "Partner Name shop",
@@ -1192,7 +1323,8 @@ Response signature for /tags/1100
             }
         },
         "subscriptionStatus": {
-            "partnerParentID": "auto",
+            "partnerParentID": "Vehicles",
+            "crmEnabled": false,
             "package": "prestige",
             "expireAt": "2021-06-03T23:59:59Z",
             "numberImageUploads": 36,
@@ -1472,6 +1604,11 @@ Response signature for /tags/1100
 
 ```json
   "adStats": {
+      "lastMonth": {
+          "pageViews": 15,
+          "replies": 4,
+          "phoneViews": 2
+      },
       "month": {
           "pageViews": 16,
           "replies": 5,
@@ -2028,6 +2165,108 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
 </pre>
 
 
+### Create animal ad /partner/entries
+* * *
+> Create new animal ad  
+> Requires valid token for authentication  
+  
+  
+  <pre>
+  Method 
+    POST
+  Headers
+    Content-Type: application/json
+    Authorization: kiYiuYTiuTiUTYiytIut
+  Payload signature
+  </pre>
+```json    
+    {
+      "author":{
+          "email":"name@partner.pt",
+          "name":"Partner name",
+          "phone":"911234567",
+          "phoneDisabled":false,
+          "professionalAd":true,
+          "salesmanDisabled":false,
+          "vatNumber":"999999990"
+      },
+      "body": "[{Título do anúncio a bold}]\n\nIsto é um novo anúncio",
+      "category":"6061",
+      "images":[
+          "3568575919",
+      ],
+      "location":{
+          "area":66,
+          "cp6":"4445-371",
+          "district":5,
+          "subArea":4
+      },
+      "params":{
+          "animalAge": 1,
+          "animalBreedOther": "Bengal",
+          "breedingFemaleNr": "3456789",
+          "breedingNr": "345678",
+          "creatorRegistrationNr": "456789",
+          "nrOfLitterAnimals": "2"
+      },
+      "partner":{
+          "externalAdID":"DOG-112233",
+          "externalGroupID":"partner-group-name",
+      },
+      "price":4967,
+      "subject":"Auto subject will apply for cars",
+      "type":"s",
+    }
+```
+<pre>
+  Response signature
+  StatusCode
+    200 - OK
+  </pre>
+```json  
+    {
+      "results":[
+          {
+            "field":"adID",
+            "value":"11501677"
+          },
+          {
+            "field":"remainingCredits",
+            "value":"983"
+          }
+      ]
+    }
+```
+<pre>
+  StatusCode
+    417 - Expectation Failed
+  </pre>
+```json  
+    {
+      "results":[
+          {
+            "field":"fieldName",
+            "value":"Error description"
+          }
+      ]
+    }
+```
+    
+<pre>
+  adID - ID used to edit or deactivate an exported ad
+  remainingCredits - Indicates the number of new ads + number of Edits remaning
+</pre>
+
+**Custom Params for Animals category, valid categories for custom params are ony Dogs and Cats**
+   > animalAge - age interval ID  
+   > animalBreed - Dogs category only, accepts a valid ID from breeds listing  
+   > animalBreedOther - Cats category only, accepts a string  
+   > breedingFemaleNr - "Nº de identificação electrónica da fêmea reprodutora"  
+   > breedingNr - "Nº de identificação electrónica da cria"  
+   > creatorRegistrationNr - "Nº de inscrição do criador"  
+   > lop - Dogs category only  
+   > nrOfLitterAnimals - "Nº de animais da ninhada"  
+
 ### Create real estate ad /partner/entries
 * * *
 > Create new real estate ad  
@@ -2217,7 +2456,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
 
 ### Edit ad /partner/entries/{adID}
 * * *
-> Edit an ad  
+> Edit/reactivate an ad
 > Requires valid token for authentication  
   
   
