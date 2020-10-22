@@ -1322,23 +1322,24 @@ Response signature for /tags/1100
                 "phoneViews": 0
             }
         },
-        "subscriptionStatus": {
-            "partnerParentID": "Vehicles",
-            "crmEnabled": false,
-            "package": "prestige",
-            "expireAt": "2021-06-03T23:59:59Z",
-            "numberImageUploads": 36,
-            "adsActive": 7,
-            "adsTotal": 100,
-            "adsLeft": 93,
-            "adsActionsLeft": 990,
-            "availableCredits": 3657
+        "subscriptionStatus":{
+            "partnerParentID":"auto",
+            "partnerParentName":"Vehicles",
+            "crmEnabled":false,
+            "package":"Prestige",
+            "expireAt":"2021-06-03T23:59:59Z",
+            "numberImageUploads":36,
+            "adsActive":7,
+            "adsTotal":11,
+            "adsLeft":4,
+            "adsActionsLeft":999,
+            "availableCredits":52
         },
-        "adsStatus": {
-            "deleted": 13,
-            "active": 6,
-            "refused": 1,
-            "inactive": 0
+        "adsStatus":{
+            "disabled":4,
+            "active":7,
+            "refused":0,
+            "inactive":0
         }
     }
 ```
