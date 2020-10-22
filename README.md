@@ -1406,6 +1406,27 @@ Response signature for /tags/1100
     }
 ```
 
+
+### Change partner password /partner/profile/changepassword
+* * *
+> This endpoint will reset partner password  
+> Requires valid token for authentication  
+  
+  
+  <pre>
+  Method 
+    POST
+  Headers
+    Content-Type: application/json
+    Authorization: kiYiuYTiuTiUTYiytIut
+  Payload signature for /partner/profile/changepassword
+  </pre>
+```json  
+    {
+      "password":"Pass1234"
+    }
+```
+
 ### Update partner shop details /partner/shop
 * * *
 > This endpoint update shop details for parthers with enabled shop  Limit for phone numbers is 5  
