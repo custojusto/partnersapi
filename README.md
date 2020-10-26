@@ -1974,7 +1974,7 @@ Response signature for /tags/1100
   > typology - Check /roomtypologies for correct ID  
 
 
-### Update shop banner /images/ads
+### Upload images /images/ads
 * * *
 > When creating ads, image ids are needed. Use this endpoint to upload those images, image id will be returned  This endpoint will return a valid and temporary image url (valid for 24h).  
 > Requires valid token for authentication  
