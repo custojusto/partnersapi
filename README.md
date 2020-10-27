@@ -1842,7 +1842,8 @@ Response signature for /tags/1100
             "power": 230,
             "regMonth": 2,
             "regYear": 2013,
-            "variant": "XPTO"
+            "variant": "XPTO",
+            "occupancy": 7
         },
         "partner": {
             "externalAdID": "7780p6yhgtr",
@@ -1870,6 +1871,7 @@ Response signature for /tags/1100
    > regMonth - First registration - Month  
    > regYear - First registration - Year  
    > variant - Variant/Version (SW, S-Line, etc)  
+   > occupancy - Int value, number of seats in vehicle
 
 
 
