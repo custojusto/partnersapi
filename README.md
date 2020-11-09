@@ -1871,7 +1871,7 @@ Response signature for /tags/1100
    > regMonth - First registration - Month  
    > regYear - First registration - Year  
    > variant - Variant/Version (SW, S-Line, etc)  
-   > occupancy - Int value, number of seats in vehicle (only appliable in certain categories)
+   > occupancy - Int value, number of seats in vehicle (only appliable in categories: 2141, 2142, 2143, 2144, 2145, 2146, 2181)
 
 
 
@@ -1973,7 +1973,7 @@ Response signature for /tags/1100
   > gotAffordableRental - Not used for Vacation rental. This parameter indicates if the rental allows PAA (arrendamento-acessivel)  
   > rntLicence - Rental license  
   > size - Mt² available  
-  > terrainSize - Mt² terrain size (only appliable in certain categories)
+  > terrainSize - Mt² terrain size (only appliable in categories: 1040, 1060)
   > tags - Available amenities. Check /tags/{category} endpoint  
   > typology - Check /roomtypologies for correct ID  
 
