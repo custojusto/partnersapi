@@ -1973,7 +1973,7 @@ Response signature for /tags/1100
   > gotAffordableRental - Not used for Vacation rental. This parameter indicates if the rental allows PAA (arrendamento-acessivel)  
   > rntLicence - Rental license  
   > size - Mt² available  
-  > terrainSize - Mt² terrain size (only appliable in categories: 1040, 1060)
+  > terrainSize - Mt² terrain size (only appliable in categories: 1040, 1060)  
   > tags - Available amenities. Check /tags/{category} endpoint  
   > typology - Check /roomtypologies for correct ID  
 
