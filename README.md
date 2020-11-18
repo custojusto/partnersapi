@@ -1226,6 +1226,7 @@ Response signature for /tags/1100
     {
         "userID": "4234123414",
         "name": "Partner Name",
+        "notifications": ["wnl", "activads", "promo"],
         "email": "partner_email@partner.com",
         "phone": "911234567",
         "address": "Partner main address",
@@ -1243,6 +1244,7 @@ Response signature for /tags/1100
         "allowedCategories": [
           "2000"
           ],
+        "chatEnabled": true,
         "hasShop": true,
         "shop": {
             "name": "Partner Name shop",
@@ -1368,9 +1370,19 @@ Response signature for /tags/1100
           "area":66,
           "subArea":4,
           "cp6":"4445-371"
-      }
+      },
+      "notifications":["wnl", "activads", "promo"]
     }
 ```
+
+### Valid notifications
+* * *
+> wnl - Newsletter semanal com as estatísticas dos seus anúncios activos
+> activads - Anúncios activos há 10 e 30 dias
+> promo - Sugestões e promoções para vender mais rápido no CustoJusto
+> saveds - Pesquisas favoritas, sempre que houver novidades nas suas pesquisas favoritas
+> partnerpromo - Promoções de parceiros
+
 
 ### Fail errors will return the field and error description
 * * *
