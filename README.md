@@ -1377,11 +1377,11 @@ Response signature for /tags/1100
 
 ### Valid notifications
 * * *
-> wnl - Newsletter semanal com as estatísticas dos seus anúncios activos
-> activads - Anúncios activos há 10 e 30 dias
-> promo - Sugestões e promoções para vender mais rápido no CustoJusto
-> saveds - Pesquisas favoritas, sempre que houver novidades nas suas pesquisas favoritas
-> partnerpromo - Promoções de parceiros
+> wnl - Newsletter semanal com as estatísticas dos seus anúncios activos  
+> activads - Anúncios activos há 10 e 30 dias  
+> promo - Sugestões e promoções para vender mais rápido no CustoJusto  
+> saveds - Pesquisas favoritas, sempre que houver novidades nas suas pesquisas favoritas  
+> partnerpromo - Promoções de parceiros  
 
 
 ### Fail errors will return the field and error description
