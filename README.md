@@ -2001,7 +2001,7 @@ Response signature for /tags/1100
     POST
   Headers
     Content-Type: application/json
-    Authorization: kiYiuYTiuTiUTYiytIut
+    Authorization: Token kiYiuYTiuTiUTYiytIut
     Form field: file
     <small>curl --location --request POST '{API_URL}/images/ads' --header 'Authorization: Token kiYiuYTiuTiUTYiytIut' --header 'Content-Type: multipart/form-data' --form 'file=@/image_location/filename.jpg'</small>
   Response signature for /images/ads
