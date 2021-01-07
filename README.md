@@ -1632,7 +1632,8 @@ Response signature for /tags/1100
   * /partner/entries/refused will return just refused ads  
   * /partner/entries/disabled will return just ads marked as disabled. Auto removal after 60 days of the deactivation  
   * /partner/entries/inactive will return just inactive ads  
-  **pagination also possible**   Params: p=0 (page number, index 0 based) c=40 (count per page)    
+  **pagination is also possible**   Params: p=0 (page number, index 0 based) c=40 (count per page)    
+  **sorting is also possible**   Param: "s" possible values are: price_desc | price_asc | pub_date_desc | pub_date_asc    
   **stats per ad also possible**  Param: stats=enabled adds a new object to each ad
 
 
