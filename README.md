@@ -1792,8 +1792,6 @@ Response signature for /tags/1100
     }
 ```
 
-
-
 ### Read ad complete details - Vehicles /partner/entries/{adID}
 * * *
 > This endpoint will return the ad details, regardless the ad state  
@@ -1867,7 +1865,8 @@ Response signature for /tags/1100
         "status": "active",
         "subject": "Mercedes-Benz CLS 400 XPTO",
         "type": "s",
-        "url": "https://www.custojusto.pt/11812765"
+        "url": "https://www.custojusto.pt/11812765",
+        "videoURL": "https://www.youtube.com/embed/Z8XP7UjzvnU"
     }
 ```
     
@@ -1884,7 +1883,8 @@ Response signature for /tags/1100
    > regMonth - First registration - Month  
    > regYear - First registration - Year  
    > variant - Variant/Version (SW, S-Line, etc)  
-   > occupancy - Int value, number of seats in vehicle (only appliable in categories: 2141, 2142, 2143, 2144, 2145, 2146, 2181)
+   > occupancy - Int value, number of seats in vehicle (only appliable in categories: 2141, 2142, 2143, 2144, 2145, 2146, 2181)  
+   > videoURL - A YouTube link for an EMBED video, normal links won't work  
 
 
 
@@ -1975,7 +1975,8 @@ Response signature for /tags/1100
       "status":"active",
       "subject":"Propriedade situada em Vila-do-Bispo-Ref: 4640",
       "type":"u",
-      "url":"https://www.custojusto.pt/11804904"
+      "url":"https://www.custojusto.pt/11804904",
+      "videoURL": "https://www.youtube.com/embed/Z8XP7UjzvnU"
     }
 ```
     
@@ -1989,6 +1990,7 @@ Response signature for /tags/1100
   > terrainSize - Mt² terrain size (only appliable in categories: 1040, 1060)  
   > tags - Available amenities. Check /tags/{category} endpoint  
   > typology - Check /roomtypologies for correct ID  
+  > videoURL - A YouTube link for an EMBED video, normal links won't work  
 
 
 ### Upload images /images/ads
@@ -2062,7 +2064,7 @@ Response signature for /tags/1100
       },
       "price":32022,
       "subject":"Barco para 6 pessoas, motor 175cv",
-      "type":"s",
+      "type":"s"
     }
 ```    
 <pre>
@@ -2162,6 +2164,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
       "price":4967,
       "subject":"Auto subject will apply for cars",
       "type":"s",
+      "videoURL": "https://www.youtube.com/embed/Z8XP7UjzvnU"
     }
 ```
 <pre>
@@ -2254,7 +2257,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
       },
       "price":4967,
       "subject":"Auto subject will apply for cars",
-      "type":"s",
+      "type":"s"
     }
 ```
 <pre>
@@ -2353,6 +2356,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
       "price":4967,
       "subject":"Auto subject will apply for cars",
       "type":"s",
+      "videoURL": "https://www.youtube.com/embed/Z8XP7UjzvnU"
     }
 ```
 
@@ -2451,6 +2455,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
       "price":130,
       "subject":"Propriedade situada em Vila-do-Bispo-Ref: 4640",
       "type":"u",
+      "videoURL": "https://www.youtube.com/embed/Z8XP7UjzvnU"
     }
 ```
 <pre>
