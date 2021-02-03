@@ -1866,7 +1866,7 @@ Response signature for /tags/1100
         "subject": "Mercedes-Benz CLS 400 XPTO",
         "type": "s",
         "url": "https://www.custojusto.pt/11812765",
-        "videoURL": "https://www.youtube.com/embed/Z8XP7UjzvnU"
+        "videoURL": "https://www.youtube.com/embed/jNlqg72IeDU"
     }
 ```
     
@@ -1884,7 +1884,7 @@ Response signature for /tags/1100
    > regYear - First registration - Year  
    > variant - Variant/Version (SW, S-Line, etc)  
    > occupancy - Int value, number of seats in vehicle (only appliable in categories: 2141, 2142, 2143, 2144, 2145, 2146, 2181)  
-   > videoURL - A YouTube link for an EMBED video, normal links won't work  
+   > videoURL - A YouTube link for an EMBED video (https://www.youtube.com/embed/jNlqg72IeDU), normal links won't work  
 
 
 
@@ -1976,7 +1976,7 @@ Response signature for /tags/1100
       "subject":"Propriedade situada em Vila-do-Bispo-Ref: 4640",
       "type":"u",
       "url":"https://www.custojusto.pt/11804904",
-      "videoURL": "https://www.youtube.com/embed/Z8XP7UjzvnU"
+      "videoURL": "https://www.youtube.com/embed/jNlqg72IeDU"
     }
 ```
     
@@ -1990,7 +1990,7 @@ Response signature for /tags/1100
   > terrainSize - Mt² terrain size (only appliable in categories: 1040, 1060)  
   > tags - Available amenities. Check /tags/{category} endpoint  
   > typology - Check /roomtypologies for correct ID  
-  > videoURL - A YouTube link for an EMBED video, normal links won't work  
+  > videoURL - A YouTube link for an EMBED video (https://www.youtube.com/embed/jNlqg72IeDU), normal links won't work  
 
 
 ### Upload images /images/ads
@@ -2060,7 +2060,7 @@ Response signature for /tags/1100
       },
       "partner":{
           "externalAdID":"BOAT-123321",
-          "externalGroupID":"partner-group-name",
+          "externalGroupID":"partner-group-name"
       },
       "price":32022,
       "subject":"Barco para 6 pessoas, motor 175cv",
@@ -2159,12 +2159,12 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
       },
       "partner":{
           "externalAdID":"BMW-112233",
-          "externalGroupID":"partner-group-name",
+          "externalGroupID":"partner-group-name"
       },
       "price":4967,
       "subject":"Auto subject will apply for cars",
       "type":"s",
-      "videoURL": "https://www.youtube.com/embed/Z8XP7UjzvnU"
+      "videoURL": "https://www.youtube.com/embed/jNlqg72IeDU"
     }
 ```
 <pre>
@@ -2253,7 +2253,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
       },
       "partner":{
           "externalAdID":"DOG-112233",
-          "externalGroupID":"partner-group-name",
+          "externalGroupID":"partner-group-name"
       },
       "price":4967,
       "subject":"Auto subject will apply for cars",
@@ -2351,12 +2351,12 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
       },
       "partner":{
           "externalAdID":"Partner-T4-33123",
-          "externalGroupID":"partner-group-name",
+          "externalGroupID":"partner-group-name"
       },
       "price":4967,
       "subject":"Auto subject will apply for cars",
       "type":"s",
-      "videoURL": "https://www.youtube.com/embed/Z8XP7UjzvnU"
+      "videoURL": "https://www.youtube.com/embed/jNlqg72IeDU"
     }
 ```
 
@@ -2450,12 +2450,12 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
       },
       "partner":{
           "externalAdID":"Partner-T2-33123",
-          "externalGroupID":"partner-group-name",
+          "externalGroupID":"partner-group-name"
       },
       "price":130,
       "subject":"Propriedade situada em Vila-do-Bispo-Ref: 4640",
       "type":"u",
-      "videoURL": "https://www.youtube.com/embed/Z8XP7UjzvnU"
+      "videoURL": "https://www.youtube.com/embed/jNlqg72IeDU"
     }
 ```
 <pre>
