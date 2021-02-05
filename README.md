@@ -1,5 +1,7 @@
 New features will be added just to this API
 
+PROD: https://v2.custojusto.pt
+QA: https://v2qa.custojusto.pt
 
 ### Get valid districts /locations
 * * *
@@ -1150,7 +1152,7 @@ Response signature for /tags/1100
 
 ### Get room typology /partner/categories
 * * *
-> This endpoint returns the category tree allowed for the privided partner token  
+> This endpoint returns the category tree allowed for the provided partner token  
 > Requires valid token for authentication  
   
   
@@ -1854,7 +1856,8 @@ Response signature for /tags/1100
             "regMonth": 2,
             "regYear": 2013,
             "variant": "XPTO",
-            "occupancy": 7
+            "occupancy": 7,
+            "videoURL": "https://www.youtube.com/embed/jNlqg72IeDU"
         },
         "partner": {
             "externalAdID": "7780p6yhgtr",
@@ -1865,8 +1868,7 @@ Response signature for /tags/1100
         "status": "active",
         "subject": "Mercedes-Benz CLS 400 XPTO",
         "type": "s",
-        "url": "https://www.custojusto.pt/11812765",
-        "videoURL": "https://www.youtube.com/embed/jNlqg72IeDU"
+        "url": "https://www.custojusto.pt/11812765"
     }
 ```
     
@@ -1884,7 +1886,7 @@ Response signature for /tags/1100
    > regYear - First registration - Year  
    > variant - Variant/Version (SW, S-Line, etc)  
    > occupancy - Int value, number of seats in vehicle (only appliable in categories: 2141, 2142, 2143, 2144, 2145, 2146, 2181)  
-   > videoURL - A YouTube link for an EMBED video (https://www.youtube.com/embed/jNlqg72IeDU), normal links won't work  
+   > videoURL - A YouTube link for a video
 
 
 
@@ -1964,7 +1966,9 @@ Response signature for /tags/1100
             "wifi",
             "ac"
           ],
-          "typology":5
+          "typology":5,
+          "videoURL": "https://www.youtube.com/embed/Z8XP7UjzvnU",
+          "virtualTourURL": "https://my.matterport.com/show/?m=B3p9vSWmXcG"
       },
       "partner":{
           "externalAdID":"4640",
@@ -1975,8 +1979,7 @@ Response signature for /tags/1100
       "status":"active",
       "subject":"Propriedade situada em Vila-do-Bispo-Ref: 4640",
       "type":"u",
-      "url":"https://www.custojusto.pt/11804904",
-      "videoURL": "https://www.youtube.com/embed/jNlqg72IeDU"
+      "url":"https://www.custojusto.pt/11804904"
     }
 ```
     
@@ -1990,7 +1993,8 @@ Response signature for /tags/1100
   > terrainSize - Mt² terrain size (only appliable in categories: 1040, 1060)  
   > tags - Available amenities. Check /tags/{category} endpoint  
   > typology - Check /roomtypologies for correct ID  
-  > videoURL - A YouTube link for an EMBED video (https://www.youtube.com/embed/jNlqg72IeDU), normal links won't work  
+  > videoURL - A YouTube link for a video  
+  > virtualTourURL - A Matterport link for a virtual tour
 
 
 ### Upload images /images/ads
@@ -2155,7 +2159,8 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
           "power":200,
           "regMonth":3,
           "regYear":2017,
-          "variant":"XPTO"
+          "variant":"XPTO",
+          "videoURL":"https://www.youtube.com/embed/jNlqg72IeDU"
       },
       "partner":{
           "externalAdID":"BMW-112233",
@@ -2163,8 +2168,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
       },
       "price":4967,
       "subject":"Auto subject will apply for cars",
-      "type":"s",
-      "videoURL": "https://www.youtube.com/embed/jNlqg72IeDU"
+      "type":"s"
     }
 ```
 <pre>
@@ -2347,7 +2351,9 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
       "params":{
           "energyRating":3,
           "size":500,
-          "typology":7
+          "typology":7,
+          "videoURL":"https://www.youtube.com/embed/jNlqg72IeDU",
+          "virtualTourURL":"https://my.matterport.com/show/?m=B3p9vSWmXcG"
       },
       "partner":{
           "externalAdID":"Partner-T4-33123",
@@ -2355,8 +2361,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
       },
       "price":4967,
       "subject":"Auto subject will apply for cars",
-      "type":"s",
-      "videoURL": "https://www.youtube.com/embed/jNlqg72IeDU"
+      "type":"s"
     }
 ```
 
@@ -2446,7 +2451,9 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
             "wifi",
             "ac"
           ],
-          "typology":5
+          "typology":5,
+          "videoURL":"https://www.youtube.com/embed/jNlqg72IeDU",
+          "virtualTourURL":"https://my.matterport.com/show/?m=B3p9vSWmXcG"
       },
       "partner":{
           "externalAdID":"Partner-T2-33123",
@@ -2454,8 +2461,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
       },
       "price":130,
       "subject":"Propriedade situada em Vila-do-Bispo-Ref: 4640",
-      "type":"u",
-      "videoURL": "https://www.youtube.com/embed/jNlqg72IeDU"
+      "type":"u"
     }
 ```
 <pre>
