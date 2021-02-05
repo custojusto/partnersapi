@@ -2,6 +2,6 @@ github:
 is_project_page: false
 title: "Partners API v2.0"
 logo: https://www.custojusto.pt/img/email/logo.png
-description: [This is an alternative API with improved features]
+description: [This is an alternative API with improved features \n PROD: https://v2.custojusto.pt \n QA: https://v2qa.custojusto.pt]
 show_downloads: false
 theme: jekyll-theme-minimal
