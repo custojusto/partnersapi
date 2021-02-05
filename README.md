@@ -1,4 +1,7 @@
 New features will be added just to this API
+> PROD: https://v2.custojusto.pt  
+> QA: https://v2qa.custojusto.pt
+
 
 ### Get valid districts /locations
 * * *
