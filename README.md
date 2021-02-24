@@ -1886,8 +1886,20 @@ Response signature for /tags/1100
    > regYear - First registration - Year  
    > variant - Variant/Version (SW, S-Line, etc)  
    > occupancy - Int value, number of seats in vehicle (only appliable in categories: 2141, 2142, 2143, 2144, 2145, 2146, 2181)  
-   > videoURL - A YouTube link for a video
+   > videoURL - A YouTube link for a video  
 
+
+**Custom Params for Vehicles/Motos category**
+   > motobrand - BrandID (/motobrands or /motobrands/byname/{value})  
+   > motomodel - ModelID (/motobrands/{id} or /motobrands/{id}/byname/{value})  
+   > cubicCentimeters - Cubic Centimeters ID (/cc or using /cc/{value})  
+   > regYear - License plate year (yyyy)  
+   > mileage - Mileages (/mileages or /mileages/{value})  
+   > videoURL - A YouTube link for a video  
+
+
+**Custom Params for any category**
+   > All params can be reached using the endpoint /categories/fields/{categoryID}  
 
 
 ### Read ad complete details - Real Estate /partner/entries/{adID}
