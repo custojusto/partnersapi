@@ -1857,7 +1857,7 @@ Response signature for /tags/1100
             "regYear": 2013,
             "variant": "XPTO",
             "occupancy": 7,
-            "videoURL": "https://www.youtube.com/embed/jNlqg72IeDU"
+            "videoURL": "https://www.youtube.com/watch?v=jNlqg72IeDU"
         },
         "partner": {
             "externalAdID": "7780p6yhgtr",
@@ -1886,7 +1886,10 @@ Response signature for /tags/1100
    > regYear - First registration - Year  
    > variant - Variant/Version (SW, S-Line, etc)  
    > occupancy - Int value, number of seats in vehicle (only appliable in categories: 2141, 2142, 2143, 2144, 2145, 2146, 2181)  
-   > videoURL - A YouTube link for a video  
+   > videoURL - A link for a video, we currently support:
+   >> YouTube (https://www.youtube.com/watch?v=jNlqg72IeDU)  
+   >> Vimeo (https://vimeo.com/347119375)  
+   >> DailyMotion (https://www.dailymotion.com/video/x75z2pn)  
 
 
 **Custom Params for Vehicles/Motos category**
@@ -1895,7 +1898,10 @@ Response signature for /tags/1100
    > cubicCentimeters - Cubic Centimeters ID (/cc or using /cc/{value})  
    > regYear - License plate year (yyyy)  
    > mileage - Mileages (/mileages or /mileages/{value})  
-   > videoURL - A YouTube link for a video  
+   > videoURL - A link for a video, we currently support:
+   >> YouTube (https://www.youtube.com/watch?v=jNlqg72IeDU)  
+   >> Vimeo (https://vimeo.com/347119375)  
+   >> DailyMotion (https://www.dailymotion.com/video/x75z2pn)  
 
 
 **Custom Params for any category**
@@ -2005,8 +2011,14 @@ Response signature for /tags/1100
   > terrainSize - Mt² terrain size (only appliable in categories: 1040, 1060)  
   > tags - Available amenities. Check /tags/{category} endpoint  
   > typology - Check /roomtypologies for correct ID  
-  > videoURL - A YouTube link for a video  
-  > virtualTourURL - A Matterport link for a virtual tour
+  > videoURL - A link for a video, we currently support:  
+  >> YouTube (https://www.youtube.com/watch?v=jNlqg72IeDU)  
+  >> Vimeo (https://vimeo.com/347119375)  
+  >> DailyMotion (https://www.dailymotion.com/video/x75z2pn)  
+  >
+  > virtualTourURL - A link for a virtual tour, we currently support:  
+  >> Matterport (https://my.matterport.com/show/?m=B3p9vSWmXcG)  
+  >> Remax Virtual Tour Premier (https://www.remaxvtp.com/remax/porto/oceanus/080/tour.html)  
 
 
 ### Upload images /images/ads
@@ -2172,7 +2184,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
           "regMonth":3,
           "regYear":2017,
           "variant":"XPTO",
-          "videoURL":"https://www.youtube.com/embed/jNlqg72IeDU"
+          "videoURL":"https://www.youtube.com/watch?v=jNlqg72IeDU"
       },
       "partner":{
           "externalAdID":"BMW-112233",
@@ -2364,7 +2376,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
           "energyRating":3,
           "size":500,
           "typology":7,
-          "videoURL":"https://www.youtube.com/embed/jNlqg72IeDU",
+          "videoURL":"https://www.youtube.com/watch?v=jNlqg72IeDU",
           "virtualTourURL":"https://my.matterport.com/show/?m=B3p9vSWmXcG"
       },
       "partner":{
@@ -2464,7 +2476,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
             "ac"
           ],
           "typology":5,
-          "videoURL":"https://www.youtube.com/embed/jNlqg72IeDU",
+          "videoURL":"https://www.youtube.com/watch?v=jNlqg72IeDU",
           "virtualTourURL":"https://my.matterport.com/show/?m=B3p9vSWmXcG"
       },
       "partner":{
