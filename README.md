@@ -816,7 +816,7 @@ Response signature for /tags/1100
 ```
 
 
-### Get our color list /color
+### Get our color list /colors
 * * *
 > This endpoint returns the available colors on our platform  
 > Requires valid token for authentication  
@@ -828,7 +828,7 @@ Response signature for /tags/1100
   Headers
     Content-Type: application/json
     Authorization: kiYiuYTiuTiUTYiytIut
-  Response signature for /color
+  Response signature for /colors
   </pre>
 ```json  
     [
