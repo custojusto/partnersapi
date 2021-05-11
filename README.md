@@ -1775,6 +1775,7 @@ Response signature for /tags/1100
             "0919434168"
         ],
         "listID": "11812765",
+        "deleteID": "11812765",
         "location": {
             "area": 66,
             "cp6": "4440-777",
@@ -1837,6 +1838,7 @@ Response signature for /tags/1100
             "0919434168"
         ],
         "listID": "11812765",
+        "deleteID": "11812765",
         "location": {
             "area": 66,
             "cp6": "4440-777",
@@ -1964,6 +1966,7 @@ Response signature for /tags/1100
           "1318544565"
       ],
       "listID":"11804904",
+      "deleteID":"11804904",
       "location":{
           "area":278,
           "cp6":"8650-111",
