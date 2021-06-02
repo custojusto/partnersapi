@@ -1253,6 +1253,7 @@ Response signature for /tags/1100
             "description": "By amazing shop",
             "address": "Partner shop address",
             "website": "https://www.partner.com",
+            "shopUrl": "https://www.custojusto.pt/loja/partner-name",
             "phones": [
                 {
                     "name": "Geral",
@@ -1555,10 +1556,10 @@ Response signature for /tags/1100
   Method 
     POST
   Headers
-    Authorization: Token kiYiuYTiuTiUTYiytIut
+    Authorization: kiYiuYTiuTiUTYiytIut
     Content-Type: multipart/form-data
     Form field: file
-    <small>curl --location --request POST '{API_URL}/images/users/shop' --header 'Authorization: Token kiYiuYTiuTiUTYiytIut' --header 'Content-Type: multipart/form-data' --form 'file=@/image_location/filename.jpg'</small>
+    <small>curl --location --request POST '{API_URL}/images/users/shop' --header 'Authorization: kiYiuYTiuTiUTYiytIut' --header 'Content-Type: multipart/form-data' --form 'file=@/image_location/filename.jpg'</small>
   Response signature for /images/users/shop
   </pre>
 ```json  
@@ -1581,7 +1582,7 @@ Response signature for /tags/1100
     DELETE
   Headers
     Content-Type: application/json
-    Authorization: Token kiYiuYTiuTiUTYiytIut
+    Authorization: kiYiuYTiuTiUTYiytIut
   </pre>
 
 
@@ -1595,10 +1596,10 @@ Response signature for /tags/1100
   Method 
     POST
   Headers
-    Authorization: Token kiYiuYTiuTiUTYiytIut
+    Authorization: kiYiuYTiuTiUTYiytIut
     Content-Type: multipart/form-data
     Form field: file
-    <small>curl --location --request POST '{API_URL}/images/users/profile' --header 'Authorization: Token kiYiuYTiuTiUTYiytIut' --header 'Content-Type: multipart/form-data' --form 'file=@/image_location/filename.jpg'</small>
+    <small>curl --location --request POST '{API_URL}/images/users/profile' --header 'Authorization: kiYiuYTiuTiUTYiytIut' --header 'Content-Type: multipart/form-data' --form 'file=@/image_location/filename.jpg'</small>
   Response signature for /images/users/shop
   </pre>
 ```json
@@ -1620,7 +1621,7 @@ Response signature for /tags/1100
     DELETE
   Headers
     Content-Type: application/json
-    Authorization: Token kiYiuYTiuTiUTYiytIut
+    Authorization: kiYiuYTiuTiUTYiytIut
   </pre>
 
 
@@ -2022,6 +2023,7 @@ Response signature for /tags/1100
   > virtualTourURL - A link for a virtual tour, we currently support:  
   >> Matterport (https://my.matterport.com/show/?m=B3p9vSWmXcG)  
   >> Remax Virtual Tour Premier (https://www.remaxvtp.com/remax/porto/oceanus/080/tour.html)  
+  >> Nodalview (https://www.nodalview.com/7oUdKXnqY2jD5YDmTquVKJkF)  
 
 
 ### Upload images /images/ads
@@ -2035,9 +2037,9 @@ Response signature for /tags/1100
     POST
   Headers
     Content-Type: application/json
-    Authorization: Token kiYiuYTiuTiUTYiytIut
+    Authorization: kiYiuYTiuTiUTYiytIut
     Form field: file
-    <small>curl --location --request POST '{API_URL}/images/ads' --header 'Authorization: Token kiYiuYTiuTiUTYiytIut' --header 'Content-Type: multipart/form-data' --form 'file=@/image_location/filename.jpg'</small>
+    <small>curl --location --request POST '{API_URL}/images/ads' --header 'Authorization: kiYiuYTiuTiUTYiytIut' --header 'Content-Type: multipart/form-data' --form 'file=@/image_location/filename.jpg'</small>
   Response signature for /images/ads
   </pre>
 ```json  
