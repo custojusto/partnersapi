@@ -323,7 +323,7 @@ Response signature for /categories/2000
         "subCategoryID": "2120",
         "name": "Peças e acessórios de carros",
         "keywords": "capacete,jante,pneu,gps,motor,peças",
-        "hasChildren": false
+        "hasChildren": true
     },
     {
         "subCategoryID": "2140",
@@ -1150,10 +1150,11 @@ Response signature for /tags/1100
 ```
 
 
-### Get room typology /partner/categories
+### Get partner allowed categories /partner/categories
 * * *
 > This endpoint returns the category tree allowed for the provided partner token  
 > Requires valid token for authentication  
+> hasChildren = false will indicate which categories allow ad insertion
   
   
   <pre>
