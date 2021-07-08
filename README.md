@@ -2,6 +2,10 @@ New features will be added just to this API
 > PROD: https://v2.custojusto.pt  
 > QA: https://v2qa.custojusto.pt
 
+### Table of contents
+
+* TOC
+{:toc}
 
 ### Get valid districts /locations
 * * *
