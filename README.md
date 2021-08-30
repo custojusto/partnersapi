@@ -1153,7 +1153,65 @@ Response signature for /tags/1100
     }
 ```
 
+### Get accommodation types list accommodationtypes
+* * *
+> This endpoint returns our accommodation types list  
+> Requires valid token for authentication  
+  
+<pre>
+  Method 
+    GET
+  Headers
+    Content-Type: application/json
+    Authorization: kiYiuYTiuTiUTYiytIut
+  Response signature for /accommodationtypes
+</pre>
+```json  
+    [
+      {
+        "id": 1,
+        "name": "Apartamento"
+      },
+      {
+        "id": 2,
+        "name": "Casa"
+      },
+      {
+        "id": 3,
+        "name": "Quarto de hóspedes"
+      }
+    ]
+```
 
+### Get vacation types list vacationtypes
+* * *
+> This endpoint returns our vacation types list  
+> Requires valid token for authentication  
+  
+<pre>
+  Method 
+    GET
+  Headers
+    Content-Type: application/json
+    Authorization: kiYiuYTiuTiUTYiytIut
+  Response signature for /vacationtypes
+</pre>
+```json  
+    [
+      {
+        "id": 1,
+        "name": "Praia"
+      },
+      {
+        "id": 2,
+        "name": "Rural"
+      },
+      {
+        "id": 3,
+        "name": "Cidade"
+      }
+    ]
+```
 ### Get partner allowed categories /partner/categories
 * * *
 > This endpoint returns the category tree allowed for the provided partner token  
@@ -2475,6 +2533,8 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
           "subArea":2
       },
       "params":{
+          "accommodationType":1,
+          "vacationType":1,
           "availability":"custom string, please contact us for more details",
           "beds":4,
           "rntLicence":"12345",
@@ -2536,7 +2596,10 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
   adID - ID used to edit or deactivate an exported ad
   remainingCredits - Indicates the number of new ads + number of Edits remaning
 </pre>
-
+    
+**Custom Params for Real Estate - Vacation rental**
+   > accommodationType - accommodation type ID (/accommodationtypes)  
+   > vacationType - vacation type ID (/cavationtypes)  
 
 ### Edit ad /partner/entries/{adID}
 * * *
