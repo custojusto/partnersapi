@@ -2858,9 +2858,8 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
 > For this to be possible, a callback URL has to be configured first. Please contact us to set your callback URL. It should be in https and have a valid certiticate associated.  
 > As the main api, all data is sent as JSON, with UTF-8 encodings. The HTTP verb used is always POST.  
 
-##### Fields
-
 | Name | Type | Description |
+| --- | --- | --- |
 | **event** | string | The event type. |
 | **request_id** | string | The unique identifier for this request. Please mention this when contacting us for debugging issues. |
 | **token** |	string | The token for the respective partner. |
@@ -2869,9 +2868,8 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
 #### Ad reply callback
 > This callback is sent when an ad is replied to. The **event** value for this callback is **replied**.  
 
-##### Fields
-
 | Name | Type | Description |
+| --- | --- | --- |
 | **ad_id** | string | The ad_id specified when inserting this ad. |
 | **body** | string | The message body. |
 | **sender_email** | string | The sender's email address. |
@@ -2894,8 +2892,8 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
 #### Ad refused callback
 > This callback is sent when an ad is refused. The **event** value for this callback is **refused**.  
 
-##### Fields
 | Name | Type | Description |
+| --- | --- | --- |
 | **ad_id** | string | The ad_id specified when inserting this ad. |
 | **reason** | string | The reason why the ad was refused. |
 
@@ -2912,7 +2910,6 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
 #### Ad published callback
 > This callback is sent when an ad is published, which usually occurs soon after it's inserted/updated. The **event** value for this callback is **published**.  
 
-##### Fields
 | Name | Type | Description |
 | --- | --- | --- |
 | **ad_id** | string | The ad_id specified when inserting this ad. |
@@ -2931,7 +2928,6 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
 #### Partner created callback
 > This callback is sent when a new partner is created. This event will also be communicated through email, but this callback may be used to automate the process. The **event** value for this callback is **created**.  
 
-##### Fields
 | Name | Type | Description |
 | --- | --- | --- |
 | **credit** | int | The number of credits (ads active at a given time) allowed for the partner. |
@@ -2956,7 +2952,6 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
 #### Partner changed callback
 > This callback is sent when a new partner is changed. The **event** value for this callback is **changed**.  
 
-##### Fields
 | Name | Type | Description |
 | --- | --- | --- |
 | **credit** | int | The new number of credits (ads active at a given time) allowed for the partner. |
