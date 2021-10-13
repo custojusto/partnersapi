@@ -2863,6 +2863,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
 | Name | Type | Description |
 
 | --- | --- | --- |
+
 | **event** |	string |	The event type. |
 | **request_id** | string | The unique identifier for this request. Please mention this when contacting us for debugging issues. |
 | **token** |	string | The token for the respective partner. |
