@@ -2860,7 +2860,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
 
 ##### Fields
 
-| Name | Type | Description |
+| Name | Type | Description | 
 
 | --- | --- | --- |
 
@@ -2875,6 +2875,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
 ##### Fields
 | Name | Type | Description |
 | --- | --- | --- |
+
 | **ad_id** | string | The ad_id specified when inserting this ad. |
 | **body** | string | The message body. |
 | **sender_email** | string | The sender's email address. |
