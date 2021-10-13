@@ -2896,7 +2896,6 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
 
 ##### Fields
 | Name | Type | Description |
-| --- | --- | --- |
 | **ad_id** | string | The ad_id specified when inserting this ad. |
 | **reason** | string | The reason why the ad was refused. |
 
