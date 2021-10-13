@@ -2859,7 +2859,9 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
 > As the main api, all data is sent as JSON, with UTF-8 encodings. The HTTP verb used is always POST.  
 
 ##### Fields
+
 | Name | Type | Description |
+
 | --- | --- | --- |
 | **event** |	string |	The event type. |
 | **request_id** | string | The unique identifier for this request. Please mention this when contacting us for debugging issues. |
