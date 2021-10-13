@@ -2860,8 +2860,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
 
 ##### Fields
 
-| Name | Type | Description | 
-
+| Name | Type | Description |
 | **event** | string | The event type. |
 | **request_id** | string | The unique identifier for this request. Please mention this when contacting us for debugging issues. |
 | **token** |	string | The token for the respective partner. |
@@ -2873,7 +2872,6 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
 ##### Fields
 
 | Name | Type | Description |
-
 | **ad_id** | string | The ad_id specified when inserting this ad. |
 | **body** | string | The message body. |
 | **sender_email** | string | The sender's email address. |
