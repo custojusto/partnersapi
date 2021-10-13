@@ -5,3 +5,4 @@ logo: https://www.custojusto.pt/img/email/logo.png
 description: [This is an alternative API with improved features]
 show_downloads: false
 theme: jekyll-theme-minimal
+markdown: GFM
