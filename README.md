@@ -2861,6 +2861,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
 ##### Fields
 
 | Name | Type | Description |
+
 | --- | --- | --- |
 
 | **event** | string | The event type. |
