@@ -947,7 +947,7 @@ Response signature for /tags/1100
   },
   {
     "id": 7,
-    "name": "Cão De Água"
+    "name": "Cão De Ýgua"
   },
   {
     "id": 12,
@@ -1531,27 +1531,44 @@ Response signature for /tags/1100
             "total": {
                 "pageViews": 294,
                 "adReplies": 11,
-                "phoneViews": 2
+                "phoneViews": 2,
+                "favourites": 10
             },
             "previousMonth": {
                 "pageViews": 69,
                 "adReplies": 4,
-                "phoneViews": 0
+                "phoneViews": 0,
+                "favourites": 5
             },
             "currentMonth": {
                 "pageViews": 45,
                 "adReplies": 2,
-                "phoneViews": 0
+                "phoneViews": 0,
+                "favourites": 5
             },
             "previousWeek": {
                 "pageViews": 10,
                 "adReplies": 0,
-                "phoneViews": 0
+                "phoneViews": 0,
+                "favourites": 4
             },
             "currentWeek": {
                 "pageViews": 33,
                 "adReplies": 2,
-                "phoneViews": 0
+                "phoneViews": 0,
+                "favourites": 1
+            },
+            "last90Days": {
+                "pageViews": 33,
+                "adReplies": 2,
+                "phoneViews": 0,
+                "favourites": 1
+            },
+            "last30Days": {
+                "pageViews": 33,
+                "adReplies": 2,
+                "phoneViews": 0,
+                "favourites": 1
             }
         },
         "subscriptionStatus":{
