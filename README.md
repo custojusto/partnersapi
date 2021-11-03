@@ -1886,25 +1886,47 @@ Response signature for /tags/1100
 
 ```json
   "adStats": {
-      "lastMonth": {
-          "pageViews": 15,
-          "replies": 4,
-          "phoneViews": 2
+      "total": {
+          "pageViews": 294,
+          "adReplies": 11,
+          "phoneViews": 2,
+          "favourites": 10
       },
-      "month": {
-          "pageViews": 16,
-          "replies": 5,
-          "phoneViews": 0
+      "previousMonth": {
+          "pageViews": 69,
+          "adReplies": 4,
+          "phoneViews": 0,
+          "favourites": 5
       },
-      "yesterday": {
-          "pageViews": 13,
-          "replies": 5,
-          "phoneViews": 0
+      "currentMonth": {
+          "pageViews": 45,
+          "adReplies": 2,
+          "phoneViews": 0,
+          "favourites": 5
       },
-      "today": {
-          "pageViews": 3,
-          "replies": 0,
-          "phoneViews": 0
+      "previousWeek": {
+          "pageViews": 10,
+          "adReplies": 0,
+          "phoneViews": 0,
+          "favourites": 4
+      },
+      "currentWeek": {
+          "pageViews": 33,
+          "adReplies": 2,
+          "phoneViews": 0,
+          "favourites": 1
+      },
+      "last90Days": {
+          "pageViews": 33,
+          "adReplies": 2,
+          "phoneViews": 0,
+          "favourites": 1
+      },
+      "last30Days": {
+          "pageViews": 33,
+          "adReplies": 2,
+          "phoneViews": 0,
+          "favourites": 1
       }
   }
 ```
