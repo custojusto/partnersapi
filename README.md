@@ -1927,6 +1927,12 @@ Response signature for /tags/1100
           "adReplies": 2,
           "phoneViews": 0,
           "favourites": 1
+      },
+      "yesterday": {
+          "pageViews": 10,
+          "adReplies": 1,
+          "phoneViews": 0,
+          "favourites": 0
       }
   }
 ```
