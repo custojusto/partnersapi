@@ -375,6 +375,130 @@ Response signature for /categories/2000/2020
 ]
 ```
 
+### Get allowed/custom fields by category /categories/fields/{categoryID}
+* * * 
+> This endpoint will return the default allowed fields by category, these may vary for each different ad type  
+> Requires valid token for authentication
+
+<pre>
+Method 
+  GET
+Headers
+  Content-Type: application/json
+  Authorization: kiYiuYTiuTiUTYiytIut
+Response signature for /categories/fields/1020
+</pre>
+
+```json  
+[
+  {
+    "label": "Tipologia",
+    "json": "typology",
+    "type": "int",
+    "values": "/roomtypologies",
+    "accelerator": "/roomtypologies/{value}",
+    "required": true
+  },
+  {
+    "label": "Área útil",
+    "json": "size",
+    "type": "int",
+    "required": true
+  },
+  {
+    "label": "Certificado Energético",
+    "json": "energyRating",
+    "type": "int",
+    "values": "/energyratings",
+    "required": true
+  },
+  {
+    "label": "Ano de Construção",
+    "json": "constructionYear",
+    "type": "date",
+    "format": "YYYY",
+    "required": false
+  },
+  {
+    "label": "Licença de Utilização",
+    "json": "usageLicense",
+    "type": "string",
+    "required": false
+  },
+  {
+    "label": "Link do vídeo",
+    "json": "videoURL",
+    "type": "string",
+    "required": false
+  },
+  {
+    "label": "Link da visita virtual",
+    "json": "virtualTourURL",
+    "type": "string",
+    "required": false
+  }
+]
+```
+
+### Get allowed/custom fields by category and ad type /categories/fields/{categoryID}/{adType}
+* * * 
+> This endpoint will return the allowed fields for a specific category and ad type (u,s,d,k,t)  
+> Requires valid token for authentication
+
+<pre>
+Method 
+  GET
+Headers
+  Content-Type: application/json
+  Authorization: kiYiuYTiuTiUTYiytIut
+Response signature for /categories/fields/1020/s
+</pre>
+
+```json  
+[
+  {
+    "label": "Tipologia",
+    "json": "typology",
+    "type": "int",
+    "values": "/roomtypologies",
+    "accelerator": "/roomtypologies/{value}",
+    "required": true
+  },
+  {
+    "label": "Área útil",
+    "json": "size",
+    "type": "int",
+    "required": true
+  },
+  {
+    "label": "Certificado Energético",
+    "json": "energyRating",
+    "type": "int",
+    "values": "/energyratings",
+    "required": true
+  },
+  {
+    "label": "Ano de Construção",
+    "json": "constructionYear",
+    "type": "date",
+    "format": "YYYY",
+    "required": false
+  },
+  {
+    "label": "Link do vídeo",
+    "json": "videoURL",
+    "type": "string",
+    "required": false
+  },
+  {
+    "label": "Link da visita virtual",
+    "json": "virtualTourURL",
+    "type": "string",
+    "required": false
+  }
+]
+```
+
 ### Get allowed tags by category /tags/{categoryID}
 * * * 
 > This endpoint will return the allowed tags by category  
@@ -642,31 +766,31 @@ Response signature for /tags/1100
   Response signature for /motobrands
   </pre>
 ```json
-	[
-	    {
-		"id": 4,
-		"name": "AJP"
-	    },
-	    {
-		"id": 1,
-		"name": "Adly"
-	    },
-	    {
-		"id": 2,
-		"name": "Aeon"
-	    },
-	    {
-		"id": 3,
-		"name": "Aixam"
-	    },
-	    {
-		"id": 5,
-		"name": "Aprilia"
-	    },
-	    {
-		"id": 9,
-		"name": "BMW"
-	    }
+  [
+      {
+    "id": 4,
+    "name": "AJP"
+      },
+      {
+    "id": 1,
+    "name": "Adly"
+      },
+      {
+    "id": 2,
+    "name": "Aeon"
+      },
+      {
+    "id": 3,
+    "name": "Aixam"
+      },
+      {
+    "id": 5,
+    "name": "Aprilia"
+      },
+      {
+    "id": 9,
+    "name": "BMW"
+      }
     ]
  ```
 
@@ -684,28 +808,28 @@ Response signature for /tags/1100
   Response signature for /motobrands/9
   </pre>
 ```json  
-	{
-	    "id": 9,
-	    "name": "BMW",
-	    "models": [
-		{
-		    "id": 1,
-		    "name": "C1"
-		},
-		{
-		    "id": 2,
-		    "name": "F"
-		},
-		{
-		    "id": 3,
-		    "name": "GS"
-		},
-		{
-		    "id": 4,
-		    "name": "HP2"
-		}
-	    ]
-	}
+  {
+      "id": 9,
+      "name": "BMW",
+      "models": [
+    {
+        "id": 1,
+        "name": "C1"
+    },
+    {
+        "id": 2,
+        "name": "F"
+    },
+    {
+        "id": 3,
+        "name": "GS"
+    },
+    {
+        "id": 4,
+        "name": "HP2"
+    }
+      ]
+  }
 ```
 
 ### Find moto brand by similar name /motobrands/byname/{lowercaseName}
@@ -722,10 +846,10 @@ Response signature for /tags/1100
   Response signature for /motobrands/byname/cavasaqui
   </pre>
 ```json
-	{
-	    "id": 28,
-	    "name": "Kawasaki"
-	}
+  {
+      "id": 28,
+      "name": "Kawasaki"
+  }
 ```
 
 
@@ -743,10 +867,10 @@ Response signature for /tags/1100
   Response signature for /motobrands/28/byname/eliminador
   </pre>
 ```json
-	{
-	    "id": 19,
-	    "name": "Eliminator"
-	}
+  {
+      "id": 19,
+      "name": "Eliminator"
+  }
 ```
 
 ### Get Cubic Centemeters configurations /cc
@@ -2147,7 +2271,7 @@ Response signature for /tags/1100
     }
 ```
     
-**Custom Params for Vehicles category**
+**Custom Params for Vehicles category** - Check [section](#get-allowedcustom-fields-by-category-categoriesfieldscategoryid) and [section](#get-allowedcustom-fields-by-category-and-ad-type-categoriesfieldscategoryidadtype)
    > brand - BrandID  
    > capacity - Cubic Centimeters (CC)  
    > color - ColorID  
@@ -2167,20 +2291,16 @@ Response signature for /tags/1100
    >> DailyMotion (https://www.dailymotion.com/video/x75z2pn)  
 
 
-**Custom Params for Vehicles/Motos category**
+**Custom Params for Vehicles/Motos category** - Check [section](#get-allowedcustom-fields-by-category-categoriesfieldscategoryid) and [section](#get-allowedcustom-fields-by-category-and-ad-type-categoriesfieldscategoryidadtype)
    > motobrand - BrandID (/motobrands or /motobrands/byname/{value})  
    > motomodel - ModelID (/motobrands/{id} or /motobrands/{id}/byname/{value})  
    > cubicCentimeters - Cubic Centimeters ID (/cc or using /cc/{value})  
    > regYear - License plate year (yyyy)  
    > mileage - Mileages (/mileages or /mileages/{value})  
-   > videoURL - A link for a video, we currently support:
+   > videoURL - A link for a video, we currently support:  
    >> YouTube (https://www.youtube.com/watch?v=jNlqg72IeDU)  
    >> Vimeo (https://vimeo.com/347119375)  
    >> DailyMotion (https://www.dailymotion.com/video/x75z2pn)  
-
-
-**Custom Params for any category**
-   > All params can be reached using the endpoint /categories/fields/{categoryID}  
 
 
 ### Read ad complete details - Real Estate /partner/entries/{adID}
@@ -2216,8 +2336,8 @@ Response signature for /tags/1100
           "vatNumber":"999999990"
       },
       "body":"Apartamento localizado em Burgau, o segredo mais bem guardado do Algarve. É um típico porto de pesca debruçado sobre o mar. Por estar inclinada sobre a praia, de qualquer lado da pequena localidade se vê as águas calmas e transparentes.\u003cbr\u003e\u003cbr\u003ePossui dois quartos de casal, uma casa de banho, sala de jantar/estar e cozinha equipada. Esta propriedade tem a possibilidade de alojar mais pessoas em camas suplementares.\u003cbr\u003e\u003cbr\u003eAo abrir a janela vai desfrutar de uma vista fantástica sobre o mar e a praia. Tem ainda à sua disposição um pequeno terraço onde poderá efetuar refeições ao ar livre com a família.\u003cbr\u003e\u003cbr\u003eDevido à sua excelente localização, os hóspedes têm à sua disposição restaurantes, supermercados, comércios, praia e animação noturna sem precisar de utilizar o carro. As referências a este sítio recuam ao século XVI e ainda se vê as ruínas de um forte antigo. O local é propício a atividades ao ar livre, como desportos náuticos e aquáticos.\u003cbr\u003e\u003cbr\u003e De: 2018-03-23 até: 2018-03-30: Por noite: 48.8 euros e por semana: 341.6 euros (obrigatorio permanecer 4 noites na casa!)\u003cbr\u003e De: 2018-03-31 até: 2018-05-31: Por noite: 67.1 euros e por semana: 469.7 euros (obrigatorio permanecer 4 noites na casa!)\u003cbr\u003e De: 2018-06-01 até: 2018-07-15: Por noite: 79.3 euros e por semana: 555.1 euros (obrigatorio permanecer 5 noites na casa!)\u003cbr\u003e De: 2018-07-16 até: 2018-09-15: Por noite extra: 97.6 euros ou por semana: 683.2 euros (mínimo de 7 noites na casa)\u003cbr\u003e De: 2018-09-16 até: 2018-10-31: Por noite: 79.3 euros e por semana: 555.1 euros (obrigatorio permanecer 5 noites na casa!)\u003cbr\u003e De: 2018-11-01 até: 2018-12-29: Por noite: 54.9 euros e por semana: 384.3 euros (o",
-      "category":"1100",
-      "categoryPath":"1000>1100",
+      "category":"1020",
+      "categoryPath":"1000>1020",
       "imageURLs":[
           "https://cdn.custojusto.pt/api/v1/images/images/1335591203-propriedade-situada-em-vila-do-bispo-ref-4640.jpg?rule=gallery",
           "https://cdn.custojusto.pt/api/v1/images/images/1392974608-propriedade-situada-em-vila-do-bispo-ref-4640.jpg?rule=gallery",
@@ -2254,13 +2374,15 @@ Response signature for /tags/1100
           "rntLicence":"12345",
           "size":400,
           "terrainSize": 700,
+          "constructionYear": 1850,
+          "usageLicense": "XYZ/2021/AND/1234567",
           "tags":[
             "piscina",
             "cozinha",
             "wifi",
             "ac"
           ],
-          "typology":5,
+          "typology": 5,
           "videoURL": "https://www.youtube.com/embed/Z8XP7UjzvnU",
           "virtualTourURL": "https://my.matterport.com/show/?m=B3p9vSWmXcG"
       },
@@ -2277,7 +2399,7 @@ Response signature for /tags/1100
     }
 ```
     
-**Custom Params for Real Estate**
+**Custom Params for Real Estate** - Check [section](#get-allowedcustom-fields-by-category-categoriesfieldscategoryid) and [section](#get-allowedcustom-fields-by-category-and-ad-type-categoriesfieldscategoryidadtype)
   > availability - To be defined a custom layout  
   > beds - Capacity, number of beds or rooms. Is this case, the website will show 4 as capacity  
   > energyRating - Not used for Vacation rental  
@@ -2285,6 +2407,8 @@ Response signature for /tags/1100
   > rntLicence - Rental license  
   > size - Mt² available  
   > terrainSize - Mt² terrain size (only appliable in categories: 1040, 1060)  
+  > constructionYear - Building construction year (only appliable in categories: 1020, 1040; in the near future it will be mandatory for renting)  
+  > usageLicense - Building usage license (only appliable in categories: 1020, 1040 and for constructionYear >= 1951; in the near future it will be mandatory for renting) 
   > tags - Available amenities. Check /tags/{category} endpoint  
   > typology - Check /roomtypologies for correct ID  
   > videoURL - A link for a video, we currently support:  
@@ -2296,6 +2420,7 @@ Response signature for /tags/1100
   >> Matterport (https://my.matterport.com/show/?m=B3p9vSWmXcG)  
   >> Remax Virtual Tour Premier (https://www.remaxvtp.com/remax/porto/oceanus/080/tour.html)  
   >> Nodalview (https://www.nodalview.com/7oUdKXnqY2jD5YDmTquVKJkF)  
+  >> X-IMO (https://XYZ.ximo.pt/vtour/tourPlayer.htm?idImovel=123)  
 
 
 ### Upload images /images/ads
@@ -2604,7 +2729,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
   remainingCredits - Indicates the number of new ads + number of Edits remaning
 </pre>
 
-**Custom Params for Animals category, valid categories for custom params are ony Dogs and Cats**
+**Custom Params for Animals category, valid categories for custom params are ony Dogs and Cats** - Check [section](#get-allowedcustom-fields-by-category-categoriesfieldscategoryid) and [section](#get-allowedcustom-fields-by-category-and-ad-type-categoriesfieldscategoryidadtype)
    > animalAge - age interval ID  
    > animalBreed - Dogs category only, accepts a valid ID from breeds listing  
    > animalBreedOther - Cats category only, accepts a string  
@@ -2806,7 +2931,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
   remainingCredits - Indicates the number of new ads + number of Edits remaning
 </pre>
     
-**Custom Params for Real Estate - Vacation rental**
+**Custom Params for Real Estate - Vacation rental** - Check [section](#get-allowedcustom-fields-by-category-categoriesfieldscategoryid) and [section](#get-allowedcustom-fields-by-category-and-ad-type-categoriesfieldscategoryidadtype)
    > accommodationType - accommodation type ID (/accommodationtypes)  
    > vacationType - vacation type ID (/cavationtypes)  
 
