@@ -2270,38 +2270,72 @@ Response signature for /tags/1100
         "url": "https://www.custojusto.pt/11812765"
     }
 ```
-    
-**Custom Params for Vehicles category** - Check [section](#get-allowedcustom-fields-by-category-categoriesfieldscategoryid) and [section](#get-allowedcustom-fields-by-category-and-ad-type-categoriesfieldscategoryidadtype)
-   > brand - BrandID  
-   > capacity - Cubic Centimeters (CC)  
-   > color - ColorID  
-   > fuel - Fuel TypeID  
-   > gearbox - Gearbox TypeID  
-   > licensePlate - Valid, uppercased, Portuguese format, licenseplate  
-   > mileage - MileageID  
-   > model - ModelID  
-   > power - BHP (CV)  
-   > regMonth - First registration - Month  
-   > regYear - First registration - Year  
-   > variant - Variant/Version (SW, S-Line, etc)  
-   > occupancy - Int value, number of seats in vehicle (only appliable in categories: 2141, 2142, 2143, 2144, 2145, 2146, 2181)  
-   > videoURL - A link for a video, we currently support:
-   >> YouTube (https://www.youtube.com/watch?v=jNlqg72IeDU)  
-   >> Vimeo (https://vimeo.com/347119375)  
-   >> DailyMotion (https://www.dailymotion.com/video/x75z2pn)  
 
-
-**Custom Params for Vehicles/Motos category** - Check [section](#get-allowedcustom-fields-by-category-categoriesfieldscategoryid) and [section](#get-allowedcustom-fields-by-category-and-ad-type-categoriesfieldscategoryidadtype)
-   > motobrand - BrandID (/motobrands or /motobrands/byname/{value})  
-   > motomodel - ModelID (/motobrands/{id} or /motobrands/{id}/byname/{value})  
-   > cubicCentimeters - Cubic Centimeters ID (/cc or using /cc/{value})  
-   > regYear - License plate year (yyyy)  
-   > mileage - Mileages (/mileages or /mileages/{value})  
-   > videoURL - A link for a video, we currently support:  
-   >> YouTube (https://www.youtube.com/watch?v=jNlqg72IeDU)  
-   >> Vimeo (https://vimeo.com/347119375)  
-   >> DailyMotion (https://www.dailymotion.com/video/x75z2pn)  
-
+### Read ad complete details - Vehicle Parts /partner/entries/{adID}
+* * *
+> This endpoint will return the ad details, regardless the ad state  
+> Vehicle part type ad, with custom parameters  
+> Requires valid token for authentication  
+  
+  
+  <pre>
+  Method 
+    GET
+  StatusCode
+    417 - Expectation Failed
+    <small>When requesting a bad or not authorized adID</small>
+    200 - OK
+  Headers
+    Content-Type: application/json
+    Authorization: kiYiuYTiuTiUTYiytIut
+  Response signature for /partner/entries/12505606
+  </pre>
+```json    
+    {
+        "adID": 12505606,
+        "author": {
+            "email": "nome@partner.pt",
+            "name": "Nome da loja",
+            "phone": "911234567",
+            "phoneDisabled": false,
+            "professionalAd": true,
+            "salesmanDisabled": false,
+            "vatNumber": "999999990"
+        },
+        "body": "[{Título do anúncio a bold}]\n\nVeículo com as seguintes características\n[*] 4 Rodas\n[*] 5 Portas\n[*] Radio\n[*] GPS\n[*] Vidros escurecidos\n[*] Volante à esquerda\n\n",
+        "category": "2121",
+        "categoryPath": "2000>2120>2121",
+        "imageURLs": [
+            "https://cdn.custojusto.pt/api/v1/images/images/953910819-teste-de-teste-de-trigger-em-anuncio-via-api.jpg?rule=gallery",
+            "https://cdn.custojusto.pt/api/v1/images/images/919434168-teste-de-teste-de-trigger-em-anuncio-via-api.jpg?rule=gallery"
+        ],
+        "images": [
+            "0953910819",
+            "0919434168"
+        ],
+        "listID": "11812765",
+        "deleteID": "11812765",
+        "location": {
+            "area": 66,
+            "cp6": "4440-777",
+            "district": 5,
+            "subArea": 3
+        },
+        "params": {
+            "partNumber": "222-AAA_123"
+        },
+        "partner": {
+            "externalAdID": "7780p6yhgtr",
+            "externalGroupID": "partner-group-name",
+            "partnerParentID": "partner-name-999999990"
+        },
+        "price": 233,
+        "status": "active",
+        "subject": "Peça para Carro X",
+        "type": "s",
+        "url": "https://www.custojusto.pt/11812765"
+    }
+```
 
 ### Read ad complete details - Real Estate /partner/entries/{adID}
 * * *
@@ -2398,30 +2432,6 @@ Response signature for /tags/1100
       "url":"https://www.custojusto.pt/11804904"
     }
 ```
-    
-**Custom Params for Real Estate** - Check [section](#get-allowedcustom-fields-by-category-categoriesfieldscategoryid) and [section](#get-allowedcustom-fields-by-category-and-ad-type-categoriesfieldscategoryidadtype)
-  > availability - To be defined a custom layout  
-  > beds - Capacity, number of beds or rooms. Is this case, the website will show 4 as capacity  
-  > energyRating - Not used for Vacation rental  
-  > gotAffordableRental - Not used for Vacation rental. This parameter indicates if the rental allows PAA (arrendamento-acessivel)  
-  > rntLicence - Rental license  
-  > size - Mt² available  
-  > terrainSize - Mt² terrain size (only appliable in categories: 1040, 1060)  
-  > constructionYear - Building construction year (only appliable in categories: 1020, 1040; in the near future it will be mandatory for renting)  
-  > usageLicense - Building usage license (only appliable in categories: 1020, 1040 and for constructionYear >= 1951; in the near future it will be mandatory for renting) 
-  > tags - Available amenities. Check /tags/{category} endpoint  
-  > typology - Check /roomtypologies for correct ID  
-  > videoURL - A link for a video, we currently support:  
-  >> YouTube (https://www.youtube.com/watch?v=jNlqg72IeDU)  
-  >> Vimeo (https://vimeo.com/347119375)  
-  >> DailyMotion (https://www.dailymotion.com/video/x75z2pn)  
-  >
-  > virtualTourURL - A link for a virtual tour, we currently support:  
-  >> Matterport (https://my.matterport.com/show/?m=B3p9vSWmXcG)  
-  >> Remax Virtual Tour Premier (https://www.remaxvtp.com/remax/porto/oceanus/080/tour.html)  
-  >> Nodalview (https://www.nodalview.com/7oUdKXnqY2jD5YDmTquVKJkF)  
-  >> X-IMO (https://XYZ.ximo.pt/vtour/tourPlayer.htm?idImovel=123)  
-
 
 ### Upload images /images/ads
 * * *
@@ -2636,6 +2646,129 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
   remainingCredits - Indicates the number of new ads + number of Edits remaning
 </pre>
 
+**Custom Params for Vehicles category** - Check [section](#get-allowedcustom-fields-by-category-categoriesfieldscategoryid) and [section](#get-allowedcustom-fields-by-category-and-ad-type-categoriesfieldscategoryidadtype)
+   > brand - BrandID  
+   > capacity - Cubic Centimeters (CC)  
+   > color - ColorID  
+   > fuel - Fuel TypeID  
+   > gearbox - Gearbox TypeID  
+   > licensePlate - Valid, uppercased, Portuguese format, licenseplate  
+   > mileage - MileageID  
+   > model - ModelID  
+   > power - BHP (CV)  
+   > regMonth - First registration - Month  
+   > regYear - First registration - Year  
+   > variant - Variant/Version (SW, S-Line, etc)  
+   > occupancy - Int value, number of seats in vehicle (only appliable in categories: 2141, 2142, 2143, 2144, 2145, 2146, 2181)  
+   > videoURL - A link for a video, we currently support:
+   >> YouTube (https://www.youtube.com/watch?v=jNlqg72IeDU)  
+   >> Vimeo (https://vimeo.com/347119375)  
+   >> DailyMotion (https://www.dailymotion.com/video/x75z2pn)  
+
+
+**Custom Params for Vehicles/Motos category** - Check [section](#get-allowedcustom-fields-by-category-categoriesfieldscategoryid) and [section](#get-allowedcustom-fields-by-category-and-ad-type-categoriesfieldscategoryidadtype)
+   > motobrand - BrandID (/motobrands or /motobrands/byname/{value})  
+   > motomodel - ModelID (/motobrands/{id} or /motobrands/{id}/byname/{value})  
+   > cubicCentimeters - Cubic Centimeters ID (/cc or using /cc/{value})  
+   > regYear - License plate year (yyyy)  
+   > mileage - Mileages (/mileages or /mileages/{value})  
+   > videoURL - A link for a video, we currently support:  
+   >> YouTube (https://www.youtube.com/watch?v=jNlqg72IeDU)  
+   >> Vimeo (https://vimeo.com/347119375)  
+   >> DailyMotion (https://www.dailymotion.com/video/x75z2pn)  
+
+
+
+### Create vehicle part ad /partner/entries
+* * *
+> Create new vehicle part ad  
+> Requires valid token for authentication  
+  
+  
+  <pre>
+  Method 
+    POST
+  Headers
+    Content-Type: application/json
+    Authorization: kiYiuYTiuTiUTYiytIut
+  Payload signature
+  </pre>
+```json    
+    {
+      "author":{
+          "email":"name@partner.pt",
+          "name":"Partner name",
+          "phone":"911234567",
+          "phoneDisabled":false,
+          "professionalAd":true,
+          "salesmanDisabled":false,
+          "vatNumber":"999999990"
+      },
+      "body": "[{Título do anúncio a bold}]\n\nIsto é um anúncio de peças\n[*]Peça X",
+      "category":"2121",
+      "images":[
+          "3568575919",
+      ],
+      "location":{
+          "area":66,
+          "cp6":"4445-371",
+          "district":5,
+          "subArea":4
+      },
+      "params":{
+          "partNumber": "222-AAA_123"
+      },
+      "partner":{
+          "externalAdID":"BMW-112233",
+          "externalGroupID":"partner-group-name"
+      },
+      "price":4967,
+      "subject":"Auto subject will apply for cars",
+      "type":"s"
+    }
+```
+<pre>
+  Response signature
+  StatusCode
+    200 - OK
+  </pre>
+```json  
+    {
+      "results":[
+          {
+            "field":"adID",
+            "value":"11505679"
+          },
+          {
+            "field":"remainingCredits",
+            "value":"984"
+          }
+      ]
+    }
+```
+<pre>
+  StatusCode
+    417 - Expectation Failed
+  </pre>
+```json  
+    {
+      "results":[
+          {
+            "field":"fieldName",
+            "value":"Error description"
+          }
+      ]
+    }
+```
+    
+<pre>
+  adID - ID used to edit or deactivate an exported ad
+  remainingCredits - Indicates the number of new ads + number of Edits remaning
+</pre>
+
+**Custom Params for Vehicle Parts** - Check [section](#get-allowedcustom-fields-by-category-categoriesfieldscategoryid) and [section](#get-allowedcustom-fields-by-category-and-ad-type-categoriesfieldscategoryidadtype)
+   > partNumber - part number/reference  
+
 
 ### Create animal ad /partner/entries
 * * *
@@ -2739,6 +2872,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
    > lop - Dogs category only  
    > nrOfLitterAnimals - "Nº de animais da ninhada"  
 
+
 ### Create real estate ad /partner/entries
 * * *
 > Create new real estate ad  
@@ -2829,6 +2963,29 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
   adID - ID used to edit or deactivate an exported ad
   remainingCredits - Indicates the number of new ads + number of Edits remaning
 </pre>
+    
+**Custom Params for Real Estate** - Check [section](#get-allowedcustom-fields-by-category-categoriesfieldscategoryid) and [section](#get-allowedcustom-fields-by-category-and-ad-type-categoriesfieldscategoryidadtype)
+  > availability - To be defined a custom layout  
+  > beds - Capacity, number of beds or rooms. Is this case, the website will show 4 as capacity  
+  > energyRating - Not used for Vacation rental  
+  > gotAffordableRental - Not used for Vacation rental. This parameter indicates if the rental allows PAA (arrendamento-acessivel)  
+  > rntLicence - Rental license  
+  > size - Mt² available  
+  > terrainSize - Mt² terrain size (only appliable in categories: 1040, 1060)  
+  > constructionYear - Building construction year (only appliable in categories: 1020, 1040; in the near future it will be mandatory for renting)  
+  > usageLicense - Building usage license (only appliable in categories: 1020, 1040 and for constructionYear >= 1951; in the near future it will be mandatory for renting) 
+  > tags - Available amenities. Check /tags/{category} endpoint  
+  > typology - Check /roomtypologies for correct ID  
+  > videoURL - A link for a video, we currently support:  
+  >> YouTube (https://www.youtube.com/watch?v=jNlqg72IeDU)  
+  >> Vimeo (https://vimeo.com/347119375)  
+  >> DailyMotion (https://www.dailymotion.com/video/x75z2pn)  
+  >
+  > virtualTourURL - A link for a virtual tour, we currently support:  
+  >> Matterport (https://my.matterport.com/show/?m=B3p9vSWmXcG)  
+  >> Remax Virtual Tour Premier (https://www.remaxvtp.com/remax/porto/oceanus/080/tour.html)  
+  >> Nodalview (https://www.nodalview.com/7oUdKXnqY2jD5YDmTquVKJkF)  
+  >> X-IMO (https://XYZ.ximo.pt/vtour/tourPlayer.htm?idImovel=123)  
 
 
 ### Create real estate - Vacation rental ad /partner/entries
@@ -2934,6 +3091,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
 **Custom Params for Real Estate - Vacation rental** - Check [section](#get-allowedcustom-fields-by-category-categoriesfieldscategoryid) and [section](#get-allowedcustom-fields-by-category-and-ad-type-categoriesfieldscategoryidadtype)
    > accommodationType - accommodation type ID (/accommodationtypes)  
    > vacationType - vacation type ID (/cavationtypes)  
+
 
 ### Edit ad /partner/entries/{adID}
 * * *
