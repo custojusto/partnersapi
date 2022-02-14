@@ -514,28 +514,31 @@ Response signature for /tags/1100
 </pre>
 
 ```json  
-[
-    {
-        "id": "piscina",
-        "name": "Piscina"
-    },
-    {
-        "id": "cozinha",
-        "name": "Cozinha"
-    },
-    {
-        "id": "animais",
-        "name": "Permitido animais"
-    },
-    {
-        "id": "wifi",
-        "name": "Wifi"
-    },
-    {
-        "id": "ac",
-        "name": "Ar condicionado"
-    }
-]
+{
+	"type": "checkbox",
+	"tags": [
+		{
+			"id": "piscina",
+			"name": "Piscina"
+		},
+		{
+			"id": "cozinha",
+			"name": "Cozinha"
+		},
+		{
+			"id": "animais",
+			"name": "Permitido animais"
+		},
+		{
+			"id": "wifi",
+			"name": "Wifi"
+		},
+		{
+			"id": "ac",
+			"name": "Ar condicionado"
+		}
+	]
+}
 ```
 
 ### Get the existing car phone brands /phonebrands
