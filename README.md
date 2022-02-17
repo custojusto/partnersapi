@@ -2133,6 +2133,44 @@ Response signature for /tags/1100
     }
 ```
 
+### Get partner ids based on ads status /partner/my-ids/...
+* * *
+> This endpoint returns the ids used on partner ads. All 4 Status apply: active (published), inactive (under approval), disabled (marked as deleted for less than 60 days), refused (when ad has been refused)  
+> Requires valid token for authentication  
+  
+  **it's possible to filter data based on url route**
+  * /partner/my-ids/active will return just active ads ids  
+  * /partner/my-ids/refused will return just refused ads ids  
+  * /partner/my-ids/disabled will return just ads ids marked as disabled. Auto removal after 60 days of the deactivation  
+  * /partner/my-ids/inactive will return just inactive ads ids  
+
+
+```json
+[
+    {
+        "adID": 12412133,
+        "deleteID": "32133241",
+        "listID": "32133241",
+        "externalAdID": "AA-123",
+        "externalGroupID": "partner-group-name"
+    },
+    {
+        "adID": 12412134,
+        "deleteID": "32133242",
+        "listID": "32133242",
+        "externalAdID": "BB-432",
+        "externalGroupID": "partner-group-name"
+    },
+    {
+        "adID": 12132135,
+        "deleteID": "32133243",
+        "listID": "32133243",
+        "externalAdID": "BB-54634",
+        "externalGroupID": "partner-group-name"
+    }
+]
+```
+
 ### Read ad complete details /partner/entries/{adID}
 * * *
 > This endpoint will return the ad details, regardless the ad state  
