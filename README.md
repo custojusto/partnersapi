@@ -400,7 +400,7 @@ Response signature for /categories/fields/1020
     "required": true
   },
   {
-    "label": "Área útil",
+    "label": "Ýrea útil",
     "json": "size",
     "type": "int",
     "required": true
@@ -465,7 +465,7 @@ Response signature for /categories/fields/1020/s
     "required": true
   },
   {
-    "label": "Área útil",
+    "label": "Ýrea útil",
     "json": "size",
     "type": "int",
     "required": true
@@ -2476,7 +2476,7 @@ Response signature for /tags/1100
 
 ### Upload images /images/ads
 * * *
-> When creating ads, image ids are needed. Use this endpoint to upload those images, image id will be returned  This endpoint will return a valid and temporary image url (valid for 24h).  
+> When creating ads, image ids are needed. Use this endpoint to upload those images, image id will be returned  This endpoint will return a valid and temporary image url (valid for 1h).  
 > Requires valid token for authentication  
   
   
