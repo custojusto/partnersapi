@@ -400,7 +400,7 @@ Response signature for /categories/fields/1020
     "required": true
   },
   {
-    "label": "Ýrea útil",
+    "label": "Área útil",
     "json": "size",
     "type": "int",
     "required": true
@@ -411,6 +411,12 @@ Response signature for /categories/fields/1020
     "type": "int",
     "values": "/energyratings",
     "required": true
+  },
+  {
+    "label": "Código do Certificado Energético",
+    "json": "energyCertificateNumber",
+    "type": "string",
+    "required": false
   },
   {
     "label": "Ano de Construção",
@@ -476,6 +482,12 @@ Response signature for /categories/fields/1020/s
     "type": "int",
     "values": "/energyratings",
     "required": true
+  },
+  {
+    "label": "Código do Certificado Energético",
+    "json": "energyCertificateNumber",
+    "type": "string",
+    "required": false
   },
   {
     "label": "Ano de Construção",
@@ -2445,6 +2457,7 @@ Response signature for /tags/1100
           "availability":"custom string, please contact us for more details",
           "beds":4,
           "energyRating":0,
+          "energyCertificateNumber":"CJ0123456789",
           "gotAffordableRental":false,
           "rntLicence":"12345",
           "size":400,
@@ -2951,6 +2964,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
       },
       "params":{
           "energyRating":3,
+          "energyCertificateNumber":"CJ0123456789",
           "size":500,
           "typology":7,
           "videoURL":"https://www.youtube.com/watch?v=jNlqg72IeDU",
@@ -3009,6 +3023,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
   > availability - To be defined a custom layout  
   > beds - Capacity, number of beds or rooms. Is this case, the website will show 4 as capacity  
   > energyRating - Not used for Vacation rental  
+  > energyCertificateNumber - Not used for Garages, Rooms or Vacation rental  
   > gotAffordableRental - Not used for Vacation rental. This parameter indicates if the rental allows PAA (arrendamento-acessivel)  
   > rntLicence - Rental license  
   > size - Mt² available  
