@@ -471,7 +471,7 @@ Response signature for /categories/fields/1020/s
     "required": true
   },
   {
-    "label": "Ýrea útil",
+    "label": "Área útil",
     "json": "size",
     "type": "int",
     "required": true
@@ -614,6 +614,48 @@ Response signature for /tags/1100
         "name": "Apple"
     }
 ```
+
+
+### Get default car params for a known licenseplate /vehicles/licenseplates/{licenseplate}
+* * * 
+> This endpoint will return the default ad params, for the provided licenseplate, on our platform  
+> This is an experimental service, available only for vehicle professionals  
+> Requires valid token for authentication  
+
+  <pre>
+  Method 
+    GET
+  Headers
+    Content-Type: application/json
+    Authorization: kiYiuYTiuTiUTYiytIut
+  Response signature for /vehicles/licenseplates/AA01AA
+  </pre>
+  ```json  
+    {
+        "year": 2020,
+        "month": 3,
+        "brandID": 63,
+        "modelID": 4,
+        "variant": "3",
+        "colorID": 1,
+        "power": 506,
+        "fuelID": 5
+    }
+  ```
+
+> This would be the equivalent to  
+
+  ```json  
+  {
+      "dataMatricula": "2020-03-02",
+      "marca": "TESLA",
+      "modelo": "MODEL 3",
+      "cor": "BRANCO E OUTRAS",
+      "potencia": "506cv",
+      "combustivel": "ELECTRICO",
+  }
+  ```
+
 
 ### Get the existing car brands /carbrands
 * * * 
