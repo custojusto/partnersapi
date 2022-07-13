@@ -2499,7 +2499,7 @@ Response signature for /tags/1100
           "availability":"custom string, please contact us for more details",
           "beds":4,
           "energyRating":0,
-          "energyCertificateNumber":"CJ0123456789",
+          "energyCertificateNumber":"SCE0123456789101",
           "gotAffordableRental":false,
           "rntLicence":"12345",
           "size":400,
@@ -3006,7 +3006,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
       },
       "params":{
           "energyRating":3,
-          "energyCertificateNumber":"CJ0123456789",
+          "energyCertificateNumber":"SCE0123456789101",
           "size":500,
           "typology":7,
           "videoURL":"https://www.youtube.com/watch?v=jNlqg72IeDU",
@@ -3065,7 +3065,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
   > availability - To be defined a custom layout  
   > beds - Capacity, number of beds or rooms. Is this case, the website will show 4 as capacity  
   > energyRating - Not used for Vacation rental  
-  > energyCertificateNumber - Not used for Garages, Rooms or Vacation rental  
+  > energyCertificateNumber - Not used for Garages, Rooms or Vacation rental (format examples: DCR0123456789101, SCE0123456789101, CE0123456789101, 0123456789101)  
   > gotAffordableRental - Not used for Vacation rental. This parameter indicates if the rental allows PAA (arrendamento-acessivel)  
   > rntLicence - Rental license  
   > size - Mt² available  
