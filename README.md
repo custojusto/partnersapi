@@ -406,14 +406,14 @@ Response signature for /categories/fields/1020
     "required": true
   },
   {
-    "label": "Certificado Energético",
+    "label": "Classe Energética",
     "json": "energyRating",
     "type": "int",
     "values": "/energyratings",
     "required": true
   },
   {
-    "label": "Código do Certificado Energético",
+    "label": "Número do Certificado Energético",
     "json": "energyCertificateNumber",
     "type": "string",
     "required": false
@@ -477,14 +477,14 @@ Response signature for /categories/fields/1020/s
     "required": true
   },
   {
-    "label": "Certificado Energético",
+    "label": "Classe Energética",
     "json": "energyRating",
     "type": "int",
     "values": "/energyratings",
     "required": true
   },
   {
-    "label": "Código do Certificado Energético",
+    "label": "Número do Certificado Energético",
     "json": "energyCertificateNumber",
     "type": "string",
     "required": false
