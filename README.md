@@ -101,7 +101,7 @@ Headers
 
 ### Get location IDs tree based on CP6 /cp6/{cp6}
 * * *
-> This endpoint will return the needed IDs for region (district), county (area) and parish (sub area)  
+> This endpoint will return the needed IDs for region (district), county (area) and parish (sub area) + region, county and parish names  
 > Requires valid token for authentication  
 > In some cases, when CP6 was not found, IDs might return 0, which means that they should be lookup on /locations endpoint.  
 > Let us know about these cases so we can improve our database
@@ -117,9 +117,14 @@ Response signature for /cp6/4300-200
   
 ```json  
 {
+{
     "districtID": 5,
+    "districtName": "Porto",
     "areaID": 62,
-    "subAreaID": 3
+    "areaName": "Porto",
+    "subAreaID": 3,
+    "subAreaName": "Campanhã"
+}
 }
 ```
 
@@ -2062,7 +2067,8 @@ Response signature for /tags/1100
   * /partner/entries/inactive will return just inactive ads  
   **pagination is also possible**   Params: p=0 (page number, index 0 based) c=40 (count per page)    
   **sorting is also possible**   Param: "s" possible values are: price_desc | price_asc | pub_date_desc | pub_date_asc    
-  **stats per ad also possible**  Param: stats=enabled adds a new object to each ad
+  **stats per ad also possible**  Param: stats=enabled adds a new object to each ad    
+  **premiumFeatures**  Info about which premium features are active, when were they activated and when they will end
 
 
 ```json
@@ -2115,7 +2121,33 @@ Response signature for /tags/1100
           "phoneViews": 0,
           "favourites": 0
       }
-  }
+  },
+  "premiumServices":[
+    {
+        "service":"vr_pack_c",
+        "firstOrder":"2023-03-15T10:57:03.890583Z",
+        "lastOrder":"2023-03-15T10:57:03.890583Z",
+        "expireAT":"2023-05-14T10:57:03.890583Z"
+    },
+    {
+        "service":"bump",
+        "firstOrder":"2023-03-15T10:57:05.204554Z",
+        "lastOrder":"2023-03-15T10:57:05.204554Z",
+        "expireAT":"2023-03-15T10:57:05.204554Z"
+    },
+    {
+        "service":"weekly_bump",
+        "firstOrder":"2023-03-15T10:59:38.313387Z",
+        "lastOrder":"2023-03-15T10:59:38.313387Z",
+        "expireAT":"2023-03-22T10:59:38.313387Z"
+    },
+    {
+        "service":"urgent",
+        "firstOrder":"2023-03-15T10:57:02.361169Z",
+        "lastOrder":"2023-03-15T10:59:36.345887Z",
+        "expireAT":"2023-03-18T10:59:36.345887Z"
+    }
+  ]
 ```
     
   <pre>
@@ -2152,7 +2184,33 @@ Response signature for /tags/1100
                     "area": "Valongo",
                     "subAreaID": 4,
                     "subArea": "Ermesinde"
-                }
+                },
+                "premiumServices":[
+                    {
+                      "service":"vr_pack_c",
+                      "firstOrder":"2023-03-15T10:57:03.890583Z",
+                      "lastOrder":"2023-03-15T10:57:03.890583Z",
+                      "expireAT":"2023-05-14T10:57:03.890583Z"
+                    },
+                    {
+                      "service":"bump",
+                      "firstOrder":"2023-03-15T10:57:05.204554Z",
+                      "lastOrder":"2023-03-15T10:57:05.204554Z",
+                      "expireAT":"2023-03-15T10:57:05.204554Z"
+                    },
+                    {
+                      "service":"weekly_bump",
+                      "firstOrder":"2023-03-15T10:59:38.313387Z",
+                      "lastOrder":"2023-03-15T10:59:38.313387Z",
+                      "expireAT":"2023-03-22T10:59:38.313387Z"
+                    },
+                    {
+                      "service":"urgent",
+                      "firstOrder":"2023-03-15T10:57:02.361169Z",
+                      "lastOrder":"2023-03-15T10:59:36.345887Z",
+                      "expireAT":"2023-03-18T10:59:36.345887Z"
+                    }
+                ]
             },
             {
                 "adID": 12505712,
@@ -3124,7 +3182,18 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
       "params":{
           "accommodationType":1,
           "vacationType":1,
-          "availability":"custom string, please contact us for more details",
+          "availability":[
+            {
+              "available": false,
+              "date": "2022-12-03T00:00:00Z",
+              "price": 0
+            },
+            {
+              "available": true,
+              "date": "2022-12-09T00:00:00Z",
+              "price": 999
+            },
+          ],
           "beds":4,
           "rntLicence":"12345",
           "size":400,
@@ -3189,6 +3258,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
 **Custom Params for Real Estate - Vacation rental** - Check [section](#get-allowedcustom-fields-by-category-categoriesfieldscategoryid) and [section](#get-allowedcustom-fields-by-category-and-ad-type-categoriesfieldscategoryidadtype)
    > accommodationType - accommodation type ID (/accommodationtypes)  
    > vacationType - vacation type ID (/cavationtypes)  
+   > availability - availabilities list  
 
 
 ### Edit ad /partner/entries/{adID}
