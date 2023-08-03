@@ -3348,6 +3348,30 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
       ]
     }
 ```
+    
+### Contact support /partner/contact
+> Contact commercial support team via email. Limited to 10 requests per 24h.  
+> Requires valid token for authentication  
+  
+ <pre>
+  Method 
+    POST
+  Headers
+    Content-Type: application/json
+    Authorization: kiYiuYTiuTiUTYiytIut
+  Payload signature
+  </pre>
+```json  
+    {
+      "phone": "911234567",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget vestibulum sapien."
+    }
+```
+<pre>
+  Response signature
+  StatusCode
+    200 - OK
+  </pre>
 
 ### Callbacks
 > The API will perform callbacks to notify CRMs of actions related to partners.  
