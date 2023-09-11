@@ -2060,15 +2060,17 @@ Response signature for /tags/1100
 > This endpoint returns all partner ads, with a few information  All 4 Status apply: active (published), inactive (under approval), disabled (marked as deleted for less than 60 days), refused (when ad has been refused, refusalReason field will contain more details)  
 > Requires valid token for authentication  
   
-  **it's possible to filter data based on url route**
-  * /partner/entries/active will return just active ads  
-  * /partner/entries/refused will return just refused ads  
-  * /partner/entries/disabled will return just ads marked as disabled. Auto removal after 60 days of the deactivation  
-  * /partner/entries/inactive will return just inactive ads  
-  **pagination is also possible**   Params: p=0 (page number, index 0 based) c=40 (count per page)    
-  **sorting is also possible**   Param: "s" possible values are: price_desc | price_asc | pub_date_desc | pub_date_asc    
-  **stats per ad also possible**  Param: stats=enabled adds a new object to each ad    
-  **premiumFeatures**  Info about which premium features are active, when were they activated and when they will end
+  * **filter data based on url route**
+    * /partner/entries/active will return just active ads  
+    * /partner/entries/refused will return just refused ads  
+    * /partner/entries/disabled will return just ads marked as disabled. Auto removal after 60 days of the deactivation  
+    * /partner/entries/inactive will return just inactive ads  
+  * **search**   Params: search=t1%20lisboa (search string, properly encoded)     
+  * **pagination**   Params: p=0 (page number, index 0 based) c=40 (count per page)    
+  * **sorting**   Param: "s" possible values are: price_desc | price_asc | pub_date_desc | pub_date_asc    
+  * **filter ads with/without images**  Param: "imgs" possible values are: 1=with images or 0=without images; param not present means filter is not applied    
+  * **stats per ad**  Param: stats=enabled adds a new object to each ad    
+  * **premiumFeatures**  Info about which premium features are active, when were they activated and when they will end
 
 
 ```json
