@@ -3457,6 +3457,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
 | **name** | string | The name of the partner. |
 | **vat** | string | The portuguese VAT number of the partner. |
 | **ami** | string | The portuguese AMI number of the partner (Real Estate only). |
+| **tua** | string | The portuguese TUA license of the partner (Parts only). |
 
 ```json  
     {
@@ -3467,7 +3468,8 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
         "email": "imox@example.com",
         "name": "IMO X",
         "vat": "123456789",
-        "ami": "12345"
+        "ami": "12345",
+        "tua": "TUA22222323 - EA"
     }
 ```
 
