@@ -405,7 +405,7 @@ Response signature for /categories/fields/1020
     "required": true
   },
   {
-    "label": "Área útil",
+    "label": "Ýrea útil",
     "json": "size",
     "type": "int",
     "required": true
@@ -476,7 +476,7 @@ Response signature for /categories/fields/1020/s
     "required": true
   },
   {
-    "label": "Área útil",
+    "label": "Ýrea útil",
     "json": "size",
     "type": "int",
     "required": true
@@ -2055,6 +2055,21 @@ Response signature for /tags/1100
   </pre>
 
 
+
+### Get partner counters /partner/entries/adscounter
+* * *
+  * **Ads status counters**
+    * /partner/entries/adscounter will return the ads counter per status  
+
+```json
+  {
+      "activeAds": 59,
+      "deletedAds": 2013,
+      "refusedAds": 0,
+      "inactiveAds": 0
+  }
+```
+
 ### Get partner ads /partner/entries
 * * *
 > This endpoint returns all partner ads, with a few information  All 4 Status apply: active (published), inactive (under approval), disabled (marked as deleted for less than 60 days), refused (when ad has been refused, refusalReason field will contain more details)  
@@ -2071,7 +2086,6 @@ Response signature for /tags/1100
   * **filter ads with/without images**  Param: "imgs" possible values are: 1=with images or 0=without images; param not present means filter is not applied    
   * **stats per ad**  Param: stats=enabled adds a new object to each ad    
   * **premiumFeatures**  Info about which premium features are active, when were they activated and when they will end
-
 
 ```json
   "adStats": {
