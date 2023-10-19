@@ -2477,7 +2477,8 @@ Response signature for /tags/1100
             "subArea": 3
         },
         "params": {
-            "partNumber": "222-AAA_123"
+            "partNumber": "222-AAA_123",
+            "tua": "TUA20230222 - EA"
         },
         "partner": {
             "externalAdID": "7780p6yhgtr",
@@ -2872,7 +2873,8 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
           "subArea":4
       },
       "params":{
-          "partNumber": "222-AAA_123"
+          "partNumber": "222-AAA_123",
+          "tua": "TUA20230222 - EA"
       },
       "partner":{
           "externalAdID":"BMW-112233",
@@ -2924,6 +2926,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
 
 **Custom Params for Vehicle Parts** - Check [section](#get-allowedcustom-fields-by-category-categoriesfieldscategoryid) and [section](#get-allowedcustom-fields-by-category-and-ad-type-categoriesfieldscategoryidadtype)
    > partNumber - part number/reference  
+   > tua - portuguese TUA license associated with the part  
 
 
 ### Create animal ad /partner/entries
