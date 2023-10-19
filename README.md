@@ -405,7 +405,7 @@ Response signature for /categories/fields/1020
     "required": true
   },
   {
-    "label": "Ýrea útil",
+    "label": "Área útil",
     "json": "size",
     "type": "int",
     "required": true
@@ -476,7 +476,7 @@ Response signature for /categories/fields/1020/s
     "required": true
   },
   {
-    "label": "Ýrea útil",
+    "label": "Área útil",
     "json": "size",
     "type": "int",
     "required": true
@@ -1133,7 +1133,7 @@ Response signature for /tags/1100
   },
   {
     "id": 7,
-    "name": "Cão De Ýgua"
+    "name": "Cão De Água"
   },
   {
     "id": 12,
