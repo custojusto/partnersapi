@@ -1798,6 +1798,7 @@ Response signature for /tags/1100
     {
       "address":"Estrada Granja do Marques",
       "phone":"911234567",
+      "changePhones": false,
       "location":{
           "district":5,
           "area":66,
@@ -1807,6 +1808,11 @@ Response signature for /tags/1100
       "notifications":["wnl", "activads", "promo"]
     }
 ```
+
+### Update ads details
+* * *
+> changePhones - updates all ads phone contact. This process will require a full reindex and might take up to 24h  
+
 
 ### Valid notifications
 * * *
