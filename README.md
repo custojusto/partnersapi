@@ -2,6 +2,20 @@ New features will be added just to this API
 > PROD: https://v2.custojusto.pt  
 > QA: https://v2qa.custojusto.pt
 
+### IMPORTANT 
+
+> Image links support the use of rules as placeholders. We are transitioning to a new provider, which means image URLs will be changing.  
+> 
+**Valid placeholder rules are**  
+> - thumbnail: 112x80  
+> - gallery: 299x207  
+> - full: 750x600  
+> - play: 1500x1500  
+>
+> eg: https://cdn.custojusto.pt/api/v1/images/images/2140593119-mercedes-benz-cl-500-347.jpg?rule=gallery will become https://cdn.custojusto.pt/api/v1/images/images/2140593119-mercedes-benz-cl-500-347.jpg?rule={rule}  
+
+
+
 ### Table of contents
 
 * TOC
@@ -405,7 +419,7 @@ Response signature for /categories/fields/1020
     "required": true
   },
   {
-    "label": "Área útil",
+    "label": "Ýrea útil",
     "json": "size",
     "type": "int",
     "required": true
@@ -476,7 +490,7 @@ Response signature for /categories/fields/1020/s
     "required": true
   },
   {
-    "label": "Área útil",
+    "label": "Ýrea útil",
     "json": "size",
     "type": "int",
     "required": true
@@ -1133,7 +1147,7 @@ Response signature for /tags/1100
   },
   {
     "id": 7,
-    "name": "Cão De Água"
+    "name": "Cão De Ýgua"
   },
   {
     "id": 12,
@@ -2192,7 +2206,7 @@ Response signature for /tags/1100
                 "deleteID": "11812874",
                 "listID": "11812874",
                 "externalAdID": "4562846523542",
-                "imageURL": "https://cdn.custojusto.pt/api/v1/images/images/2140593119-mercedes-benz-cl-500-347.jpg?rule=gallery",
+                "imageURL": "https://cdn.custojusto.pt/api/v1/images/images/2140593119-mercedes-benz-cl-500-347.jpg?rule={rule}",
                 "notice": "Ad imported using partners API",
                 "listTime": "2020-06-18T20:05:49.596596Z",
                 "category": {
@@ -2339,8 +2353,8 @@ Response signature for /tags/1100
         "category": "2080",
         "categoryPath": "2000>2080",
         "imageURLs": [
-            "https://cdn.custojusto.pt/api/v1/images/images/953910819-teste-de-teste-de-trigger-em-anuncio-via-api.jpg?rule=gallery",
-            "https://cdn.custojusto.pt/api/v1/images/images/919434168-teste-de-teste-de-trigger-em-anuncio-via-api.jpg?rule=gallery"
+            "https://cdn.custojusto.pt/api/v1/images/images/953910819-teste-de-teste-de-trigger-em-anuncio-via-api.jpg?rule={rule}",
+            "https://cdn.custojusto.pt/api/v1/images/images/919434168-teste-de-teste-de-trigger-em-anuncio-via-api.jpg?rule={rule}"
         ],
         "images": [
             "0953910819",
@@ -2402,8 +2416,8 @@ Response signature for /tags/1100
         "category": "2021",
         "categoryPath": "2000>2020>2021",
         "imageURLs": [
-            "https://cdn.custojusto.pt/api/v1/images/images/953910819-teste-de-teste-de-trigger-em-anuncio-via-api.jpg?rule=gallery",
-            "https://cdn.custojusto.pt/api/v1/images/images/919434168-teste-de-teste-de-trigger-em-anuncio-via-api.jpg?rule=gallery"
+            "https://cdn.custojusto.pt/api/v1/images/images/953910819-teste-de-teste-de-trigger-em-anuncio-via-api.jpg?rule={rule}",
+            "https://cdn.custojusto.pt/api/v1/images/images/919434168-teste-de-teste-de-trigger-em-anuncio-via-api.jpg?rule={rule}"
         ],
         "images": [
             "0953910819",
@@ -2481,8 +2495,8 @@ Response signature for /tags/1100
         "category": "2121",
         "categoryPath": "2000>2120>2121",
         "imageURLs": [
-            "https://cdn.custojusto.pt/api/v1/images/images/953910819-teste-de-teste-de-trigger-em-anuncio-via-api.jpg?rule=gallery",
-            "https://cdn.custojusto.pt/api/v1/images/images/919434168-teste-de-teste-de-trigger-em-anuncio-via-api.jpg?rule=gallery"
+            "https://cdn.custojusto.pt/api/v1/images/images/953910819-teste-de-teste-de-trigger-em-anuncio-via-api.jpg?rule={rule}",
+            "https://cdn.custojusto.pt/api/v1/images/images/919434168-teste-de-teste-de-trigger-em-anuncio-via-api.jpg?rule={rule}"
         ],
         "images": [
             "0953910819",
@@ -2549,14 +2563,14 @@ Response signature for /tags/1100
       "category":"1020",
       "categoryPath":"1000>1020",
       "imageURLs":[
-          "https://cdn.custojusto.pt/api/v1/images/images/1335591203-propriedade-situada-em-vila-do-bispo-ref-4640.jpg?rule=gallery",
-          "https://cdn.custojusto.pt/api/v1/images/images/1392974608-propriedade-situada-em-vila-do-bispo-ref-4640.jpg?rule=gallery",
-          "https://cdn.custojusto.pt/api/v1/images/images/1301497927-propriedade-situada-em-vila-do-bispo-ref-4640.jpg?rule=gallery",
-          "https://cdn.custojusto.pt/api/v1/images/images/1327067884-propriedade-situada-em-vila-do-bispo-ref-4640.jpg?rule=gallery",
-          "https://cdn.custojusto.pt/api/v1/images/images/1344114522-propriedade-situada-em-vila-do-bispo-ref-4640.jpg?rule=gallery",
-          "https://cdn.custojusto.pt/api/v1/images/images/1310021246-propriedade-situada-em-vila-do-bispo-ref-4640.jpg?rule=gallery",
-          "https://cdn.custojusto.pt/api/v1/images/images/1384451289-propriedade-situada-em-vila-do-bispo-ref-4640.jpg?rule=gallery",
-          "https://cdn.custojusto.pt/api/v1/images/images/1318544565-propriedade-situada-em-vila-do-bispo-ref-4640.jpg?rule=gallery"
+          "https://cdn.custojusto.pt/api/v1/images/images/1335591203-propriedade-situada-em-vila-do-bispo-ref-4640.jpg?rule={rule}",
+          "https://cdn.custojusto.pt/api/v1/images/images/1392974608-propriedade-situada-em-vila-do-bispo-ref-4640.jpg?rule={rule}",
+          "https://cdn.custojusto.pt/api/v1/images/images/1301497927-propriedade-situada-em-vila-do-bispo-ref-4640.jpg?rule={rule}",
+          "https://cdn.custojusto.pt/api/v1/images/images/1327067884-propriedade-situada-em-vila-do-bispo-ref-4640.jpg?rule={rule}",
+          "https://cdn.custojusto.pt/api/v1/images/images/1344114522-propriedade-situada-em-vila-do-bispo-ref-4640.jpg?rule={rule}",
+          "https://cdn.custojusto.pt/api/v1/images/images/1310021246-propriedade-situada-em-vila-do-bispo-ref-4640.jpg?rule={rule}",
+          "https://cdn.custojusto.pt/api/v1/images/images/1384451289-propriedade-situada-em-vila-do-bispo-ref-4640.jpg?rule={rule}",
+          "https://cdn.custojusto.pt/api/v1/images/images/1318544565-propriedade-situada-em-vila-do-bispo-ref-4640.jpg?rule={rule}"
       ],
       "images":[
           "1335591203",
