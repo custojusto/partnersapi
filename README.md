@@ -4,7 +4,7 @@ New features will be added just to this API
 
 ### IMPORTANT 
 
-> Image links support the use of rules as placeholders. We are transitioning to a new provider, which means image URLs will be changing.  
+> Image links are now using {rule} as placeholders.  
 > 
 **Valid placeholder rules are**  
 > - thumbnail: 112x80  
@@ -12,7 +12,7 @@ New features will be added just to this API
 > - full: 750x600  
 > - play: 1500x1500  
 >
-> eg: https://cdn.custojusto.pt/api/v1/images/images/2140593119-mercedes-benz-cl-500-347.jpg?rule=gallery will become https://cdn.custojusto.pt/api/v1/images/images/2140593119-mercedes-benz-cl-500-347.jpg?rule={rule}  
+> ex: https://prod-images.custojusto.pt/{rule}/7140386551-junio-frontend-developer.jpg  
 
 
 
@@ -2102,7 +2102,7 @@ Response signature for /tags/1100
     * /partner/entries/inactive will return just inactive ads  
   * **search**   Params: search=t1%20lisboa (search string, properly encoded)     
   * **pagination**   Params: p=0 (page number, index 0 based) c=40 (count per page)    
-  * **sorting**   Param: "s" possible values are: price_desc | price_asc | pub_date_desc | pub_date_asc    
+  * **sorting**   Param: "s" possible values are: price_desc | price_asc | pub_date_desc | pub_date_asc | first_pub_date_desc | first_pub_date_asc   
   * **filter ads with/without images**  Param: "imgs" possible values are: 1=with images or 0=without images; param not present means filter is not applied    
   * **stats per ad**  Param: stats=enabled adds a new object to each ad    
   * **premiumFeatures**  Info about which premium features are active, when were they activated and when they will end
