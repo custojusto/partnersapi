@@ -7,10 +7,10 @@ New features will be added just to this API
 > Image links are now using {rule} as placeholders.  
 > 
 **Valid placeholder rules are**  
-> - thumbnail: 112x80  
-> - gallery: 299x207  
-> - full: 750x600  
-> - play: 1500x1500  
+> - thumbnail: max of 112x80  
+> - gallery: max of 299x207  
+> - full: max of 750x600  
+> - play: max of 1500x1500  
 >
 > ex: https://prod-images.custojusto.pt/{rule}/7140386551-junio-frontend-developer.jpg  
 
@@ -3467,7 +3467,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
 ```
 
 #### Ad published callback
-> This callback is sent when an ad is published, which usually occurs soon after it's inserted/updated. The **event** value for this callback is **published**.  
+> This callback is sent when an ad is published, which usually occurs soon after it's created (not edited or undeleted). The **event** value for this callback is **published**.  
 
 | Name | Type | Description |
 | --- | --- | --- |
