@@ -2,7 +2,7 @@ New features will be added just to this API
 > PROD: https://v2.custojusto.pt  
 > QA: https://v2qa.custojusto.pt
 
-### IMPORTANT 
+**IMPORTANT**  
 
 > Image links are now using {rule} as placeholders.  
 > 
@@ -16,10 +16,88 @@ New features will be added just to this API
 
 
 
-### Table of contents
+**Table of contents**  
+<!-- TOC -->
 
-* TOC
-{:toc}
+- [Get valid districts /locations](#get-valid-districts-locations)
+- [Get valid areas /locations/{locationId}](#get-valid-areas-locationslocationid)
+- [Get valid sub areas /locations/{locationId}/{county_locationId}](#get-valid-sub-areas-locationslocationidcounty_locationid)
+- [Get location IDs tree based on CP6 /cp6/{cp6}](#get-location-ids-tree-based-on-cp6-cp6cp6)
+- [Get possible adtypes /adtypes](#get-possible-adtypes-adtypes)
+- [Get possible adtypes /adtypes/bycategory/{categoryID}](#get-possible-adtypes-adtypesbycategorycategoryid)
+- [Get possible categories /categories](#get-possible-categories-categories)
+- [Get categories tree /categories/tree](#get-categories-tree-categoriestree)
+- [Get categories by level 1 /categories/{categoryID}](#get-categories-by-level-1-categoriescategoryid)
+- [Get categories by level 2 /categories/{categoryID}/{subCategoryID}](#get-categories-by-level-2-categoriescategoryidsubcategoryid)
+- [Get allowed/custom fields by category /categories/fields/{categoryID}](#get-allowedcustom-fields-by-category-categoriesfieldscategoryid)
+- [Get allowed/custom fields by category and ad type /categories/fields/{categoryID}/{adType}](#get-allowedcustom-fields-by-category-and-ad-type-categoriesfieldscategoryidadtype)
+- [Get allowed tags by category /tags/{categoryID}](#get-allowed-tags-by-category-tagscategoryid)
+- [Get the existing car phone brands /phonebrands](#get-the-existing-car-phone-brands-phonebrands)
+- [Find phone brand by similar name /phonebrands/byname/{lowercaseName}](#find-phone-brand-by-similar-name-phonebrandsbynamelowercasename)
+- [Get default car params for a known licenseplate /vehicles/licenseplates/{licenseplate}](#get-default-car-params-for-a-known-licenseplate-vehicleslicenseplateslicenseplate)
+- [Get the existing car brands /carbrands](#get-the-existing-car-brands-carbrands)
+- [Get the existing car models per brand /carbrands/{brandID}](#get-the-existing-car-models-per-brand-carbrandsbrandid)
+- [Get the existing car models per brand /carbrands/{brandID}/series](#get-the-existing-car-models-per-brand-carbrandsbrandidseries)
+- [Find car brand by similar name /carbrands/byname/{lowercaseName}](#find-car-brand-by-similar-name-carbrandsbynamelowercasename)
+- [Find car model by similar name /carbrands/{brandID}/byname/{lowercaseName}](#find-car-model-by-similar-name-carbrandsbrandidbynamelowercasename)
+- [Get the existing moto brands /motobrands](#get-the-existing-moto-brands-motobrands)
+- [Get the existing moto models per brand /motobrands/{brandID}](#get-the-existing-moto-models-per-brand-motobrandsbrandid)
+- [Find moto brand by similar name /motobrands/byname/{lowercaseName}](#find-moto-brand-by-similar-name-motobrandsbynamelowercasename)
+- [Find car model by similar name /motobrands/{brandID}/byname/{lowercaseName}](#find-car-model-by-similar-name-motobrandsbrandidbynamelowercasename)
+- [Get Cubic Centemeters configurations /cc](#get-cubic-centemeters-configurations-cc)
+- [Get Cubic Centimeters configuration based on CC value /cc/{CubicCentimetersValue}](#get-cubic-centimeters-configuration-based-on-cc-value-cccubiccentimetersvalue)
+- [Get our color list /colors](#get-our-color-list-colors)
+- [Get our fuel type list /fuels](#get-our-fuel-type-list-fuels)
+- [Get our animal/dogs breed list /animals/canine-breeds](#get-our-animaldogs-breed-list-animalscanine-breeds)
+- [Get our animal/dogs gender list /animals/genders](#get-our-animaldogs-gender-list-animalsgenders)
+- [Get our animal/dogs size list /animals/sizes](#get-our-animaldogs-size-list-animalssizes)
+- [Get our animal/dogs ageing intervals /animals/ageing](#get-our-animaldogs-ageing-intervals-animalsageing)
+- [Get our gear boxes list /gearboxes](#get-our-gear-boxes-list-gearboxes)
+- [Get our mileage intervals /mileages](#get-our-mileage-intervals-mileages)
+- [Get mileage id by mileage value /mileages/{mileageValue}](#get-mileage-id-by-mileage-value-mileagesmileagevalue)
+- [Get energy rating list /energyratings](#get-energy-rating-list-energyratings)
+- [Get room typologies list /roomtypologies](#get-room-typologies-list-roomtypologies)
+- [Get room typology /roomtypologies/{typologyName}](#get-room-typology-roomtypologiestypologyname)
+- [Get accommodation types list accommodationtypes](#get-accommodation-types-list-accommodationtypes)
+- [Get vacation types list vacationtypes](#get-vacation-types-list-vacationtypes)
+- [Get partner allowed categories /partner/categories](#get-partner-allowed-categories-partnercategories)
+- [Get partner data /partner](#get-partner-data-partner)
+- [Update partner profile /partner/profile](#update-partner-profile-partnerprofile)
+- [Update ads details](#update-ads-details)
+- [Valid notifications](#valid-notifications)
+- [Fail errors will return the field and error description](#fail-errors-will-return-the-field-and-error-description)
+- [Change partner password /partner/profile/changepassword](#change-partner-password-partnerprofilechangepassword)
+- [Update partner shop details /partner/shop](#update-partner-shop-details-partnershop)
+- [Fail errors will return the field and error description](#fail-errors-will-return-the-field-and-error-description)
+- [Update shop banner /images/users/shop](#update-shop-banner-imagesusersshop)
+- [Delete shop banner /images/users/shop](#delete-shop-banner-imagesusersshop)
+- [Update user profile image /images/users/profile](#update-user-profile-image-imagesusersprofile)
+- [Delete profile image /images/users/profile](#delete-profile-image-imagesusersprofile)
+- [Get partner counters /partner/entries/adscounter](#get-partner-counters-partnerentriesadscounter)
+- [Get partner ads /partner/entries](#get-partner-ads-partnerentries)
+- [Get partner ids based on ads status /partner/my-ids/...](#get-partner-ids-based-on-ads-status-partnermy-ids)
+- [Read ad complete details /partner/entries/{adID}](#read-ad-complete-details-partnerentriesadid)
+- [Read ad complete details - Vehicles /partner/entries/{adID}](#read-ad-complete-details---vehicles-partnerentriesadid)
+- [Read ad complete details - Vehicle Parts /partner/entries/{adID}](#read-ad-complete-details---vehicle-parts-partnerentriesadid)
+- [Read ad complete details - Real Estate /partner/entries/{adID}](#read-ad-complete-details---real-estate-partnerentriesadid)
+- [Upload images /images/ads](#upload-images-imagesads)
+- [Create general ad /partner/entries](#create-general-ad-partnerentries)
+- [Create vehicle ad /partner/entries](#create-vehicle-ad-partnerentries)
+- [Create vehicle part ad /partner/entries](#create-vehicle-part-ad-partnerentries)
+- [Create animal ad /partner/entries](#create-animal-ad-partnerentries)
+- [Create real estate ad /partner/entries](#create-real-estate-ad-partnerentries)
+- [Create real estate - Vacation rental ad /partner/entries](#create-real-estate---vacation-rental-ad-partnerentries)
+- [Edit ad /partner/entries/{adID}](#edit-ad-partnerentriesadid)
+- [Deactivate ad /partner/entries/{deleteID}](#deactivate-ad-partnerentriesdeleteid)
+- [Contact support /partner/contact](#contact-support-partnercontact)
+- [Callbacks](#callbacks)
+    - [Ad reply callback](#ad-reply-callback)
+    - [Ad refused callback](#ad-refused-callback)
+    - [Ad published callback](#ad-published-callback)
+    - [Partner created callback](#partner-created-callback)
+    - [Partner changed callback](#partner-changed-callback)
+
+<!-- /TOC -->
 
 ### Get valid districts /locations
 * * *
