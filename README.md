@@ -3236,7 +3236,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
   remainingCredits - Indicates the number of new ads + number of Edits remaning
 </pre>
     
-**Custom Params for Real Estate** - Check [section](#get-allowedcustom-fields-by-category-categoriesfieldscategoryid) and [section](#get-allowedcustom-fields-by-category-and-ad-type-categoriesfieldscategoryidadtype)
+**Custom Params for Real Estate** - [Check fields by category id](#get-allowedcustom-fields-by-category-categoriesfieldscategoryid) and [category id plus ad type](#get-allowedcustom-fields-by-category-and-ad-type-categoriesfieldscategoryidadtype)
   > availability - To be defined a custom layout  
   > beds - Capacity, number of beds or rooms. Is this case, the website will show 4 as capacity  
   > energyRating - Not used for Vacation rental  
@@ -3249,6 +3249,64 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
   > usageLicense - Building usage license (only appliable in categories: 1020, 1040 and for constructionYear >= 1951; in the near future it will be mandatory for renting) 
   > tags - Available amenities. Check /tags/{category} endpoint  
   > typology - Check /roomtypologies for correct ID  
+
+
+  > **Rental rooms sub-category**  
+  > Parameter types should be defined in accordance with the technical information provided at **/categories/fields/1120/u**  
+  >  
+  > allowCpl – Indicates whether couples are allowed. See available values at **/allowcpl**  
+  > bathroomNr – Number of bathrooms of the apartment. See available values at **/bathrooms**  
+  > bedroomNr – Number of bedrooms of the apartment. See available values at **/bedrooms**  
+  > tenant – Gender preference options for the ad. See options at **/tenants**  
+  > available – Availability details for the ad. See options at **/available**  
+  > tags – Optional commodities available in the ad (array). See options at **/tags/1120**  
+  > (Tag groups information is also found in this endpoint. The tag prefix corresponds to the group ID)  
+  >  
+  > **Commodities example**  
+  ```json  
+  {
+    "type": "checkbox",
+    "tags": [
+        {
+            "id": "util__tv",
+            "name": "TV"
+        },
+        {
+            "id": "util__wifi",
+            "name": "Wi-Fi"
+        },
+        {
+            "id": "util__net",
+            "name": "Internet"
+        },
+        {
+            "id": "util__water_inc",
+            "name": "Água incluída"
+        }
+        ...
+    ],
+    "groups": [
+        {
+            "prefix": "near",
+            "name": "Proximidade (máx. 15 min a pé)"
+        },
+        {
+            "prefix": "util",
+            "name": "Internet e utilidades"
+        },
+        {
+            "prefix": "acc",
+            "name": "Acessos e transportes"
+        },
+        {
+            "prefix": "kit",
+            "name": "Cozinha (uso total ou partilhado)"
+        }
+        ...
+    ]
+  }
+ ```
+  
   > videoURL - A link for a video, we currently support:  
   >> YouTube (https://www.youtube.com/watch?v=jNlqg72IeDU)  
   >> Vimeo (https://vimeo.com/347119375)  
