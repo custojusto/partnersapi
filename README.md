@@ -1736,6 +1736,7 @@ Response signature for /tags/1100
         "notifications": ["wnl", "activads", "promo"],
         "email": "partner_email@partner.com",
         "phone": "911234567",
+        "whatsappNr": "9211234567",
         "address": "Partner main address",
         "location": {
             "district": 5,
@@ -1874,7 +1875,7 @@ Response signature for /tags/1100
 
 ### Update partner profile /partner/profile
 * * *
-> This endpoint update profile details, such as location, main phone and address  Editing the phone number won't update ads  
+> This endpoint update profile details, such as location, main phone, whatsapp number and address. Editing the phone number or the whatsapp number won't update ads  
 > Requires valid token for authentication  
   
   
@@ -1891,6 +1892,8 @@ Response signature for /tags/1100
       "address":"Estrada Granja do Marques",
       "phone":"911234567",
       "changePhones": false,
+      "whatsappNr":"9211234567",
+      "changeWhatsappNrs":false,
       "location":{
           "district":5,
           "area":66,
@@ -1905,6 +1908,7 @@ Response signature for /tags/1100
 * * *
 > changePhones - updates all ads phone contact. This process will require a full reindex and might take up to 24h  
 
+> changeWhatsappNrs - updates all ads whatsapp contact. This process will require a full reindex and might take up to 24h  
 
 ### Valid notifications
 * * *
@@ -1920,7 +1924,7 @@ Response signature for /tags/1100
   <pre>
   StatusCode 
     400 - Bad Request
-  Response example when providing an unexisting district (consequently no match for area and subarea), a bad format CP6 and bad format phone number
+  Response example when providing an unexisting district (consequently no match for area and subarea), a bad format CP6, a bad format phone number and a bad format whatsapp number  
   </pre>
 ```json
     {
@@ -1932,6 +1936,10 @@ Response signature for /tags/1100
             {
                 "field": "phone",
                 "value": "Verificar o número de telefone"
+            },
+            {
+                "field": "whatsappNr",
+                "value": "Verificar o número do whatsapp"
             },
             {
                 "field": "district",
@@ -2422,6 +2430,7 @@ Response signature for /tags/1100
             "email": "nome@partner.pt",
             "name": "Nome da loja",
             "phone": "911234567",
+            "whatsappNr":"9211234567",
             "phoneDisabled": false,
             "professionalAd": true,
             "salesmanDisabled": false,
@@ -2485,6 +2494,7 @@ Response signature for /tags/1100
             "email": "nome@partner.pt",
             "name": "Nome da loja",
             "phone": "911234567",
+            "whatsappNr":"9211234567",
             "phoneDisabled": false,
             "professionalAd": true,
             "salesmanDisabled": false,
@@ -2564,6 +2574,7 @@ Response signature for /tags/1100
             "email": "nome@partner.pt",
             "name": "Nome da loja",
             "phone": "911234567",
+            "whatsappNr":"9211234567",
             "phoneDisabled": false,
             "professionalAd": true,
             "salesmanDisabled": false,
@@ -2631,6 +2642,7 @@ Response signature for /tags/1100
           "email":"name@partner.pt",
           "name":"Partner name",
           "phone":"911234567",
+          "whatsappNr":"9211234567",
           "phoneDisabled":false,
           "professionalAd":true,
           "rntLicence":"12345",
@@ -2751,6 +2763,7 @@ Response signature for /tags/1100
           "email":"name@partner.pt",
           "name":"Partner name",
           "phone":"911234567",
+          "whatsappNr":"9211234567",
           "phoneDisabled":false,
           "professionalAd":true,
           "salesmanDisabled":false,
@@ -2836,6 +2849,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
           "email":"name@partner.pt",
           "name":"Partner name",
           "phone":"911234567",
+          "whatsappNr":"9211234567",
           "phoneDisabled":false,
           "professionalAd":true,
           "salesmanDisabled":false,
@@ -2968,6 +2982,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
           "email":"name@partner.pt",
           "name":"Partner name",
           "phone":"911234567",
+          "whatsappNr":"9211234567",
           "phoneDisabled":false,
           "professionalAd":true,
           "salesmanDisabled":false,
@@ -3061,6 +3076,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
           "email":"name@partner.pt",
           "name":"Partner name",
           "phone":"911234567",
+          "whatsappNr":"9211234567",
           "phoneDisabled":false,
           "professionalAd":true,
           "salesmanDisabled":false,
@@ -3163,6 +3179,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
           "email":"name@partner.pt",
           "name":"Partner name",
           "phone":"911234567",
+          "whatsappNr":"9211234567",
           "phoneDisabled":false,
           "professionalAd":true,
           "salesmanDisabled":false,
@@ -3338,6 +3355,7 @@ remainingCredits - Indicates the number of new ads + number of Edits remaning
           "email":"name@partner.pt",
           "name":"Partner name",
           "phone":"911234567",
+          "whatsappNr":"9211234567",
           "phoneDisabled":false,
           "professionalAd":true,
           "salesmanDisabled":false,
