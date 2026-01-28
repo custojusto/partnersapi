@@ -32,7 +32,7 @@ New features will be added just to this API
 - [Get allowed/custom fields by category /categories/fields/{categoryID}](#get-allowedcustom-fields-by-category-categoriesfieldscategoryid)
 - [Get allowed/custom fields by category and ad type /categories/fields/{categoryID}/{adType}](#get-allowedcustom-fields-by-category-and-ad-type-categoriesfieldscategoryidadtype)
 - [Get allowed tags by category /tags/{categoryID}](#get-allowed-tags-by-category-tagscategoryid)
-- [Get the existing car phone brands /phonebrands](#get-the-existing-car-phone-brands-phonebrands)
+- [Get the existing phone brands /phonebrands](#get-the-existing-phone-brands-phonebrands)
 - [Find phone brand by similar name /phonebrands/byname/{lowercaseName}](#find-phone-brand-by-similar-name-phonebrandsbynamelowercasename)
 - [Get default car params for a known licenseplate /vehicles/licenseplates/{licenseplate}](#get-default-car-params-for-a-known-licenseplate-vehicleslicenseplateslicenseplate)
 - [Get the existing car brands /carbrands](#get-the-existing-car-brands-carbrands)
@@ -650,7 +650,7 @@ Response signature for /tags/1100
 }
 ```
 
-### Get the existing car phone brands /phonebrands
+### Get the existing phone brands /phonebrands
 * * * 
 > This endpoint will return the existing phone brands on our platform  
 > Requires valid token for authentication  
